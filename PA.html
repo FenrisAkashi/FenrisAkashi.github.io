@@ -1,0 +1,432 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+	 <title>InMap</title>
+	 <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+	<nav> 
+		<ul> 
+			<li><a href="map">home</a></li>
+			<li><a href="journal">journal</a></li>
+			<li><a href="contact">report a bug</a></li>
+			<li><a href="/">sign out</a></li>
+		</ul>
+	</nav>
+	</header>
+
+    <div class="flexbox-container main">
+        <div id="statediv" style="width: 20%; height: 600px;">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1xT7RSNPev14nNFaec8tZx7ixxTcq8DB7" width="400" height="590"></iframe>
+        </div>
+
+        
+            
+        <div id="poi" style="width: 70%; height: 600px; overflow: auto;">
+            <h2 style="position:sticky;font-weight: bold;">PA National Parks</h2>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/alca">Allegheny Portage Railroad</a></h4>
+                        <h5>Gallitzin, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src= "https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/E3B11B52-1DD8-B71C-0E9E071C927EA562.jpg"></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>The first railroad to circumvent the Allegheny Mountains, the Allegheny Portage Railroad was the finishing piece of the Pennsylvania Mainline Canal. "The Portage," opened in 1834, marking the first time that there was one, direct route between Philadelphia and Pittsburgh. All things to all people, it served merchants, passengers, slaves in pursuit of freedom, and soldiers from the Mexican War.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/cabr">Appalachian National Scenic Trail</a></h4>
+                        <h5>Maine to Georgia, CT,GA,MA,MD,ME, NC,NH,NJ,NY,PA, TN,VA,VT,WV</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src="https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/AA071FC6-1DD8-B71C-07550F35390CBB43.jpg"></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>The Appalachian Trail is a 2,180+ mile long public footpath that traverses the scenic, wooded, pastoral, wild, and culturally resonant lands of the Appalachian Mountains. Conceived in 1921, built by private citizens, and completed in 1937, today the trail is managed by the National Park Service, US Forest Service, Appalachian Trail Conservancy, numerous state agencies and thousands of volunteers.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/cali">Captain John Smith Chesapeake</a></h4>
+                        <h5>Various States VA,MD,DE, DC,PA,NY</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/86C2A5B0-1DD8-B71C-0E77366CBDC1CF33.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Four hundred years ago Englishman John Smith and a small crew of adventurers set out in an open boat to explore the Chesapeake Bay. Between 1607 and 1609 Smith and his crew mapped nearly 3,000 miles of the Bay and rivers and documented American Indian communities. Smith’s map and journals are a remarkable record of the 17th-century Chesapeake. Come join the adventure on the Chesapeake Bay!</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/camo">Chesapeake Bay</a></h4>
+                        <h5>Chesapeake Bay Watershed, DC,DE,MD,NY, PA,VA,WV</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/8E6C023C-1DD8-B71C-0E3142AC97E37D47.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>NPS helps you learn about and enjoy the Chesapeake Bay, the largest estuary in North America. Here, you can visit major league cities, colonial towns, American Indian landscapes, farms and fishing villages. You can learn to kayak, pick crabs, go fishing, tour a lighthouse, slurp oysters, and slow down to enjoy the natural beauty of the Chesapeake.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/cech">Delaware & Lehigh National heritage corridor</a></h4>
+                        <h5>Easton, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/8C13BA6B-1DD8-B71C-0E2217A409785AE3.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Come journey through five Pennsylvania counties bursting with heritage and brimming with outdoor adventure. Follow the D&L Trail, a historic pathway marked with stories about hearty lumberjacks, coal miners, lock tenders, and railroaders. Explore the history of the Corridor at the National Canal Museum or along quiet canal paths, challenging bike trails and the rippling waters of the river.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/chis">Delaware Water Gap</a></h4>
+                        <h5>Bushkill, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/EB8C1938-1DD8-B71C-078BC325E472C196.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Paddlers slip down the river between low forested mountains; anglers wade the trout streams; hikers scan the valley from the ridge or peer into the 1000-foot-deep Water Gap. The valley has known human hand and voice for 10,000 years. Floodplains nourished the Native farmer; waterfalls drew the Victorian vacationer. Today, a 70,000-acre park welcomes those who seek the outdoors close to home.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/deva">Edgar Allan Poe National Historic Site</a></h4>
+                        <h5>Philadelphia, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/BB4E97C5-1DD8-B71C-0E1F31C426622DFD.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Described as horrifying, mystifying, and brilliant, Poe’s writing has engaged readers all over the globe. The six years Edgar Allan Poe lived in Philadelphia were his happiest and most productive. Yet Poe also struggled with bad luck, personal demons and his wife’s illness. In Poe’s humble home, reflect on the human spirit surmounting crushing obstacles, and celebrate Poe’s astonishing creativity.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/depo">Eisenhower National historic site</a></h4>
+                        <h5>Gettysburg, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/5331311B-1DD8-B71C-0E8768FF8784601B.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Eisenhower National Historic Site preserves the farm of General and 34th President Dwight D. Eisenhower. Adjacent to the Gettysburg battlefield, the farm served the president and first lady as a weekend retreat and as a meeting place for world leaders. With its peaceful setting and view of South Mountain, it was a respite from Washington, DC, and a backdrop for efforts to reduce Cold War tensions.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/fopo">First State National historical park</a></h4>
+                        <h5>DE, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/0B52ACAF-155D-451F-6742CC117F9390BC.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Famous as the First State to ratify the Constitution, Delaware was born out of a conflict among three world powers for dominance of the Delaware Valley. From this beginning, the region developed a distinct character that tolerated diversity in religion and national origin and valued independence.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/goga">Flight 93 National Memorial</a></h4>
+                        <h5>Shanksville, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/7CD7AA9D-1DD8-B71C-0E872D66345F538C.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>On Tuesday morning, September 11, 2001, the U.S. came under attack when four commercial airliners were hijacked and used to strike targets on the ground. Nearly 3,000 people tragically lost their lives. Because of the actions of the 40 passengers and crew aboard one of the planes, Flight 93, the attack on the U.S. Capitol was thwarted.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/jomu">Fort Necessity</a></h4>
+                        <h5>Farmington, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/0E351595-155D-451F-674A6C65B96C63EB.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>The battle at Fort Necessity in the summer of 1754 was the opening action of the French and Indian War. This war was a clash of British, French and American Indian cultures. It ended with the removal of French power from North America. The stage was set for the American Revolution.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/jotr">Friendship Hill</a></h4>
+                        <h5>Point Marion, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/8B20ACDC-1DD8-B71C-0E1B31463A9BBBEE.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Albert Gallatin is best remembered for his thirteen year tenure as Secretary of the Treasury during the Jefferson and Madison administrations. In that time he reduced the national debt, purchased the Louisiana Territory and funded the Lewis & Clark exploration. Gallatin's accomplishments and contributions are highlighted at Friendship Hill, his restored country estate.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/juba">Gettysburg</a></h4>
+                        <h5>Gettysburg, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/52B4A96F-1DD8-B71C-0ECD954BDB64A0E3.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>The Battle of Gettysburg was a turning point in the Civil War, the Union victory that ended General Robert E. Lee's second and most ambitious invasion of the North. Often referred to as the "High Water Mark of the Rebellion", Gettysburg was the Civil War's bloodiest battle and was also the inspiration for President Abraham Lincoln's immortal "Gettysburg Address".</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/lavo">Gloria Dei Church</a></h4>
+                        <h5>Philadelphia, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/1E55ABD2-155D-451F-67DA5E58F0CAEC58.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Before Pennsylvania there was New Sweden. Discover this last historic link to a forgotten past. Visit the church's pastoral surroundings and its burial ground of patriots and ordinary citizens alike.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/labe">Hopewell Furnace</a></h4>
+                        <h5>Elverson, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/B156B52A-1DD8-B71C-0E9A769FEA03FD7F.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Hopewell Furnace showcases an early American landscape of industrial operations from 1771-1883, Hopewell and other "iron plantations" laid the foundation for the transformation of the United States into an industrial giant for the time. The park's 848 acres and historic structures illustrate the business, technology and lifestyle of our growing nation.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/manz">Independence National historical park</a></h4>
+                        <h5>Philadelphia, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/571148A8-1DD8-B71C-0E58F60AB82B8A62.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>The park represents the founding ideals of the nation, and preserves national and international symbols of freedom and democracy, including Independence Hall and the Liberty Bell. The Declaration of Independence and U.S. Constitution were both debated and signed inside Independence Hall, a UNESCO World Heritage Site.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/moja">Johnstown Flood National Memorial</a></h4>
+                        <h5>South Fork, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/B55359A5-1DD8-B71C-0ED9504B2CD04BB9.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>The South Fork dam failed on Friday, May 31, 1889 and unleashed 20,000,000 tons of water that devastated Johnstown, PA. The flood killed 2,209 people but it brought the nation and the world together to aid the "Johnstown sufferers." The story of the Johnstown Flood reminds us all, "...that we must leave nothing undone for the preservation and protection of our brother men."</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/muwo">Lewis & Clark National historical trail</a></h4>
+                        <h5> IA,ID,IL,IN,KS,KY, MO,MT,NE,ND,OH, OR,PA,SD,WA,WV</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/1F2C5E30-1DD8-B71C-0ED8FE190406A09F.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>The Lewis and Clark National Historic Trail is approximately 4,900 miles long, extending from Pittsburgh, Pennsylvania, to the mouth of the Columbia River, near present day Astoria, Oregon. It follows the historic outbound and inbound routes of the Lewis and Clark Expedition as well as the preparatory section from Pittsburgh, Pennsylvania to Wood River, Illinois.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/pinn">Lower Delaware National wild and scenic river</a></h4>
+                        <h5>PA, NJ</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/835E8AB5-1DD8-B71C-0EA793283A547E5A.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Come to the North Country. Trek the hills and valleys. Stand on the shores of lakes & streams from glaciers 10,000 years before. Clear-flowing water, red/gold of autumn, a fairyland of snow, open prairies, and distant horizons paint the land. Historic sites along the way tell how America settled and grew as a nation. From North Dakota to New York (and soon Vermont), adventure is never far away.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/pore">Oil Region National heritage area</a></h4>
+                        <h5>Oil City, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/E440D2E2-1DD8-B71C-0E5FBE21786F7C21.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Oil Region National Heritage Area in northwestern Pennsylvania tells of the world’s first successful commercial oil well and a legacy of petroleum that continues to shape industry, society, and politics. The Oil Region includes oil artifacts, scenic communities, farmlands and woodlands, and industrial landscapes, and offers visitors heritage attractions and four seasons of outdoor recreation.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/poch">Potomac Heritage National scenic trail</a></h4>
+                        <h5>the corridor between the Chesapeake Bay and the Allegheny Highlands, DC,MD,PA,VA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/4D46B1F0-1DD8-B71C-0EE4BFA3870B5B2C.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Over thousands of years, the Potomac River wound its way through layers of rock. Carving limestone cliffs, roaring falls, and serene winding bends, these waters created a landscape and shaped a nation. Today, the Potomac River corridor is rich in both history and recreation. Offering a chance to both explore your heritage and choose your adventure along the way. Start your journey below!</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/prsf">Rivers Of Steel</a></h4>
+                        <h5>Homestead, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/8C13BA6B-1DD8-B71C-0E2217A409785AE3.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Situated in southwestern Pennsylvania, the Rivers of Steel National Heritage Area reveals how one region, in a sustained and thunderous blast of innovation, ambition and fire, forever changed America and its place in the world. It is the story of the industrialists and the workers who pushed an infant industry to it ultimate limits and in doing so pushed the world into the Age of Steel.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/redw">Schuylkill River Valley</a></h4>
+                        <h5>Pottstown, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/5B223F7A-1DD8-B71C-0E8793D98EAE08F1.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>The Schuylkill River Valley National Heritage Area, also known as the Schuylkill River Greenways National Heritage Area, is the birthplace of movements that shaped the nation, fueled its growth, and reclaimed its future. It was along the banks of this river and its tributaries that the American, Industrial, and Environmental Revolutions were born.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/rori">Steamtown</a></h4>
+                        <h5>Scranton, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/E2CD2D06-1DD8-B71C-0EA28CDF3AF6C625.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>You'd feel heat from the firebox, smell hot steam and oil; you'd hear the whistle, feel the ground vibrate, and watch as one-ton drive rods turned steel wheels. Remember the sound of "chuff-chuff" from the smokestack? Today, you can learn the history of steam railroad transportation, and the people who built, repaired and rode, as we work to preserve a special era in America's industrial history!.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/safr">Thaddeus Kosciuszko National Memorial</a></h4>
+                        <h5>Philadelphia, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/5766D8B0-1DD8-B71C-0E9890157A54BB89.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Visit the house where wounded Polish freedom fighter Thaddeus Kosciuszko lived and hear how this brilliant military engineer designed successful fortifications during the American Revolution. See the room where he received notable visitors such as Chief Little Turtle and Thomas Jefferson.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/samo">Upper Delaware Scenic & Recreational river</a></h4>
+                        <h5>Pike and Wayne (PA) and Delaware, Orange and Sullivan (NY) counties along the Delaware River, NY,PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/81654F1D-1DD8-B71C-0E90D51EF29E1CBA.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Canoe through rapids and quiet pools as the Delaware River winds its way through a valley of swiftly changing scenery or fish amid rolling hills and riverfront villages in one of the finest fishing rivers in the northeastern United States. The clean water of the Delaware, the last major undammed river in the eastern United States, supports a healthy ecosystem and offers tranquility and excitement.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/seki">Valley Forge</a></h4>
+                        <h5>Valley Forge, PA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/3EFFC285-155D-451F-67D8B1761C3F48B6.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Valley Forge was the site of the 1777-78 winter encampment of the Continental Army. The 3,500-acres of monuments, meadows, and woodlands commemorate the sacrifices and perseverance of the Revolutionary War generation. The park honors and celebrates the ability of citizens to pull together and overcome adversity during extraordinary times.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/tule">Washington-Rochambeau Revolutionary Route</a></h4>
+                        <h5>MA,RI,CT,NY,NJ, PA,DE,MD,VA,DC</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/DBB87F90-155D-451F-6726CA2D6A3E1BDA.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>In 1781, General Rochambeau’s French Army joined forces with General Washington’s Continental Army to fight the British Army in Yorktown, Virginia. With the French Navy in support, the allied armies moved hundreds of miles to become the largest troop movement of the American Revolution. The effort and cooperation between the two sides led to a victory at Yorktown and secured American independence.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<footer>
+	<h5>
+		cs 320 final project. amanda souriyamath, laura messick, trey fontaine. Fall 2020
+	</h5>
+</footer>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head>
+	 <title>InMap</title>
+	 <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+	<nav> 
+		<ul> 
+			<li><a href="map">home</a></li>
+			<li><a href="journal">journal</a></li>
+			<li><a href="contact">report a bug</a></li>
+			<li><a href="/">sign out</a></li>
+		</ul>
+	</nav>
+	</header>
+
+    <div class="flexbox-container main">
+        <div id="statediv" style="width: 20%; height: 600px;">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=19OtAN3DhLrL1phbnzFWMAJx-IPQQpduV" width="400" height="590"></iframe>
+        </div>
+
+        
+            
+        <div id="poi" style="width: 70%; height: 600px; overflow: auto;">
+            <h2 style="position:sticky;font-weight: bold;">WA National Parks</h2>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/ebla">Ebey's Landing</a></h4>
+                        <h5>Coupeville, WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/B81D7430-1DD8-B71C-0ED7826B4048F91F.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>This stunning landscape at the gateway to Puget Sound, with its rich farmland and promising seaport, lured the earliest American pioneers north of the Columbia River to Ebey’s Landing. Today Ebey’s Landing National Historical Reserve preserves the historical, agricultural and cultural traditions of both Native and Euro-American – while offering spectacular opportunities for recreation.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/fova">Fort Vancouver</a></h4>
+                        <h5>Vancouver, OR,WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/856CA6F1-1DD8-B71C-0EC7E4D8BD9CAB59.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Located on the north bank of the Columbia River, in sight of snowy mountain peaks and a vibrant urban landscape, this park has a rich cultural past. From a frontier fur trading post, to a powerful military legacy, the magic of flight, and the origin of the American Pacific Northwest, history is shared at four unique sites. Discover stories of transition, settlement, conflict, and community.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/iafl">Ice Age Floods</a></h4>
+                        <h5>Various States WA,OR,ID,MT</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                       <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/8A78460C-155D-4519-3E65A2522D025AAF.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>At the end of the last Ice Age, some 12,000 to 17,000 years ago, a series of cataclysmic floods occurred in what is now the northwest region of the United States, leaving a lasting mark of dramatic and distinguishing features on the landscape of parts of the States of Montana, Idaho, Washington and Oregon.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/joda">Klondike Gold Rush - Seattle Unit</a></h4>
+                        <h5>Seattle, WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/5DD4D30B-155D-4519-3EE6D7F05C209D52.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+					<p>Seattle flourished during and after the Klondike Gold Rush. Merchants supplied people from around the world passing through this port city on their way to a remarkable adventure in Alaska. Today, the park is your gateway to learn about the Klondike Gold Rush, explore the area's public lands, and engage with the local community."</p>
+                </div>
+            </div>
+			<div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/laro">Lake Roosevelt</a></h4>
+                        <h5>the Canadian border going to Coulee Dam along the Columbia River, WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/8AD086EF-1DD8-B71C-0E04BFEC1629E0C6.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+					<p>In 1941 the Grand Coulee Dam was built on the Columbia River as part of the Columbia River Basin project, creating a 130-mile long lake. Named for President Franklin D. Roosevelt, Lake Roosevelt National Recreation Area provides opportunities for boating, fishing, swimming, camping, canoeing, hunting and visiting historic Fort Spokane and St. Paul's Mission.</p>
+                </div>
+			</div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/lecl">Lewis & Clark Trail</a></h4>
+                        <h5>Various States</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/1F2C5E30-1DD8-B71C-0ED8FE190406A09F.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>The Lewis and Clark National Historic Trail is approximately 4,900 miles long, extending from Pittsburgh, Pennsylvania, to the mouth of the Columbia River, near present day Astoria, Oregon.  It follows the historic outbound and inbound routes of the Lewis and Clark Expedition as well as the preparatory section from Pittsburgh, Pennsylvania to Wood River, Illinois.</p>
+                </div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/lewi">Lewis and Clark (Park)</a></h4>
+                        <h5>Long Beach to Cannon Beach, OR,WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/AB83D22C-155D-4519-3EF0C18B5B364870.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Explore the timeless rainforests and majestic coastal vistas. Discover the rich heritage of the native people. Unfold the dramatic stories of America's most famous explorers. The park encompasses sites along the Columbia River and the Pacific Coast. Follow in the footsteps of the explorers and have an adventure in history.</p>
+                </div>
+            </div>
+			<div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/mapr">Manhattan Project National Park</a></h4>
+                        <h5>NM,WA,TN</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/A2FCC151-1DD8-B71C-07047AD6C96567F5.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+					<p>This site tells the story about the people, events, science, and engineering that led to the creation of the atomic bomb, which helped end World War II.</p>
+				</div>
+			</div>
+			<div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/miin">Minidoka</a></h4>
+                        <h5>Jerome, ID,WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+						<img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/2734B81C-1DD8-B71C-0E1C80E6C6EB149A.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+					<p>The Pearl Harbor attack intensified existing hostility towards Japanese Americans. As wartime hysteria mounted, President Roosevelt signed Executive Order 9066 forcing over 120,000 West Coast persons of Japanese ancestry (Nikkei) to leave their homes, jobs, and lives behind, forcing them into one of ten prison camps spread across the nation because of their ethnicity.</p>
+				</div>
+			</div>
+			<div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/mora">Mount Rainier</a></h4>
+                        <h5>Ashford, Enumclaw, Packwood, Wilkeson, WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+						<img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/E8D4A338-1DD8-B71C-0E7D0FCE8557BB41.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+					<p>Ascending to 14,410 feet above sea level, Mount Rainier stands as an icon in the Washington landscape. An active volcano, Mount Rainier is the most glaciated peak in the contiguous U.S.A., spawning five major rivers. Subalpine wildflower meadows ring the icy volcano while ancient forest cloaks Mount Rainier’s lower slopes. Wildlife abounds in the park’s ecosystems. A lifetime of discovery awaits.</p>
+				</div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/nepe">Nez Perce</a></h4>
+                        <h5>ID,MT,OR,WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src="//www.nps.gov/customcf/apps/CMS_HandF/ParkSearchPics/E440D2E2-1DD8-B71C-0E5FBE21786F7C21.jpg"></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Since time immemorial, the valleys, prairies, mountains, and plateaus of the inland northwest have been home to the Nimiipuu (Nez Perce) people. Extremely resilient, they survived the settling of the United States and adapted to a changed world. Nez Perce National Historical Park consists of 38 places important to the history and culture of the Nimiipuu. Explore these places. Learn their stories.</p>
+				</div>
+			</div>
+			<div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/noca">North Cascades</a></h4>
+                        <h5>Marblemount, WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/2C5DAAAF-1DD8-B71C-0ED1D7722A073EF1.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+					<p>Less than three hours from Seattle, an alpine landscape beckons. Discover communities of life adapted to moisture in the west and recurring fire in the east. Explore jagged peaks crowned by more than 300 glaciers. Listen to cascading waters in forested valleys. Witness a landscape sensitive to the Earth's changing climate. Help steward the ecological heart of the Cascades.</p>
+				</div>
+			</div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/olym">Olympic National Park</a></h4>
+                        <h5>Port Angeles, WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/00632978-D789-6335-3EAAC4036638FDD2.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+					<p>With its incredible range of precipitation and elevation, diversity is the hallmark of Olympic National Park. Encompassing nearly a million acres, the park protects a vast wilderness, thousands of years of human history, and several distinctly different ecosystems, including glacier-capped mountains, old-growth temperate rain forests, and over 70 miles of wild coastline. Come explore!</p>
+				</div>
+			</div>
+			<div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/oreg">Oregon Trail</a></h4>
+                        <h5>Various States</h5>
+                    </div>
+                    <div class="flexbox-container image">
+                        <img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/EB083792-1DD8-B71C-0E64970BDECAFE24.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+                    <p>Imagine yourself an emigrant headed for Oregon: would promises of lush farmlands and a new beginning lure you to leave home and walk for weeks? More than 2,000 miles of trail ruts and traces can still be seen along the Oregon National Historic Trail in six states and serve as reminders of the sacrifices, struggles, and triumphs of early American settlers.</p>
+				</div>
+            </div>
+            <div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/sajh">San Juan Island</a></h4>
+                        <h5>Friday Harbor, WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+						<img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/810F2DDD-D6BE-87A3-4AAC657B1DD39815.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+					<p>San Juan Island is well known for splendid vistas, saltwater shore, quiet woodlands, orca whales and one of the last remaining native prairies in the Puget Sound/Northern Straits region. But it was also here in 1859 that the United States and Great Britain nearly went to war over possession of the island, the crisis ignited by the death of a pig.</p>
+                </div>
+			</div>
+			<div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/whmi">Whitman Mission</a></h4>
+                        <h5>Walla Walla, WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+						<img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/E7C919E7-FD40-8D9A-E93062FAAD7F4939.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+					<p>The 1847 attack on the Whitmans horrified Americans and impacted the lives of the peoples of the Columbia Plateau for decades afterwards. Was killing the Whitmans justified legal retribution, an act of revenge, or some combination of both? The circumstances that surround this tragic event resonate with modern issues of cultural interaction and differing perspectives."</p>
+                </div>
+            </div>
+			<div class="flexbox-container nationalPark">
+                <div class="flexbox-container nameAndImg">
+                    <div class="flexbox-container nameAndLoc">
+                        <h4 style="font-weight: bold;"><a href="https://www.nps.gov/wing">Wing Luke Museum</a></h4>
+                        <h5>Seattle, WA</h5>
+                    </div>
+                    <div class="flexbox-container image">
+						<img src=https://www.nps.gov//customcf/apps/CMS_HandF/ParkSearchPics/3E315861-F1AA-A1ED-F5FAC5873F487710.jpg></img>
+                    </div>
+                </div>
+                <div class="flexbox-container description">
+					<p>More than a museum, the Wing is an experience. A chance to truly understand what it was - and is - to be Asian American in the Pacific Northwest. Take a guided tour of a historic hotel and learn the inside story about what makes the local Chinatown-International District unique. Visitors explore thought-provoking exhibitions of real stories, including actor and martial arts master Bruce Lee.</p>
+                </div>
+            </div>
+		</div>
+    </div>
+</div>
+<br>
+<footer>
+	<h5>
+		cs 320 final project. amanda souriyamath, laura messick, trey fontaine. Fall 2020
+	</h5>
+</footer>
+</body>
+</html>
