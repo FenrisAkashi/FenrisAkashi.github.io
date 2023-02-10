@@ -1,0 +1,647 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, 
+	abbr, acronym, address, big, cite, code,del, dfn, em, ins, kbd, q, s, samp,small, strike, 
+	strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, 
+	caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, 
+	footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	
+		/*Removed table and img from this list ^*/
+	margin: 0;	
+	padding: 0;	
+	border: 0;	
+	font-size: 100%;	
+	font: inherit;	
+	vertical-align: baseline;}
+
+	/* img {
+		max-width: 100%;
+	} */
+
+	/*starting edit 19*/
+.wip {
+	align-content: center;
+	align-items: center;
+	margin: auto;
+	//padding: 2em 3em;
+	//background: blue;
+	//cursor: pointer;
+	//border: 2px solid red;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	//margin-top: auto;
+
+
+}
+
+.wip-image {
+	//margin-top: auto;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+h3 {
+	//border: 2px solid black;
+}
+
+/*ending edit*/
+
+	th {
+		text-align: left;
+	}
+
+	table, th, td {
+		border: 1px solid #000;
+		/*border-collapse: collapse;*/
+	}
+
+	td.img {
+		/*vertical-align: middle;*/
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* table {	
+		border-collapse: collapse;	border-spacing: 0;
+		}	 */
+	/*Adding for table*/
+
+	/*Adding flexbox container*/
+	.main {
+		/*border: 2px solid brown;*/
+		display: flex;
+		justify-content: center;
+		justify-content: space-between;
+
+		width: 95%;
+		/*	border:2px solid lightgray;*/
+		max-width: 2000px;
+		margin: 10px auto;
+		background-color:white;
+		padding-top: 5px;
+		padding-bottom: 10px;
+	}
+
+	.nationalPark {
+		border: 1px solid black;
+		justify-content: flex-end; 
+    	align-items: center;
+    	display: flex;
+    	flex-direction: row;
+	}
+
+	.nameAndImg {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-left: 1%;
+	}
+
+	.image {
+		display: flex;
+		justify-content: center;
+		padding-top: 15%;
+		padding-bottom: 5%;
+	}
+	
+	/*Amanda's*/
+	#titleoutput {
+		font-size:1px;
+		color:white;
+	}
+	  
+	#paragraph {
+		font-size:1px;
+		color:white;
+	}
+	  
+	#alignsubmit {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+	}
+
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	
+	display: block;}
+	
+	body {	
+		line-height: 1.5;
+	}
+
+	nav {
+	background-color: "#535364";
+	}
+	
+	ol, ul {	
+	list-style: none;
+	}
+	
+	blockquote, q {	
+	quotes: none;
+	}
+	
+	blockquote:before, blockquote:after,q:before, q:after {	
+	content: '';	
+	content: none;
+	} 
+	
+	/* end reset*/
+
+/*navigation bar here */
+
+/* nav bar */
+
+header {
+    position: fixed;
+    width: 100%;
+	z-index: 1;
+
+    top: 0;
+   	font-family: 'Roboto Condensed', sans-serif;
+   	background-color: white;
+   	font-size: 30px;
+}
+
+
+nav {
+	background-color: #f5f5f5;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:link, a:visited { 
+    color: black;
+    text-decoration: none; 
+}
+    
+a:hover, a:focus { 
+    color: blue;
+}
+
+/* end nav bar */ 
+
+body {
+	width:100%;
+	height:auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position:center;
+	background-color: white;
+}
+
+
+
+
+
+
+/* .logoimg {
+/*  width: 10px;
+  height: 10px;
+  margin: 0 auto;
+  animation-name:img-ani;
+  animation-duration: 4s;   
+  animation-timing-function: ease-in;
+}       */
+
+/* .by {
+  animation-name:img-ani;
+  animation-duration: 3.5s;   
+  animation-timing-function: ease-in;
+} */
+
+/* .lateimg {
+  animation-name:late-img-ani;
+  animation-duration: 3s;   
+  animation-timing-function: ease-in;
+}        */
+
+/* @keyframes img-ani {
+  from{opacity:0;}
+  to{opacity: 1;}
+}
+
+@keyframes late-img-ani {
+  from{opacity:0;}
+  to{opacity: 1;}
+} */
+
+#fbads {
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 0 8% 0 8%;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap:4%;
+}
+
+#wrapper {
+	padding-top: 30px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 45px;
+}
+
+#description p {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#container {
+	width: 90%;
+	//border: 2px solid red;
+	max-width: 1000px;
+	margin: auto;
+	background-color: #b1fbfc;
+}
+
+
+#colgrid {
+	display: grid;
+	text-align: left;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+    grid-gap:10px;
+}
+
+h1 { 
+	color: black;
+	letter-spacing: 2px;
+	text-align: center;
+	font-size: 80px;
+	font-family: 'Playfair Display', serif;
+	padding: 1%;
+}
+
+h2 {
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	padding-bottom: 0.5%;
+	text-align: center;
+}
+
+h3 { 
+	font-size: 35px;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-style: bold;
+}
+
+h4 { 
+	font-size: 25px;
+	text-align: center;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+h5 { 	
+	color:black;
+   	text-align: center;
+	font-size: 22px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+p { 
+	color:black;
+	text-align: left;
+	font-size: 24px;
+	margin: 4%;
+	font-family: 'Open Sans Condensed', sans-serif;
+} 
+
+/*
+footer { 
+	background-color: #f7f7f7; 
+}
+*/
+/* about page css here */ 
+
+#description {
+	text-align: left;
+	color: black;
+	font-size: 1.4em;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+/* #description > #container img {
+	max-width:1100px; 
+	margin-left: auto; 
+	margin-right:auto;
+} */
+
+#container {
+	//padding:10px;
+}
+
+#griddesign { 
+	display: grid;
+	text-align: left;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+}
+
+/* for interface pics */
+#interface {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:70%;
+}
+
+/* for interface grid*/
+#grid {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 30px;
+}
+
+/* #griddesign img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;	
+} */
+
+/* #griddesign a:hover img {
+	opacity: 0.5;
+} */
+
+
+#grid-container {
+	text-align: center;
+	display: block;  	
+/*	border-radius: 4px;
+	border: 2px solid #080C26;*/
+	width: 100%;
+	background-color:white;
+    color:black;
+    height:auto; 
+    position:relative; 
+}
+
+#center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 23%;
+}
+
+
+#grid-container > div {
+    text-align: center;
+    padding: 3%;
+    font-size: 30px;
+}
+
+/* #grid-container > div > img {
+	text-align: center;
+	display: block;
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
+}  */
+
+
+#meet {
+	padding:0 20% 0 20%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+/*  margin-top: 6px; *//* Add a top margin */
+/*  margin-bottom: 16px; *//* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: gray;
+}
+
+/* Add a background color and some padding around the form */
+.formcontainer {
+  border-radius: 5px;
+  background-color: #f7f7f7; /* same as nav bar for now */
+  padding: 20px;
+}
+
+
+/* begin tablet styles */
+@media only screen and (min-width: 200px) and (max-width: 1000px) {
+
+nav {
+	padding-left: 6%;
+	padding-right: 8%;
+}
+
+
+ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap:13px;
+}
+
+#fbads {
+	margin: 0 auto;
+	max-width: 800px;
+	display:grid;
+	grid-template-columns: 1fr;
+}
+
+#center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 60%;
+}
+
+#meet {
+	padding:0;
+}
+#grid-container {
+	padding:10px;
+	color: black;
+	font-size:30px;
+	width:100%;
+}
+
+#griddesign { 
+	display: grid;
+	text-align: left;
+	grid-template-columns: 1fr;
+	grid-column-gap: 20px;
+	grid-gap:20px;
+	padding: 6%; 
+}
+
+#colgrid {
+	display: grid;
+	text-align: center;
+	grid-template-columns: 1fr 1fr;
+    grid-gap:20px;
+    grid-column-gap: 25px;
+    width:100%;
+}
+
+
+
+/*end tablet styles*/
+
+/* begin desktop styles */
+@media only screen and (min-width: 1001px){
+
+
+#grid-container {
+    grid-gap:0.5%;
+    color: black;
+    width:100%;
+}
+
+#griddesign { 
+	display: grid;
+	text-align: left;
+	grid-template-columns: 1fr;
+	grid-column-gap: 20%;
+	grid-gap:.50em;
+	padding: 6%; 
+}
+
+#colgrid {
+	display: grid;
+	text-align: left;
+	grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:20px;
+    grid-column-gap: 25px;
+    width: 100%;
+}
+
+/*--------------------------------------------------------------------*/
+ 
+/*----------------------LOGIN PAGE-------------------*/
+    /* Bordered form */
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Add padding to containers */
+.container {
+  //padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+/*--------------------------------------------------------------------*/
+ 
+/*---------------------- TITLE -------------------*/
+
+#title{
+  position: relative;
+}
+.js-nametag{
+  position: absolute;  
+}
+.js-nametag:nth-child(1){
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;  
+}
+
+
+.js-nametag:nth-child(2){
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+}
+
+@keyframes fade{
+    0%,50% {
+      opacity: 0;
+	}
+    100%{
+      opacity: 1;
+  	}
+}
+
