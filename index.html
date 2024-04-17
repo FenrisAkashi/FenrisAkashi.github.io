@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forbis</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo"> </div>
+      <div class="nav-items">
+        <a href="home">Home</a> <a href="about">About</a> <a href="services">Services</a> <a href="showroom">Gallery</a> <a href="reviews">Reviews</a> <a href="contact">Contact</a>
+      </div>
+    </nav>
+    <div class="img-bar">
+          <img
+            src="./images/main_car2.png"
+            alt="illustration"
+            class="main-image"
+          />
+    </div>
+    
+    <div class="hero-container">
+	  <div class="column-center">
+        <h1>Forbis Auto Detail</h1>
+        <p>
+          Auto / Marine / RV Detailing Service
+        </p>
+        <button class="quote-btn">Get Quote</button>
+	  </div>
+    </div>
+   
+
+    <!--Modal-->
+
+    <div class="modal" id="email-modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-content-left">
+          <img id="modal-img" src="./images/logo3.jfif" alt="illustration">
+        </div>
+        <div class="modal-content-right">
+          <form action="https://formsubmit.co/d86e729efed0bf8ca45049386b502840" method="POST" class="modal-form">
+            <h1>Get Quote</h1>
+            <br>
+            <div class="form-validation">
+              <input type="text" class="modal-input" id="name" name="name" placeholder="Name" required>
+            </div>
+            <br>
+            <div class="form-validation">
+              <input type="phoneNumber" class="modal-input" id="phoneNumber" name="phoneNumber" placeholder="Phone number (optional)">
+            </div>
+            <br>
+            <div class="form-validation">
+              <input type="email" class="modal-input" id="email" name="email" placeholder="Email" required>
+            </div>
+            <br>
+            <div class="form-validation">
+              <textarea name="message" class="modal-input" id="message" rows="5" cols="20" placeholder="How can we help you?" required></textarea>
+            </div>
+            <br>
+            <input type="submit" class="modal-input-btn" value="Send Message">
+            <input type="hidden" name="_subject" value="new message!">
+            <input type="hidden" name="_next" value="https://forbisautodetail.com/thankyou">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //modal items
+      const modal = document.getElementById('email-modal');
+      const openBtn = document.querySelector('.quote-btn');
+      const closeBtn = document.querySelector('.close-btn');
+
+      //Click events
+      openBtn.addEventListener('click', () => {
+	    modal.style.display = 'block';
+      });
+
+      closeBtn.addEventListener('click', () => {
+	    modal.style.display = 'none';
+      });
+
+      window.addEventListener('click', (e) => {
+	    if(e.target === modal) {
+		  modal.style.display = 'none';
+	    }
+      });
+      
+      
+    </script>
+
+  </body>
+</html>
