@@ -19,13 +19,24 @@ header {
     z-index: -1;
 }
 
-.background,
+/*.background,
 .foreground {
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
     z-index: -1;
+}*/
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.foreground {
+    position: absolute;
+    width: 100%;
 }
 
 .title {
