@@ -35,8 +35,8 @@ header {
     z-index: -1;
 }
 .foreground {
-    position: absolute;
-    max-width: 100%;
+    position: bottom;
+    width: 100%;
     height: auto;
     z-index: -1;
 }
