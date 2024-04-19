@@ -35,7 +35,6 @@ header {
     z-index: -1;
 }
 .foreground {
-    position: absolute;
     width: 100%;
 }
 
