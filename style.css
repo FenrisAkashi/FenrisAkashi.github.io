@@ -36,7 +36,8 @@ header {
 }
 .foreground {
     width: 100%;
-    object-position: 0 50;
+    height: 50%;
+    object-position: 0 0;
 }
 
 .title {
