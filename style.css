@@ -28,7 +28,7 @@ header {
 }
 
 .foreground {
-    transform: translateZ(-2px) scale(1.1);
+    transform: translateZ(-2px) scale(1.2);
 }
 
 .background,
@@ -42,7 +42,7 @@ header {
 }
 
 .tree {
-    position: relative;
+    position: absolute;
     transform: translateZ(-10px) scale(2);
 }
 
