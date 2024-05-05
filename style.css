@@ -43,7 +43,7 @@ header {
 
 .tree {
     position: relative;
-    top: -50px;
+    
     transform: translateZ(-10px) scale(2);
 }
 
