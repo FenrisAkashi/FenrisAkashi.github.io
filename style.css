@@ -20,7 +20,11 @@ header {
 }
 
 .background {
-    transform: translateZ(-10px) scale(1.9);
+    transform: translateZ(-10px) scale(2);
+}
+
+.mid {
+    transform: translateZ(-5px) scale(1.5);
 }
 
 .foreground {
@@ -28,12 +32,17 @@ header {
 }
 
 .background,
-.foreground {
+.foreground,
+.mid {
     position: absolute;
     height: 100%;
     width: 100%;
     /*object-fit: cover;*/
     z-index: -1;
+}
+
+.tree {
+    position: center;
 }
 
 .title {
