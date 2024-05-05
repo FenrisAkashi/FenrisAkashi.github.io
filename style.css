@@ -42,7 +42,8 @@ header {
 }
 
 .tree {
-    position: center;
+    position: relative;
+    transform: translateZ(-10px) scale(2);
 }
 
 .title {
