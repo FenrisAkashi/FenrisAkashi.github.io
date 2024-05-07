@@ -23,6 +23,10 @@ header {
     transform: translateZ(-10px) scale(2);
 }
 
+.mid2 {
+    transform: translateZ(-7px) scale(1.7);
+}
+
 .mid {
     transform: translateZ(-5px) scale(1.5);
 }
@@ -33,7 +37,8 @@ header {
 
 .background,
 .foreground,
-.mid {
+.mid,
+.mid2 {
     position: absolute;
     height: 100%;
     width: 100%;
