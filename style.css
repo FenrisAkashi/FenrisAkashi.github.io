@@ -1,5 +1,11 @@
-.fullscreen {
+/*.fullscreen {
   width: 100vw;
   height: 100vh;
   background: black;
+}*/
+
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  background: purple;
 }
