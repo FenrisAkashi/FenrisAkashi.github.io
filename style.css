@@ -1,11 +1,24 @@
-/*.fullscreen {
-  width: 100vw;
-  height: 100vh;
+html, body {
+  margin: 0;
+  padding: 0;
   background: black;
-}*/
+  height: 100%;
+}
 
 .fullscreen {
-  width: 100vw;
-  height: 100vh;
-  background: purple;
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
+
+/*.fullscreen {
+  width: 100%;
+  height: 100%;
+  background: purple;
+  position: fixed;
+  top: 0;
+  left: 0;
+}*/
