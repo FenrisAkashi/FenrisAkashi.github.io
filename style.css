@@ -1,4 +1,4 @@
-html, body {
+html {
   margin: 0;
   padding: 0;
   background: black;
@@ -14,11 +14,25 @@ html, body {
   left: 0;
 }
 
-/*.fullscreen {
-  width: 100%;
-  height: 100%;
+body {
+  margin: 0;
+  padding: 0;
+  /*background: black;*/
   background: purple;
-  position: fixed;
-  top: 0;
-  left: 0;
-}*/
+  height: 100%;
+
+    /* Set the image path */
+  background-image: 'imgs/Stickerized-logo.png';
+
+  /* Center the image horizontally and vertically */
+  background-position: center;
+
+  /* Prevent the image from repeating */
+  background-repeat: no-repeat;
+
+  /* Keep image fixed when scrolling */
+  background-attachment: fixed;
+
+  /* Scale image to cover screen while maintaining aspect ratio */
+  background-size: cover;
+}
