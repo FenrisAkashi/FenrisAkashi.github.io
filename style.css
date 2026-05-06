@@ -19,26 +19,26 @@ html, body {
   font-family: 'MyFont', sans-serif;
 
 
-  
-    /* Set the image path */
+  /*
+    /* Set the image path 
   background-image: url('imgs/Stickerized-logo.png');
 
-  /* Center the image horizontally and vertically */
+  /* Center the image horizontally and vertically 
   background-position: center;
 
-  /* Prevent the image from repeating */
+  /* Prevent the image from repeating 
   background-repeat: no-repeat;
 
-  /* Keep image fixed when scrolling */
+  /* Keep image fixed when scrolling 
   background-attachment: fixed;
 
   /* Scale image to cover screen while maintaining aspect ratio 
-  background-size: cover;*/
-  
+  background-size: cover;
+  */
 }
 
 .navbar {
-  height: 10vh;   /*1/10 of the viewport*/
+  height: 8vh;   /*1/10 of the viewport, lessened from 10vh*/
   width: 100%;
   background: black;
   border-bottom: 2px solid darkgoldenrod;
