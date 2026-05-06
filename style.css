@@ -6,12 +6,28 @@
   font-style: normal;
 }
 
+@media (max-width: 480px) {
+  .center-image {
+    height: 30vh;
+    min-height: 120px;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .navbar {
+    gap: 1rem;
+  }
+}
+
 html, body {
   margin: 0;
   padding: 0;
   /*background: purple;*/
   background: black;
   height: 100%;
+  min-width: 320px;   /* smallest safe mobile width */
   display: flex;
   /*justify-content: center;*/
   flex-direction: column;   /* stack navbar on top */
@@ -39,6 +55,7 @@ html, body {
 
 .navbar {
   height: 8vh;   /*1/10 of the viewport, lessened from 10vh*/
+  min-height: 60px;
   width: 100%;
   background: black;
   border-bottom: 2px solid darkgoldenrod;
@@ -53,7 +70,8 @@ html, body {
 .nav-link {
   color: darkgoldenrod;
   font-family: 'MyFont', sans-serif;
-  font-size: 1.2rem;
+  /*font-size: 1.2rem;*/
+  font-size: clamp(0.9rem, 2vw, 11.2rem);
   text-decoration: none;
 }
 
@@ -72,11 +90,13 @@ html, body {
 .center-image {
   height: 40vh;   /*33=1/3 of viewport height, dropping it a little lower*/
   width: auto;    /*keep aspect ratio*/
+  min-height: 150px;    /* prevents it from shrinking too far */
 }
 
 .tagline {
   color: darkgoldenrod;
-  font-size: 2rem;
+  /*font-size: 2rem;*/
+  font-size: clamp(1rem, 2vw, 2rem);
   margin-top: 1rem;
   text-align: center;
 }
