@@ -1,30 +1,34 @@
-html {
+
+html, body {
   margin: 0;
   padding: 0;
   /*background: purple;*/
   background: black;
   height: 100%;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-body {
-  margin: 0;
-  padding: 0;
-  /*background: purple;*/
-  background: black;
-  height: 100%;
 
-    /* Set the image path */
+  /*
+    /* Set the image path 
   background-image: url('imgs/Stickerized-logo.png');
 
-  /* Center the image horizontally and vertically */
+  /* Center the image horizontally and vertically 
   background-position: center;
 
-  /* Prevent the image from repeating */
+  /* Prevent the image from repeating 
   background-repeat: no-repeat;
 
-  /* Keep image fixed when scrolling */
+  /* Keep image fixed when scrolling 
   background-attachment: fixed;
 
-  /* Scale image to cover screen while maintaining aspect ratio */
+  /* Scale image to cover screen while maintaining aspect ratio 
   background-size: cover;
+  */
+}
+
+.center-image {
+  height: 33vh;   /*1/3 of viewport height*/
+  width: auto;    /*keep aspect ratio*/
 }
