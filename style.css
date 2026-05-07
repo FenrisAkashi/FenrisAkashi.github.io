@@ -1,7 +1,7 @@
 
 :root {
-  /*--circle-size: clamp(140px, 18vw, 240px);*/
-  --circle-size: 16vh;    /* diameter = 2 * navbar height */
+  --circle-size: clamp(140px, 16vh, 260px);
+  /*--circle-size: 16vh;    /* diameter = 2 * navbar height */
   --gold: darkgoldenrod;
 }
 
@@ -30,8 +30,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: purple;
-  /*background: black;*/
+  /*background: purple;*/
+  background: black;
   height: 100%;
   min-width: 320px;   /* smallest safe mobile width */
   display: flex;
@@ -127,8 +127,8 @@ html, body {
 /* Nav bar circle */
 .circle-mask {
   position: absolute;
-  /*left: 0;      /* stick to the left edge -- this has the whole circle */
-  left: calc(var(--circle-size) * -0.5);    /* left half of the circle should be off screen */
+  left: 0;      /* stick to the left edge -- this has the whole circle */
+  /*left: calc(var(--circle-size) * -0.5);    /* left half of the circle should be off screen */
   /*top: 50%;*/     /* verically center */
   top: 0;         /* should line up w/navbar */
   /*transform: translateY(-50%);*/
@@ -141,7 +141,7 @@ html, body {
   overflow: hidden;
 
   /* Show only the right half */
-  clip-path: inset(0 0 0 50%);
+  /*clip-path: inset(0 0 0 50%);
   /*z-index: 999;     /* make sure it's above the background */
 }
 
@@ -164,13 +164,16 @@ html, body {
   /*border: clamp(2px, 0.6vw, 4px) solid transparent;*/
   border-right-color: var(--gold);
   border-bottom-color: var(--gold);
+  border-left-color: var(--gold);
   /*box-shadow: 0 0 10px darkgoldenrod;*/
 
   /* Hide the top-right quarter of the border */
-  clip-path: polygon(
-    50% 50%,    /* center */
-    100% 50%,   /* mid-right */
-    100% 100%,  /* bottom-right */
-    50% 100%,   /* mid-bottom */
-  );
+  /*clip-path: polygon(
+    50% 50%,    /* center 
+    100% 50%,   /* mid-right 
+    100% 100%,  /* bottom-right 
+    50% 100%,   /* mid-bottom 
+  );*/
+  /* keep only the bottom half of the circle */
+  clip-path: inset(50% 0 0 0);
 }
