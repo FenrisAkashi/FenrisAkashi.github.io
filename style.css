@@ -30,8 +30,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: purple;
-  /*background: black;*/
+  /*background: purple;*/
+  background: black;
   height: 100%;
   min-width: 320px;   /* smallest safe mobile width */
   display: flex;
@@ -65,7 +65,8 @@ html, body {
   bottom: 0;
   right: 0;
 
-  width: calc(100% - var(--circle-size) / 2);
+  /*width: calc(100% - var(--circle-size) / 2);*/
+  width: calc(100% - var(--circle-size));
   height: 2px;
   background: var(--gold);
 
