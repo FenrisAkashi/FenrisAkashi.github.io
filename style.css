@@ -1,6 +1,6 @@
 
 :root {
-  --circle-size: clamp(140px, 16vh, 260px);
+  --circle-size: clamp(120px, 16vh, 240px);
   /*--circle-size: 16vh;    /* diameter = 2 * navbar height */
   --gold: darkgoldenrod;
 }
@@ -30,8 +30,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  /*background: purple;*/
-  background: black;
+  background: purple;
+  /*background: black;*/
   height: 100%;
   min-width: 320px;   /* smallest safe mobile width */
   display: flex;
@@ -52,10 +52,11 @@ html, body {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
+  align-items: flex-end;
   gap: 2rem;
   position: relative;
-  z-index: 10;    /* lower than the circle */
+  /*z-index: 10;    /* lower than the circle */
 }
 
 .navbar::after {
@@ -80,8 +81,10 @@ html, body {
   height: 100%;
   align-items: flex-end;    /* pushes underline to the bottom */
   border-bottom: 2px solid var(--gold);
-  width: calc(100% - var(--circle-size) / 2);   /* stops at circle midpoint */
-  margin-left: auto;    /* pushes it to the right */
+  /*width: calc(100% - var(--circle-size) / 2);   /* stops at circle midpoint */
+  width: calc(100% - var(--circle-size));
+  /*margin-left: auto;    /* pushes it to the right */
+  margin-left: var(--circle-size);
   display: flex;
   justify-content: center;
   gap: 2rem;
