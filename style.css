@@ -29,7 +29,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: blue;
+  background: purple;
   /*background: black;*/
   height: 100%;
   min-width: 320px;         /* smallest safe mobile width */
@@ -41,7 +41,7 @@ html, body {
 .navbar {
   height: 8vh;   /* 10vh is 1/10 of the viewport */
   /*min-height: 40px;*/
-  min-height: var(--circle-size);
+  min-height: calc(var(--circle-size) / 2);
   width: 100%;
   background: black;
   border-bottom: none;
