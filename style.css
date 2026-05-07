@@ -1,6 +1,7 @@
 
 :root {
-  --circle-size: clamp(140px, 18vw, 240px);
+  /*--circle-size: clamp(140px, 18vw, 240px);*/
+  --circle-size: 16vh;    /* diameter = 2 * navbar height */
   --gold: darkgoldenrod;
 }
 
@@ -29,8 +30,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  /*background: purple;*/
-  background: black;
+  background: purple;
+  /*background: black;*/
   height: 100%;
   min-width: 320px;   /* smallest safe mobile width */
   display: flex;
@@ -55,6 +56,24 @@ html, body {
   gap: 2rem;
   position: relative;
   z-index: 10;    /* lower than the circle */
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: calc(100% - var(--circle-size) / 2);
+  height: 2px;
+  background: var(--gold);
+
+  /* curve into the circle */
+  border-bottom-left-radius: var(--circle-size);
+  border-left: 2px solid var(--gold);
+
+  /* this creates the curved connection */
+  clip-path: inset(0 0 0 0 round var(--circle-size));
 }
 
 .nav-inner {
@@ -111,7 +130,7 @@ html, body {
   /*left: 0;      /* stick to the left edge -- this has the whole circle */
   left: calc(var(--circle-size) * -0.5);    /* left half of the circle should be off screen */
   /*top: 50%;*/     /* verically center */
-  top: 8vh;         /* should line up w/navbar */
+  top: 0;         /* should line up w/navbar */
   /*transform: translateY(-50%);*/
 
   /*width: 300px;
@@ -123,7 +142,7 @@ html, body {
 
   /* Show only the right half */
   clip-path: inset(0 0 0 50%);
-  z-index: 999;     /* make sure it's above the background */
+  /*z-index: 999;     /* make sure it's above the background */
 }
 
 /* Nav bar circle img */
@@ -139,10 +158,10 @@ html, body {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  /*border: 2px solid transparent;
-  border-right-color: darkgoldenrod;
-  border-bottom-color: darkgoldenrod;*/
-  border: clamp(2px, 0.6vw, 4px) solid transparent;
+  border: 2px solid transparent;
+  /*border-right-color: darkgoldenrod;
+  border-bottom-color: darkgoldenrod;
+  /*border: clamp(2px, 0.6vw, 4px) solid transparent;*/
   border-right-color: var(--gold);
   border-bottom-color: var(--gold);
   /*box-shadow: 0 0 10px darkgoldenrod;*/
