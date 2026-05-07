@@ -1,6 +1,6 @@
 
 :root {
-  --circle-size: clamp(180px, 28vw, 320px);
+  --circle-size: clamp(140px, 18vw, 240px);
   --gold: darkgoldenrod;
 }
 
@@ -29,8 +29,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: purple;
-  /*background: black;*/
+  /*background: purple;*/
+  background: black;
   height: 100%;
   min-width: 320px;   /* smallest safe mobile width */
   display: flex;
@@ -45,16 +45,21 @@ html, body {
   min-height: 60px;
   width: 100%;
   background: black;
-  border-bottom: 2px solid var(--gold);
-  box-shadow: 0 0 10px var(--gold);
+  /*border-bottom: 2px solid var(--gold);
+  box-shadow: 0 0 10px var(--gold);*/
+  border-bottom: none;
 
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  position: relative;
+  z-index: 10;    /* lower than the circle */
 }
 
 .nav-inner {
+  height: 100%;
+  align-items: flex-end;    /* pushes underline to the bottom */
   border-bottom: 2px solid var(--gold);
   width: calc(100% - var(--circle-size) / 2);   /* stops at circle midpoint */
   margin-left: auto;    /* pushes it to the right */
@@ -118,7 +123,7 @@ html, body {
 
   /* Show only the right half */
   clip-path: inset(0 0 0 50%);
-  z-index: 3;     /* make sure it's above the background */
+  z-index: 999;     /* make sure it's above the background */
 }
 
 /* Nav bar circle img */
