@@ -1,7 +1,6 @@
 
 :root {
   --circle-size: clamp(90px, 16vh, 240px);
-  /*--circle-size: 16vh;    /* diameter = 2 * navbar height */
   --gold: darkgoldenrod;
 }
 
@@ -30,33 +29,27 @@
 html, body {
   margin: 0;
   padding: 0;
-  /*background: purple;*/
-  background: black;
+  background: purple;
+  /*background: black;*/
   height: 100%;
-  min-width: 320px;   /* smallest safe mobile width */
+  min-width: 320px;         /* smallest safe mobile width */
   display: flex;
-  /*justify-content: center;*/
   flex-direction: column;   /* stack navbar on top */
-  /*align-items: center;*/
   font-family: 'MyFont', sans-serif;
 }
 
 .navbar {
-  height: 8vh;   /*1/10 of the viewport, lessened from 10vh*/
+  height: 8vh;   /* 10vh is 1/10 of the viewport */
   min-height: 40px;
   width: 100%;
   background: black;
-  /*border-bottom: 2px solid var(--gold);
-  box-shadow: 0 0 10px var(--gold);*/
   border-bottom: none;
 
   display: flex;
   justify-content: center;
-  /*align-items: center;*/
   align-items: flex-end;
   gap: 2rem;
   position: relative;
-  /*z-index: 10;    /* lower than the circle */
 }
 
 .navbar::after {
@@ -64,35 +57,12 @@ html, body {
   position: absolute;
   bottom: 0;
   right: 0;
-  /*
-  /*width: calc(100% - var(--circle-size) / 2);
-  width: calc(100% - var(--circle-size));
-  height: 2px;
-  background: var(--gold);
-
-  /* curve into the circle 
-  border-bottom-left-radius: var(--circle-size);
-  border-left: 3px solid var(--gold);
-
-  /* this creates the curved connection 
-  clip-path: inset(0 0 0 0 round var(--circle-size));
-  */
 
   width: calc(100% - var(--circle-size));
   height: 3px;
   background: var(--gold);
 
-  /* option 1 */
-  /* create the curved connection */
-  /*border-bottom-left-radius: calc(var(--circle-size) / 2);
-  border-left: 2px solid var(--gold);
-
-  /* ensuresd the curve is a perfect quarter circle */
-  /*clip-path: inset(0 0 0 0 round calc(var(--circle-size) / 2));
-
-  /* option 2 */
   /* decorative dip */
-  /*border-bottom-left-radius: calc(var(--circle-size) * 0.7);*/
   border-left: 3px solid var(--gold);
 
   /* soften the curve into a dip */
@@ -105,9 +75,7 @@ html, body {
   height: 100%;
   align-items: flex-end;    /* pushes underline to the bottom */
   border-bottom: 3px solid var(--gold);
-  /*width: calc(100% - var(--circle-size) / 2);   /* stops at circle midpoint */
   width: calc(100% - var(--circle-size));
-  /*margin-left: auto;    /* pushes it to the right */
   margin-left: var(--circle-size);
   display: flex;
   justify-content: center;
@@ -117,7 +85,6 @@ html, body {
 .nav-link {
   color: var(--gold);
   font-family: 'MyFont', sans-serif;
-  /*font-size: 1.2rem;*/
   font-size: clamp(0.9rem, 2vw, 11.2rem);
   text-decoration: none;
 }
@@ -127,7 +94,7 @@ html, body {
 }
 
 .content {
-  flex: 1;      /* take up remaining space */
+  flex: 1;                    /* take up remaining space */
   display: flex;
   flex-direction: column;
   justify-content: center;    /* center vertically */
@@ -145,7 +112,6 @@ html, body {
 
 .tagline {
   color: var(--gold);
-  /*font-size: 2rem;*/
   font-size: clamp(1rem, 2vw, 2rem);
   margin-top: 1rem;
   text-align: center;
@@ -154,53 +120,38 @@ html, body {
 /* Nav bar circle */
 .circle-mask {
   position: absolute;
-  left: 0;      /* stick to the left edge -- this has the whole circle */
-  /*left: calc(var(--circle-size) * -0.5);    /* left half of the circle should be off screen */
-  /*top: 50%;*/     /* verically center */
+  left: 0;        /* stick to the left edge -- this shows the whole circle */
   top: 0;         /* should line up w/navbar */
-  /*transform: translateY(-50%);*/
 
-  /*width: 300px;
-  height: 300px;*/
   width: var(--circle-size);
   height: var(--circle-size);
   border-radius: 50%;
   overflow: hidden;
-
-  /* Show only the right half */
-  /*clip-path: inset(0 0 0 50%);
-  /*z-index: 999;     /* make sure it's above the background */
 }
 
 /* Nav bar circle img */
 .circle-mask img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /*object-fit: cover;*/
+  object-fit: contain;
+  background: black;      /* optional, fills empty space */
+  transform: scale(0.85);   /* try 0.85, 0.8, 0.75 */
+  transform-origin: center;
 }
 
-/* Gold highlight on the bottom-right quarter of the circle only */
+/* Gold highlight on the bottom of the circle only */
 .circle-mask::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 3px solid transparent;
-  /*border-right-color: darkgoldenrod;
-  border-bottom-color: darkgoldenrod;
-  /*border: clamp(2px, 0.6vw, 4px) solid transparent;*/
+  border: 4px solid transparent;
+
   border-right-color: var(--gold);
   border-bottom-color: var(--gold);
   border-left-color: var(--gold);
-  /*box-shadow: 0 0 10px darkgoldenrod;*/
 
-  /* Hide the top-right quarter of the border */
-  /*clip-path: polygon(
-    50% 50%,    /* center 
-    100% 50%,   /* mid-right 
-    100% 100%,  /* bottom-right 
-    50% 100%,   /* mid-bottom 
-  );*/
   /* keep only the bottom half of the circle */
   clip-path: inset(50% 0 0 0);
 }
