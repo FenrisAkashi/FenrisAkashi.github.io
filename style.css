@@ -29,8 +29,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  /*background: purple;*/
-  background: black;
+  background: purple;
+  /*background: black;*/
   height: 100%;
   min-width: 320px;   /* smallest safe mobile width */
   display: flex;
@@ -51,6 +51,15 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+}
+
+.nav-inner {
+  border-bottom: 2px solid var(--gold);
+  width: calc(100% - var(--circle-size) / 2);   /* stops at circle midpoint */
+  margin-left: auto;    /* pushes it to the right */
+  display: flex;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -94,10 +103,11 @@ html, body {
 /* Nav bar circle */
 .circle-mask {
   position: absolute;
-  left: 0;      /* stick to the left edge */
+  /*left: 0;      /* stick to the left edge -- this has the whole circle */
+  left: calc(var(--circle-size) * -0.5);    /* left half of the circle should be off screen */
   /*top: 50%;*/     /* verically center */
   top: 8vh;         /* should line up w/navbar */
-  transform: translateY(-50%);
+  /*transform: translateY(-50%);*/
 
   /*width: 300px;
   height: 300px;*/
@@ -108,7 +118,7 @@ html, body {
 
   /* Show only the right half */
   clip-path: inset(0 0 0 50%);
-  z-index: 2;     /* make sure it's above the background */
+  z-index: 3;     /* make sure it's above the background */
 }
 
 /* Nav bar circle img */
