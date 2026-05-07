@@ -30,8 +30,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: purple;
-  /*background: black;*/
+  /*background: purple;*/
+  background: black;
   height: 100%;
   min-width: 320px;   /* smallest safe mobile width */
   display: flex;
@@ -84,19 +84,21 @@ html, body {
 
   /* option 1 */
   /* create the curved connection */
-  border-bottom-left-radius: calc(var(--circle-size) / 2);
+  /*border-bottom-left-radius: calc(var(--circle-size) / 2);
   border-left: 2px solid var(--gold);
 
   /* ensuresd the curve is a perfect quarter circle */
-  clip-path: inset(0 0 0 0 round calc(var(--circle-size) / 2));
+  /*clip-path: inset(0 0 0 0 round calc(var(--circle-size) / 2));
 
   /* option 2 */
   /* decorative dip */
-  /*border-bottom-left-radius: calc(var(--circle-size) * 0.7);
+  /*border-bottom-left-radius: calc(var(--circle-size) * 0.7);*/
   border-left: 3px solid var(--gold);
 
   /* soften the curve into a dip */
-  /*clip-path: path("M 100% 0 L 0 0 Q 0 50% 25% 100% L 100% 100% Z");*/
+  clip-path: path(
+    "M 100 0 L 0 0 Q 0 calc(var(--circle-size) * 0.25) calc(var(--circle-size) * 0.15) calc(var(--circle-size) * 0.5) L 100 calc(var(--circle-size) * 0.5) Z"
+    );
 }
 
 .nav-inner {
