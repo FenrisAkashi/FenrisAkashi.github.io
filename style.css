@@ -1,4 +1,9 @@
 
+:root {
+  --circle-size: clamp(180px, 28vw, 320px);
+  --gold: darkgoldenrod;
+}
+
 @font-face {
   font-family: 'MyFont';
   src: url('fonts/yggdrasil.regular.ttf') format('truetype');
@@ -24,8 +29,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: purple;
-  /*background: black;*/
+  /*background: purple;*/
+  background: black;
   height: 100%;
   min-width: 320px;   /* smallest safe mobile width */
   display: flex;
@@ -33,24 +38,6 @@ html, body {
   flex-direction: column;   /* stack navbar on top */
   /*align-items: center;*/
   font-family: 'MyFont', sans-serif;
-
-
-  /*
-    /* Set the image path 
-  background-image: url('imgs/Stickerized-logo.png');
-
-  /* Center the image horizontally and vertically 
-  background-position: center;
-
-  /* Prevent the image from repeating 
-  background-repeat: no-repeat;
-
-  /* Keep image fixed when scrolling 
-  background-attachment: fixed;
-
-  /* Scale image to cover screen while maintaining aspect ratio 
-  background-size: cover;
-  */
 }
 
 .navbar {
@@ -58,8 +45,8 @@ html, body {
   min-height: 60px;
   width: 100%;
   background: black;
-  border-bottom: 2px solid darkgoldenrod;
-  box-shadow: 0 0 10px darkgoldenrod;
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 0 0 10px var(--gold);
 
   display: flex;
   justify-content: center;
@@ -68,7 +55,7 @@ html, body {
 }
 
 .nav-link {
-  color: darkgoldenrod;
+  color: var(--gold);
   font-family: 'MyFont', sans-serif;
   /*font-size: 1.2rem;*/
   font-size: clamp(0.9rem, 2vw, 11.2rem);
@@ -85,6 +72,9 @@ html, body {
   flex-direction: column;
   justify-content: center;    /* center vertically */
   align-items: center;        /* center horizontally */
+
+  /* navbar logo circle shouldn't overlap content */
+  padding-left: calc(var(--circle-size)/2);
 }
 
 .center-image {
@@ -94,7 +84,7 @@ html, body {
 }
 
 .tagline {
-  color: darkgoldenrod;
+  color: var(--gold);
   /*font-size: 2rem;*/
   font-size: clamp(1rem, 2vw, 2rem);
   margin-top: 1rem;
@@ -103,14 +93,22 @@ html, body {
 
 /* Nav bar circle */
 .circle-mask {
-  position: relative;
-  width: 300px;
-  height: 300px;
+  position: absolute;
+  left: 0;      /* stick to the left edge */
+  /*top: 50%;*/     /* verically center */
+  top: 8vh;         /* should line up w/navbar */
+  transform: translateY(-50%);
+
+  /*width: 300px;
+  height: 300px;*/
+  width: var(--circle-size);
+  height: var(--circle-size);
   border-radius: 50%;
   overflow: hidden;
 
   /* Show only the right half */
   clip-path: inset(0 0 0 50%);
+  z-index: 2;     /* make sure it's above the background */
 }
 
 /* Nav bar circle img */
@@ -120,14 +118,18 @@ html, body {
   object-fit: cover;
 }
 
+/* Gold highlight on the bottom-right quarter of the circle only */
 .circle-mask::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 2px solid transparent;
+  /*border: 2px solid transparent;
   border-right-color: darkgoldenrod;
-  border-bottom-color: darkgoldenrod;
+  border-bottom-color: darkgoldenrod;*/
+  border: clamp(2px, 0.6vw, 4px) solid transparent;
+  border-right-color: var(--gold);
+  border-bottom-color: var(--gold);
   /*box-shadow: 0 0 10px darkgoldenrod;*/
 
   /* Hide the top-right quarter of the border */
