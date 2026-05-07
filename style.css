@@ -1,6 +1,6 @@
 
 :root {
-  --circle-size: clamp(80px, 16vh, 240px);
+  --circle-size: clamp(60px, 16vh, 240px);
   --gold: darkgoldenrod;
 }
 
@@ -29,8 +29,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  /*background: purple;*/
-  background: black;
+  background: purple;
+  /*background: black;*/
   height: 100%;
   min-width: 320px;         /* smallest safe mobile width */
   display: flex;
@@ -66,13 +66,13 @@ html, body {
   border-left: 3px solid var(--gold);
 
   /* soften the curve into a dip */
-  clip-path: path(
+  /*clip-path: path(
     "M 100 0 L 0 0 Q 0 calc(var(--circle-size) * 0.25) calc(var(--circle-size) * 0.15) calc(var(--circle-size) * 0.5) L 100 calc(var(--circle-size) * 0.5) Z"
     );
-  /*
+  */
   clip-path: path(
     "M 100 0 L 0 0 Q 0 18 20 36 L 100 36 Z"
-  );*/
+  );
   /*clip-path: path(
     "M 100% 0 L 0 0 Q 0 40% 20% 80% L 100% 80% Z"
   );*/
@@ -131,8 +131,8 @@ html, body {
 
   width: var(--circle-size);
   height: var(--circle-size);
-  min-width: 80px;
-  min-height: 80px;
+  min-width: 60px;
+  min-height: 60px;
   border-radius: 50%;
   overflow: hidden;
 }
