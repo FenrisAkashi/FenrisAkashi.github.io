@@ -29,8 +29,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: purple;
-  /*background: black;*/
+  /*background: purple;*/
+  background: black;
   height: 100%;
   min-width: 320px;         /* smallest safe mobile width */
   display: flex;
@@ -46,7 +46,7 @@ html, body {
   border-bottom: none;
 
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: flex-end;
   gap: 2rem;
   position: relative;
@@ -74,7 +74,7 @@ html, body {
 .nav-inner {
   height: 100%;
   align-items: flex-end;    /* pushes underline to the bottom */
-  border-bottom: 3px solid var(--gold);
+  /*border-bottom: 3px solid var(--gold);*/
   width: calc(100% - var(--circle-size));
   margin-left: var(--circle-size);
   display: flex;
@@ -133,8 +133,8 @@ html, body {
 .circle-mask img {
   width: 100%;
   height: 100%;
-  /*object-fit: cover;*/
-  object-fit: contain;
+  object-fit: cover;
+  /*object-fit: contain;*/
   background: black;      /* optional, fills empty space */
   transform: scale(0.85);   /* try 0.85, 0.8, 0.75 */
   transform-origin: center;
