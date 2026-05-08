@@ -35,7 +35,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: blue;
+  background: purple;
   /*background: black;*/
   height: 100%;
   min-width: 320px;         /* smallest safe mobile width */
@@ -53,7 +53,8 @@ html, body {
 
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  /*align-items: flex-end;*/
+  align-items: center;
   gap: 2rem;
   position: relative;
 }
@@ -86,7 +87,8 @@ html, body {
 
 .nav-inner {
   height: 100%;
-  align-items: flex-end;    /* pushes underline to the bottom */
+  /*align-items: flex-end;    /* pushes underline to the bottom */
+  align-items: center;
   width: calc(100% - var(--circle-size));
   margin-left: var(--circle-size);
   display: flex;
@@ -99,7 +101,8 @@ html, body {
 .nav-link {
   color: var(--gold);
   font-family: 'MyFont', sans-serif;
-  font-size: clamp(0.9rem, 2vw, 11.2rem);
+  /*font-size: clamp(0.9rem, 2vw, 11.2rem);*/
+  font-size: clamp(1.1rem, 2.2vw, 2rem);
   text-decoration: none;
 }
 
@@ -126,7 +129,8 @@ html, body {
 
 .tagline {
   color: var(--gold);
-  font-size: clamp(1rem, 2vw, 2rem);
+  /*font-size: clamp(1rem, 2vw, 2rem);*/
+  font-size: clamp(1.2rem, 2.5vw, 2.2rem);
   margin-top: 1rem;
   text-align: center;
 }
