@@ -11,6 +11,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Almendra';
+  src: url('fonts/Almendra-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @media (max-width: 480px) {
   .center-image {
     height: 30vh;
@@ -116,6 +123,7 @@ html, body {
   flex-direction: column;
   justify-content: center;    /* center vertically */
   align-items: center;        /* center horizontally */
+  color: var(--gold);
 
   /* navbar logo circle shouldn't overlap content */
   /*padding-left: calc(var(--circle-size)/2);*/
@@ -183,4 +191,16 @@ html, body {
     hue-rotate(5deg);
 
   opacity: 0.9;
+}
+
+
+.about {
+  font-family: 'Almendra', serif;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.about-header {
+  font-family: 'MyFont';
+  letter-spacing: 3px;
 }
