@@ -195,6 +195,7 @@ html, body {
 }
 
 .paw-loader {
+  color: var(--gold);
   filter: 
     brightness(1.8)
     sepia(1)
@@ -242,6 +243,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  
 }
 
 /* This makes sure your images shrink fluently inside their 20% columns */
