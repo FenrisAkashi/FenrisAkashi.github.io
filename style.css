@@ -37,6 +37,17 @@
     width: calc(100% - var(--circle-size) * 0.7);
     gap: clamp(0.5rem, 3vw, 2rem);
   }
+
+  .about-container {
+    flex-direction: column;   /* Stacks columns vertically */
+  }
+
+  .about,
+  .about-side {
+    flex: 0 0 100%;   /* On mobile, everything gets 100% width */
+    width: 100%;
+    padding: 10px 20px;
+  }
 }
 
 html, body {
@@ -193,14 +204,52 @@ html, body {
   opacity: 0.9;
 }
 
-
-.about {
-  font-family: 'Almendra', serif;
-  font-size: 22px;
-  line-height: 1.6;
-}
-
 .about-header {
   font-family: 'MyFont';
   letter-spacing: 3px;
 }
+
+.about {
+  /* text */
+  font-family: 'Almendra', serif;
+  font-size: 22px;
+  line-height: 1.6;
+
+  /* column */
+  flex: 0 0 60%;    /* strictly controls width, 60% of the screen */
+  text-align: center;
+  padding: 0 20px;  /* Internal padding so text doesn't hit its own borders */
+  box-sizing: border-box;
+}
+
+
+/* Container spans full width and uses flexbox */
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  /*justify-content: space-between;*/
+  width: 100%;
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+  /*gap: 20px;*/
+  box-sizing: border-box;
+}
+
+/* Both side image columns get a smaller, equal slice of the screen */
+.about-side {
+  display: flex;
+  flex: 0 0 20%;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* This makes sure your images shrink fluently inside their 20% columns */
+.about-side img {
+  width: 100%;      /* Fills up the 20% column entirely */
+  max-width: 100%;  /* Prevents the image from bursting out */
+  height: auto;     /* Maintains the image's original aspect ratio */
+  /* border-radius: 8px;   /* Optional, rounds image corners */
+}
+
+
