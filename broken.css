@@ -12,10 +12,10 @@
 }
 
 @font-face {
-    font-family: 'Almendra';
-    src: url('fonts/Almendra-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Almendra';
+  src: url('fonts/Almendra-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @media (max-width: 480px) {
@@ -38,16 +38,16 @@
     gap: clamp(0.5rem, 3vw, 2rem);
   }
 
-    .about-container {
-        flex-direction: column; /* Stacks columns vertically */
-    }
+  .about-container {
+    flex-direction: column;   /* Stacks columns vertically */
+  }
 
-    .about,
-    .about-side {
-        flex: 0 0 100%; /* On mobile, everything gets 100% width */
-        width: 100%;
-        padding: 10px 20px;
-    }
+  .about,
+  .about-side {
+    flex: 0 0 100%;   /* On mobile, everything gets 100% width */
+    width: 100%;
+    padding: 10px 20px;
+  }
 }
 
 html, body {
@@ -94,28 +94,83 @@ html, body {
   clip-path: path(
     "M 100 0 L 0 0 Q 0 calc(var(--circle-size) * 0.25) calc(var(--circle-size) * 0.15) calc(var(--circle-size) * 0.5) L 100 calc(var(--circle-size) * 0.5) Z"
     );
+  /*
+  clip-path: path(
+    "M 100 0 L 0 0 Q 0 18 20 36 L 100 36 Z"
+  );*/
+  /*clip-path: path(
+    "M 100% 0 L 0 0 Q 0 40% 20% 80% L 100% 80% Z"
+  );*/
+}
+
+
+.nav-inner {
+    height: 100%;
+    align-items: center;
+    width: calc(100% - var(--circle-size);
+    margin-left: var(--circle-size);
+    display: flex;
+    justify-content: space-evenly;
+    gap: clamp(0.4rem, 2vw, 1.2rem);
+
+    /* reset browser bullet point settings? */
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 .nav-inner {
-  height: 100%;
-  align-items: center;
-  width: calc(100% - var(--circle-size));
-  margin-left: var(--circle-size);
-  display: flex;
-  justify-content: space-evenly;
-  gap: clamp(0.4rem, 2vw, 1.2rem);
+    list-style-type: none;
 }
 
 .nav-link {
-  color: var(--gold);
-  font-family: 'MyFont', sans-serif;
-  font-size: clamp(1.1rem, 2.2vw, 2rem);
-  text-decoration: none;
+    color: var(--gold);
+    font-family: 'MyFont', sans-serif;
+    font-size: clamp(1.1rem, 2.2vw, 2rem);
+    text-decoration: none;
 }
 
 .nav-link:hover {
   text-decoration: underline;
 }
+
+.dropdown-parent {
+    position: relative;
+}
+
+.drop-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    border: 2px solid var(--gold);
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    min-width: 180px;
+    z-index: 10;
+}
+
+.drop-menu li {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.drop-menu .nav-link {
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+    padding: 0.6rem 1.2rem;
+    display: block;
+}
+
+/* Hover trigger to make drop menu appear */
+.dropdown-parent:hover .drop-menu {
+    display: block;
+}
+
 
 .content {
   flex: 1;      /* take up remaining space */
@@ -124,6 +179,9 @@ html, body {
   justify-content: center;    /* center vertically */
   align-items: center;        /* center horizontally */
   color: var(--gold);
+
+  /* navbar logo circle shouldn't overlap content */
+  /*padding-left: calc(var(--circle-size)/2);*/
 }
 
 .center-image {
@@ -134,6 +192,7 @@ html, body {
 
 .tagline {
   color: var(--gold);
+  /*font-size: clamp(1rem, 2vw, 2rem);*/
   font-size: clamp(2rem, 2.5vw, 3rem);
   margin-top: 1rem;
   text-align: center;
@@ -180,6 +239,7 @@ html, body {
 }
 
 .paw-loader {
+  color: var(--gold);
   filter: 
     brightness(1.8)
     sepia(1)
@@ -189,115 +249,53 @@ html, body {
   opacity: 0.9;
 }
 
-
-
-/* list fixes */
-ul.nav-inner {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-
-.ul .nav-inner li {
-    list-style-type: none;
-}
-
-/* drop down menu system */
-
-/* keeps the dropdown menu box locked directly below the portfolio link */
-.dropdown-parent {
-    position: relative;
-}
-
-/* Hides the sub menu completely by default and styles the floating box */
-.drop-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    border: 2px solid var(--gold);
-    list-style-type: none;
-    margin: 0;
-    padding: 0.5rem 0;
-    min-width: 150px;
-    z-index: 999;
-}
-
-/* Forces sub links to stack vertically instead of going sideways */
-.drop-menu li {
-    display: block;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Adjusts the text size and spacing specifically for the sub links */
-.drop-menu .nav-link {
-    font-size: clamp(1rem, 1.8vw, 1.5rem);  /* should be slightly smaller than main links*/
-    padding: 0.5rem 1rem;
-    text-align: center;
-}
-
-/* Trigger to show drop down menu */
-.dropdown-parent:hover .drop-menu {
-    display: block;
-}
-
-/* Add dividing line between drop down menu options */
-.drop-menu li:not(:last-child) {
-    border-bottom: 1px solid var(--gold);
-    margin-bottom: 0.2rem;
-    padding-bottom: 0.2rem;
-}
-
-/* END of list fixes*/
-
-
 .about-header {
-    font-family: 'MyFont';
-    letter-spacing: 3px;
+  font-family: 'MyFont';
+  letter-spacing: 3px;
 }
 
 .about {
-    /* text */
-    font-family: 'Almendra', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    /* column */
-    flex: 0 0 60%; /* strictly controls width, 60% of the screen */
-    text-align: center;
-    padding: 0 20px; /* Internal padding so text doesn't hit its own borders */
-    box-sizing: border-box;
+  /* text */
+  font-family: 'Almendra', serif;
+  font-size: 22px;
+  line-height: 1.6;
+
+  /* column */
+  flex: 0 0 60%;    /* strictly controls width, 60% of the screen */
+  text-align: center;
+  padding: 0 20px;  /* Internal padding so text doesn't hit its own borders */
+  box-sizing: border-box;
 }
 
 
 /* Container spans full width and uses flexbox */
 .about-container {
-    display: flex;
-    align-items: flex-start;
-    /*justify-content: space-between;*/
-    width: 100%;
-    /*max-width: 1200px;*/
-    margin: 0 auto;
-    /*gap: 20px;*/
-    box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  /*justify-content: space-between;*/
+  width: 100%;
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+  /*gap: 20px;*/
+  box-sizing: border-box;
 }
 
 /* Both side image columns get a smaller, equal slice of the screen */
 .about-side {
-    display: flex;
-    flex: 0 0 20%;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+  display: flex;
+  flex: 0 0 20%;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  
 }
 
 /* This makes sure your images shrink fluently inside their 20% columns */
 .about-side img {
-    width: 100%; /* Fills up the 20% column entirely */
-    max-width: 100%; /* Prevents the image from bursting out */
-    height: auto; /* Maintains the image's original aspect ratio */
-    /* border-radius: 8px;   /* Optional, rounds image corners */
+  width: 100%;      /* Fills up the 20% column entirely */
+  max-width: 100%;  /* Prevents the image from bursting out */
+  height: auto;     /* Maintains the image's original aspect ratio */
+  /* border-radius: 8px;   /* Optional, rounds image corners */
 }
+
+
