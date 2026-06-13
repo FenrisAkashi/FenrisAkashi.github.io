@@ -301,3 +301,63 @@ ul.nav-inner {
     height: auto; /* Maintains the image's original aspect ratio */
     /* border-radius: 8px;   /* Optional, rounds image corners */
 }
+
+
+/* Main page Tree */
+
+/* Block wrapper to center inner element */
+.yin-yang-frame {
+    display: block;
+    text-align: center;
+    width: 100%;                /* spans full width of screen */
+    background-color: black;
+}
+
+/* Isolated Image Wrapper, anchoring color fade to the image dimensions */
+.tree-wrapper {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* The actual image properties controlling the size */
+.tree-img {
+    display: block;
+    width: 72vw;                /* allows img to be responsive, always 60% of screen */
+    height: 48vw;               /* keeps square aspect ratio */
+    object-fit: contain;        /* prevents img from stretching or distorting */
+}
+
+/* Make the outer edges of the main page img black */
+.tree-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* Radial Gradient 
+        leaves the inner 50% circle clear, smoothly blends the outer photo margins to absolute black */
+    /*background: radial-gradient(circle, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 95%);*/
+    /*background: radial-gradient(elipse at center, rgba(0,0,0,0) ...*/
+    background: 
+        radial-gradient(ellipse at center,
+            rgba(0,0,0,0) 45%,
+            rgba(0,0,0,1) 95%
+        ),
+        linear-gradient(to bottom,
+            #000000 0%,
+            rgba(0,0,0,0) 4%,
+            rgba(0,0,0,0) 96%,
+            #000000 100%
+        ),
+        
+        linear-gradient(to right,
+            #000000 0%,
+            rgba(0,0,0,0) 20%, 
+            rgba(0,0,0,0) 80%,
+            #000000 100%
+        );
+    pointer-events: none;
+}
