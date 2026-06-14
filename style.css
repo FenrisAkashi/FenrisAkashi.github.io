@@ -378,7 +378,8 @@ ul.nav-inner {
         margin-left: calc(var(--circle-size) + 0.2rem);
         /*padding: 0 1rem;*/
         /*justify-content: space-around;*/
-        justify-content: flex-end;
+        justify-content: space-evenly;
+        /*justify-content: flex-end;*/
         gap: 0.25rem;
         min-width: auto;
     }
@@ -417,7 +418,7 @@ ul.nav-inner {
     }
 }
 
-/*
+
 body {
     background: red !important;
-}*/
+}
