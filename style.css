@@ -18,71 +18,6 @@
     font-style: normal;
 }
 
-/* Mobile Styles*/
-@media (max-width: 480px) {
-  .center-image {
-    height: 30vh;
-    min-height: 120px;
-  }
-
-  .tagline {
-    font-size: 1.2rem;
-  }
-
-  .navbar {
-    gap: 0.5rem;
-    /*height: auto;   /* Let the navbar expand vertically if links need to wrap 
-    flex-direction: column;     /* Stacks the logo and links block neatly if needed 
-    align-items: flex-start;*/
-  }
-
-  .nav-inner {
-    /*gap: 0.8rem;*/
-    width: calc(100% - var(--circle-size) - 0.2rem);
-    gap: clamp(0.25rem, 3vw, 2rem);
-    /*width: 100%;*/
-    margin-left: calc(var(--circle-size) + 0.2rem);
-    /*padding: 0 1rem;*/
-    /*justify-content: space-around;*/
-    justify-content: flex-end;
-    /*gap: 0.4rem;*/
-    min-width: auto;
-  }
-
-  .nav-inner > li:last-child {
-      margin-right: 0;
-  }
-
-  .about-container {
-    flex-direction: column; /* Stacks columns vertically */
-  }
-
-  .about,
-  .about-side {
-    flex: 0 0 100%; /* On mobile, everything gets 100% width */
-    width: 100%;
-    padding: 10px 20px;
-  }
-
-  .nav-link {
-    font-size: 0.95rem;    /* shrink font size on mobile */
-  }
-
-  /* reset the homepage frame on mobile so the image centers nicely below the navbar */
-  .yin-yang-frame {
-      margin-left: 0;
-      width: 100%;
-      margin-top: calc(var(--circle-size) / 2); /* safely drops img below logo on tiny screens */
-  }
-
-  .tree-img {
-      width: 90vw;
-      height: auto;
-      max-height: 50vh;
-      margin: 0 auto;
-  }
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -417,6 +352,72 @@ ul.nav-inner {
     pointer-events: none;
 }
 
+/* Mobile Styles*/
+@media (max-width: 480px) {
+    .center-image {
+        height: 30vh;
+        min-height: 120px;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        gap: 0.5rem;
+        /*height: auto;   /* Let the navbar expand vertically if links need to wrap 
+    flex-direction: column;     /* Stacks the logo and links block neatly if needed 
+    align-items: flex-start;*/
+    }
+
+    .nav-inner {
+        /*gap: 0.8rem;*/
+        width: calc(100% - var(--circle-size) - 0.2rem);
+        /*gap: clamp(0.25rem, 3vw, 2rem);*/
+        /*width: 100%;*/
+        margin-left: calc(var(--circle-size) + 0.2rem);
+        /*padding: 0 1rem;*/
+        /*justify-content: space-around;*/
+        justify-content: flex-end;
+        gap: 0.25rem;
+        min-width: auto;
+    }
+
+        .nav-inner > li:last-child {
+            margin-right: 0;
+        }
+
+    .about-container {
+        flex-direction: column; /* Stacks columns vertically */
+    }
+
+    .about,
+    .about-side {
+        flex: 0 0 100%; /* On mobile, everything gets 100% width */
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .nav-link {
+        font-size: 0.95rem; /* shrink font size on mobile */
+    }
+
+    /* reset the homepage frame on mobile so the image centers nicely below the navbar */
+    .yin-yang-frame {
+        margin-left: 0;
+        width: 100%;
+        margin-top: calc(var(--circle-size) / 2); /* safely drops img below logo on tiny screens */
+    }
+
+    .tree-img {
+        width: 90vw;
+        height: auto;
+        max-height: 50vh;
+        margin: 0 auto;
+    }
+}
+
+/*
 body {
     background: red !important;
-}
+}*/
