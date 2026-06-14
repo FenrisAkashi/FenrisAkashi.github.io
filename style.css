@@ -416,3 +416,7 @@ ul.nav-inner {
         );
     pointer-events: none;
 }
+
+body {
+    background: red !important;
+}
