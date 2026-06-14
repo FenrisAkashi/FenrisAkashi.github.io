@@ -65,24 +65,24 @@ html, body {
 }
 
 .nav-inner {
-  height: 100%;
-  align-items: center;
-  display: flex;
-  /*justify-content: space-around;*/
-  /*justify-content: flex-end;*/
-  justify-content: space-evenly;
-  /*gap: clamp(0.4rem, 2vw, 1.2rem);*/
-  gap: clamp(1rem, 3vw, 2.5rem);
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-
-  /* Force the links to occupy only the space remaining after the circle */
-  margin-left: calc(var(--circle-size) + 1rem);
-  width: calc(100% - var(--circle-size) - 1rem);
-
-  /* prevent the navbar content from squeezing too tightly */
-  min-width: 340px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    /*justify-content: space-around;*/
+    /*justify-content: flex-end;*/
+    justify-content: space-evenly;
+    /*gap: clamp(0.4rem, 2vw, 1.2rem);*/
+    gap: clamp(1rem, 3vw, 2.5rem);
+    padding: 0;
+    /*margin: 0;*/
+    list-style-type: none;
+    /* Force the links to occupy only the space remaining after the circle */
+    margin-left: calc(var(--circle-size) + 1rem);
+    width: calc(100% - var(--circle-size) - 1rem);
+    /*margin-right: calc(var(--circle-size) + 1rem);
+    max-width: calc(100% - (var(--circle-size) * 2) - 2rem);*/
+    /* prevent the navbar content from squeezing too tightly */
+    min-width: 340px;
 }
 
 .nav-inner > li:last-child {
@@ -222,17 +222,6 @@ html, body {
 
 
 /* list fixes */
-/*
-ul.nav-inner {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}*/
-
-/*.ul .nav-inner li {
-    list-style-type: none;
-}*/
-
 /* drop down menu system */
 
 /* keeps the dropdown menu box locked directly below the portfolio link */
@@ -297,7 +286,8 @@ ul.nav-inner {
     /* tree stays up high but lock the left boundary to the edge of the logo */
     margin-top: 0;
     margin-left: var(--circle-size);
-    width: calc(100% - var(--circle-size));
+    margin-right: var(--circle-size);
+    width: calc(100% - (var(--circle-size) * 2));
 }
 
 /* Isolated Image Wrapper, anchoring color fade to the image dimensions */
@@ -305,6 +295,10 @@ ul.nav-inner {
     position: relative;
     display: inline-block;
     vertical-align: middle;
+
+    /*margin-left: calc(var(--circle-size) + 1rem);
+    margin-right: calc(var(--circle-size) + 1rem);
+    max-width: calc(100% - (var(--circle-size) * 2) - 2rem);*/
 }
 
 /* The actual image properties controlling the size */
