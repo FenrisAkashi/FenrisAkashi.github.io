@@ -18,38 +18,6 @@
     font-style: normal;
 }
 
-@media (max-width: 480px) {
-  .center-image {
-    height: 30vh;
-    min-height: 120px;
-  }
-
-  .tagline {
-    font-size: 1.2rem;
-  }
-
-  .navbar {
-    gap: 1rem;
-  }
-
-  .nav-inner {
-    /*gap: 0.8rem;*/
-    width: calc(100% - var(--circle-size) * 0.7);
-    gap: clamp(0.5rem, 3vw, 2rem);
-  }
-
-    .about-container {
-        flex-direction: column; /* Stacks columns vertically */
-    }
-
-    .about,
-    .about-side {
-        flex: 0 0 100%; /* On mobile, everything gets 100% width */
-        width: 100%;
-        padding: 10px 20px;
-    }
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -97,13 +65,28 @@ html, body {
 }
 
 .nav-inner {
-  height: 100%;
-  align-items: center;
-  width: calc(100% - var(--circle-size));
-  margin-left: var(--circle-size);
-  display: flex;
-  justify-content: space-evenly;
-  gap: clamp(0.4rem, 2vw, 1.2rem);
+    height: 100%;
+    align-items: center;
+    display: flex;
+    /*justify-content: space-around;*/
+    /*justify-content: flex-end;*/
+    justify-content: space-evenly;
+    /*gap: clamp(0.4rem, 2vw, 1.2rem);*/
+    gap: clamp(1rem, 3vw, 2.5rem);
+    padding: 0;
+    /*margin: 0;*/
+    list-style-type: none;
+    /* Force the links to occupy only the space remaining after the circle */
+    margin-left: calc(var(--circle-size) + 1rem);
+    width: calc(100% - var(--circle-size) - 1rem);
+    /*margin-right: calc(var(--circle-size) + 1rem);
+    max-width: calc(100% - (var(--circle-size) * 2) - 2rem);*/
+    /* prevent the navbar content from squeezing too tightly */
+    min-width: 340px;
+}
+
+.nav-inner > li:last-child {
+    margin-right: 2rem;
 }
 
 .nav-link {
@@ -121,9 +104,12 @@ html, body {
   flex: 1;      /* take up remaining space */
   display: flex;
   flex-direction: column;
-  justify-content: center;    /* center vertically */
+  /*justify-content: center;    /* center vertically */
+  justify-content: flex-start;
   align-items: center;        /* center horizontally */
   color: var(--gold);
+  margin-top: calc(var(--circle-size) / 2);
+  box-sizing: border-box;
 }
 
 .center-image {
@@ -189,19 +175,78 @@ html, body {
   opacity: 0.9;
 }
 
+.header {
+    font-family: 'MyFont';
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about,
+.coding-center,
+.art-center,
+.contact-center,
+.certs-center {
+    /* text */
+    font-family: 'Almendra', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    /* column */
+    flex: 0 0 60%; /* strictly controls width, 60% of the screen */
+    text-align: center;
+    padding: 0 20px; /* Internal padding so text doesn't hit its own borders */
+    box-sizing: border-box;
+}
+
+
+/* Container spans full width and uses flexbox */
+.about-container,
+.page-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+    /*gap: 20px;*/
+    box-sizing: border-box;
+}
+
+/* Both side image columns get a smaller, equal slice of the screen */
+.about-side,
+.page-side {
+    display: flex;
+    flex: 0 0 20%;
+    flex-direction: column; /* stacks them vertically if needed */
+    /*flex-direction: row;*/
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.about-side.left,
+.page-side.left {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.about-side.right,
+.page-side.right {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* This makes sure your images shrink fluently inside their 20% columns */
+.about-side img,
+.page-side img {
+    width: 100%; /* Fills up the 20% column entirely */
+    max-width: 100%; /* Prevents the image from bursting out */
+    height: auto; /* Maintains the image's original aspect ratio */
+    /* border-radius: 8px;   /* Optional, rounds image corners */
+}
 
 
 /* list fixes */
-ul.nav-inner {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-
-.ul .nav-inner li {
-    list-style-type: none;
-}
-
 /* drop down menu system */
 
 /* keeps the dropdown menu box locked directly below the portfolio link */
@@ -255,62 +300,19 @@ ul.nav-inner {
 /* END of list fixes*/
 
 
-.about-header {
-    font-family: 'MyFont';
-    letter-spacing: 3px;
-}
-
-.about {
-    /* text */
-    font-family: 'Almendra', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    /* column */
-    flex: 0 0 60%; /* strictly controls width, 60% of the screen */
-    text-align: center;
-    padding: 0 20px; /* Internal padding so text doesn't hit its own borders */
-    box-sizing: border-box;
-}
-
-
-/* Container spans full width and uses flexbox */
-.about-container {
-    display: flex;
-    align-items: flex-start;
-    /*justify-content: space-between;*/
-    width: 100%;
-    /*max-width: 1200px;*/
-    margin: 0 auto;
-    /*gap: 20px;*/
-    box-sizing: border-box;
-}
-
-/* Both side image columns get a smaller, equal slice of the screen */
-.about-side {
-    display: flex;
-    flex: 0 0 20%;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-/* This makes sure your images shrink fluently inside their 20% columns */
-.about-side img {
-    width: 100%; /* Fills up the 20% column entirely */
-    max-width: 100%; /* Prevents the image from bursting out */
-    height: auto; /* Maintains the image's original aspect ratio */
-    /* border-radius: 8px;   /* Optional, rounds image corners */
-}
-
-
 /* Main page Tree */
 
 /* Block wrapper to center inner element */
 .yin-yang-frame {
     display: block;
     text-align: center;
-    width: 100%;                /* spans full width of screen */
     background-color: black;
+    /*width: 100%;                /* spans full width of screen */
+    /* tree stays up high but lock the left boundary to the edge of the logo */
+    margin-top: 0;
+    margin-left: var(--circle-size);
+    margin-right: var(--circle-size);
+    width: calc(100% - (var(--circle-size) * 2));
 }
 
 /* Isolated Image Wrapper, anchoring color fade to the image dimensions */
@@ -318,14 +320,21 @@ ul.nav-inner {
     position: relative;
     display: inline-block;
     vertical-align: middle;
+
+    /*margin-left: calc(var(--circle-size) + 1rem);
+    margin-right: calc(var(--circle-size) + 1rem);
+    max-width: calc(100% - (var(--circle-size) * 2) - 2rem);*/
 }
 
 /* The actual image properties controlling the size */
 .tree-img {
     display: block;
-    width: 72vw;                /* allows img to be responsive, always 60% of screen */
-    height: 48vw;               /* keeps square aspect ratio */
+    width: 72vw;                /* allows img to be responsive, always 72% of screen */
+    height: 48vw;               /* keeps aspect ratio 3:2 */
+    /*max-height: 90vw;           /* prevents it from clipping horizontally on tiny screens 
+    max-width: 50vh;            /* prevents it from growing too tall vertically */
     object-fit: contain;        /* prevents img from stretching or distorting */
+    /*margin: 0 auto;             /* keeps it perfectly centered */
 }
 
 /* Make the outer edges of the main page img black */
@@ -361,3 +370,74 @@ ul.nav-inner {
         );
     pointer-events: none;
 }
+
+/* Mobile Styles*/
+@media (max-width: 480px) {
+    .center-image {
+        height: 30vh;
+        min-height: 120px;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        gap: 0.5rem;
+        /*height: auto;   /* Let the navbar expand vertically if links need to wrap 
+    flex-direction: column;     /* Stacks the logo and links block neatly if needed 
+    align-items: flex-start;*/
+    }
+
+    .nav-inner {
+        /*gap: 0.8rem;*/
+        width: calc(100% - var(--circle-size) - 0.2rem);
+        /*gap: clamp(0.25rem, 3vw, 2rem);*/
+        /*width: 100%;*/
+        margin-left: calc(var(--circle-size) + 0.2rem);
+        /*padding: 0 1rem;*/
+        /*justify-content: space-around;*/
+        justify-content: space-evenly;
+        /*justify-content: flex-end;*/
+        gap: 0.25rem;
+        min-width: auto;
+    }
+
+        .nav-inner > li:last-child {
+            margin-right: 0;
+        }
+
+    .about-container {
+        flex-direction: column; /* Stacks columns vertically */
+    }
+
+    .about,
+    .about-side {
+        flex: 0 0 100%; /* On mobile, everything gets 100% width */
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .nav-link {
+        font-size: 0.95rem; /* shrink font size on mobile */
+    }
+
+    /* reset the homepage frame on mobile so the image centers nicely below the navbar */
+    .yin-yang-frame {
+        margin-left: 0;
+        width: 100%;
+        margin-top: calc(var(--circle-size) / 2); /* safely drops img below logo on tiny screens */
+    }
+
+    .tree-img {
+        width: 90vw;
+        height: auto;
+        max-height: 50vh;
+        margin: 0 auto;
+    }
+}
+
+
+/*body {
+    background: red !important;
+}*/
