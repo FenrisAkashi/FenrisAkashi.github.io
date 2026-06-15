@@ -472,7 +472,8 @@ html, body {
 /* Portfolio Media Container */
 .project-media {
     width: 100%;
-    max-width: 500px;   /* limits screenshot sizes so they don't overpower the screen */
+    /*max-width: 500px;   /* limits screenshot sizes so they don't overpower the screen */
+    max-width: 35vw;        /* I prefer % of screen width, slightly less than description */
     margin-bottom: 1.5rem;
 }
 
@@ -513,7 +514,7 @@ html, body {
     font-family: Almendra, serif;
     font-size: 1.1rem;
     line-height: 1.6;
-    max-width: 600px;
+    max-width: 50vw;   /* 50% viewport instead of 600px */
     margin: 0 auto;
 }
 
