@@ -185,7 +185,6 @@ html, body {
 
 .about,
 .coding-center,
-.art-center,
 .contact-center,
 .certs-center {
     /* text */
@@ -212,6 +211,9 @@ html, body {
     margin: 0 auto;
     /*gap: 20px;*/
     box-sizing: border-box;
+
+    /* side imgs fix, force layout to ALWAYS occupy at least the full height of the viewing screen */
+    min-height: calc(100vh - (var(--circle-size) / 2) - 1.5rem);
 }
 
 /* Both side image columns get a smaller, equal slice of the screen */
@@ -445,7 +447,9 @@ html, body {
 }
 
 
-/* Coding page */
+/* ============================================
+                Coding page 
+    ===========================================*/
 .project-card {
     display: flex;
     flex-direction: column;
@@ -517,7 +521,74 @@ html, body {
     max-width: 50vw;   /* 50% viewport instead of 600px */
     margin: 0 auto;
 }
+/* END OF CODING PAGE */
 
+
+/* ================================
+             Art Page 
+    =============================== */
+/* The central grid canvas */
+.art-center {
+    flex: 0 0 60%; /* strictly controls width, 60% of the screen */
+    /*display: flex;
+    justify-content: space-between;
+    gap: 20px;*/
+    box-sizing: border-box;
+    padding: 0 10px;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+/*.art-track {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}*/
+
+/* Grid Placement Box */
+.art-item {
+    box-sizing: border-box;
+    /*position: relative;*/
+    overflow: hidden;
+    background-color: #111;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 20px;
+    /* critical: prevents img from splitting in half... */
+    break-inside: avoid;
+
+    /*height: 100%;*/
+}
+
+.art-item img {
+    width: 100%;
+    height: auto;
+
+    /* this makes sure the image fills the space w/out stretching or distorting */
+    /*object-fit: cover;*/
+    display: block;
+}
+/*
+/* SHAPE VARIATIONS (The Masonry Tracks) 
+/* Square items 
+.art-item.square {
+    aspect-ratio: 1 / 1;
+    max-width: 75%;
+    margin: 0 auto;
+}
+/* Tall items 
+.art-item.tall {
+    aspect-ratio: 2 / 3;
+    width: 100%;
+}
+/* Wide items 
+.art-item.wide {
+    aspect-ratio: 3 / 2;
+    width: 100%;
+}*/
+/* END OF ART PAGE */
 
 /*body {
     background: red !important;
