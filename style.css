@@ -464,9 +464,6 @@ html, body {
 /* The central grid canvas */
 .art-center {
     flex: 0 0 60%; /* strictly controls width, 60% of the screen */
-    /*display: flex;
-    justify-content: space-between;
-    gap: 20px;*/
     box-sizing: border-box;
     padding: 0 10px;
     column-count: 2;
@@ -540,6 +537,96 @@ html, body {
     margin: 0;
     text-align: center;
 }
+
+/*======LIGHTBOX MODAL SYSTEM=========*/
+/* Hides the secondary images from cluttered view on the main gallery stream */
+/*.art-item img.lightbox-extra {
+    display: none !important;
+}*/
+.art-center .art-item img.lightbox-extra {
+    display: none;
+}
+
+/* The Fixed Full-Screen Backdrop Overlay */
+.lightbox-modal {
+    display: none;  /* Hidden until JavaScript triggers it */
+    position: fixed;
+    z-index: 10000; /* stays securely on top of headers and tracks */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95); /* Deep matte black background */
+    box-sizing: border-box;
+}
+
+/* Centered content bounding box */
+.lightbox-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* The Active Enlarged Image */
+#lightboxImg {
+    max-width: 100%;
+    max-height: 75vh;   /* prevents img from running off mobile screens vertically */
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    object-fit: contain;
+}
+
+/* Caption Text */
+.lightbox-caption {
+    margin-top: 15px;
+    color: var(--gold);
+    font-family: Almendra, serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Close Window Button ('X') */
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #bbb;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.lightbox-close:hover {
+    color: var(--gold);
+}
+
+/* Navigation Arrow Controls Buttons */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+.lightbox-arrow:hover {
+    background: var(--gold);
+    color: black;
+}
+.prev-arrow { left: 40px; }
+.next-arrow { right: 40px; }
 
 /* END OF ART PAGE */
 
