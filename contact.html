@@ -81,18 +81,35 @@
       </div>
 
       <script>
+          const form = document.querySelector('.contact-form');
+          const emailInput = document.getElementById('email');
           const textarea = document.getElementById('message');
           const charCount = document.getElementById('charCount');
           const maxChars = 1000;
           const minChars = 15;
 
+          // 1. LIVE CHARACTER COUNTER
           textarea.addEventListener('input', () => {
               const currentLength = textarea.value.length;
-              // Dynamically updates the text to show how many chars they have typed
               if (currentLength < minChars) {
                   charCount.textContent = `${currentLength} / ${maxChars} characters (Minimum ${minChars} required)`;
               } else {
                   charCount.textContent = `${currentLength} / ${maxChars} characters`;
+              }
+          });
+
+          // 2. STRICT EMAIL EXTENSION VERIFICATION
+          form.addEventListener('submit', function (event) {
+              // This pattern strictly forces a dot followed by at least 2 letters at the very end
+              const strictEmailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+              if (!strictEmailPattern.test(emailInput.value)) {
+                  // Stop the form completely from sending to FormSubmit
+                  event.preventDefault();
+
+                  // Show explicit feedback
+                  alert("Please enter a complete email address including a valid domain extension (e.g., .com, .net, .org).");
+                  emailInput.focus();
               }
           });
       </script>
