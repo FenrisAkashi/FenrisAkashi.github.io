@@ -322,6 +322,91 @@ html, body {
     padding-right: 5vw; /* Adjust this to change how far in from the right monitor edge it sits */
 }
 
+/* Main page Tree */
+
+/* Block wrapper to center inner element */
+.yin-yang-frame {
+    display: block;
+    text-align: center;
+    background-color: black;
+    margin-top: 0;
+    margin-left: var(--circle-size);
+    margin-right: var(--circle-size);
+    width: calc(100% - (var(--circle-size) * 2));
+
+    position: relative;     /* CRITICAL: Establishes anchor context for inverted half */
+}
+
+/* This creates a duplicate background layer that matches the image,
+    crops to the left 50%, and inverts the colors */
+    .yin-yang-frame::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* Points to your exact same tree image */
+        background-image: url('imgs/Tree.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain; /* Perfect match for object-fit: contain */
+        /* Display only the left half of this inverted layer */
+        clip-path: inset(0 50% 0 0);
+        filter: invert(1);
+        z-index: 1;
+    }
+
+/* Isolated Image Wrapper, anchoring color fade to the image dimensions */
+.tree-wrapper {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 2; /* Sits directly on top of the inverted background layer */
+}
+
+/* The actual image properties controlling the size */
+.tree-img {
+    display: block;
+    width: 72vw; /* allows img to be responsive, always 72% of screen */
+    height: 48vw; /* keeps aspect ratio 3:2 */
+    object-fit: contain; /* prevents img from stretching or distorting */
+
+    /* CRITICAL: Makes the left side of the foreground image transparent
+        so the inverted background layer underneath comes through */
+    clip-path: inset(0 0 0 50%);
+}
+
+/* Make the outer edges of the main page img black */
+.tree-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3; /* Forces the vignette on top of BOTH image layers */
+    
+    background: 
+        radial-gradient(ellipse at center, 
+            rgba(0,0,0,0) 45%, 
+            rgba(0,0,0,1) 95%  
+        ), 
+        linear-gradient(to bottom, 
+            #000000 0%, 
+            rgba(0,0,0,0) 4%, 
+            rgba(0,0,0,0) 96%, 
+            #000000 100% 
+        ), 
+        linear-gradient(to right, 
+            #000000 0%, 
+            rgba(0,0,0,0) 20%, 
+            rgba(0,0,0,0) 80%, 
+            #000000 100%
+        );
+    pointer-events: none;
+}
+
 /* END HOME PAGE */
 
 /* LIST FIXES */
@@ -376,78 +461,6 @@ html, body {
 }
 
 /* END of list fixes*/
-
-
-/* Main page Tree */
-
-/* Block wrapper to center inner element */
-.yin-yang-frame {
-    display: block;
-    text-align: center;
-    background-color: black;
-    /*width: 100%;                /* spans full width of screen */
-    /* tree stays up high but lock the left boundary to the edge of the logo */
-    margin-top: 0;
-    margin-left: var(--circle-size);
-    margin-right: var(--circle-size);
-    width: calc(100% - (var(--circle-size) * 2));
-}
-
-/* Isolated Image Wrapper, anchoring color fade to the image dimensions */
-.tree-wrapper {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-
-    /*margin-left: calc(var(--circle-size) + 1rem);
-    margin-right: calc(var(--circle-size) + 1rem);
-    max-width: calc(100% - (var(--circle-size) * 2) - 2rem);*/
-}
-
-/* The actual image properties controlling the size */
-.tree-img {
-    display: block;
-    width: 72vw;                /* allows img to be responsive, always 72% of screen */
-    height: 48vw;               /* keeps aspect ratio 3:2 */
-    /*max-height: 90vw;           /* prevents it from clipping horizontally on tiny screens 
-    max-width: 50vh;            /* prevents it from growing too tall vertically */
-    object-fit: contain;        /* prevents img from stretching or distorting */
-    /*margin: 0 auto;             /* keeps it perfectly centered */
-}
-
-/* Make the outer edges of the main page img black */
-.tree-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    /* Radial Gradient 
-        leaves the inner 50% circle clear, smoothly blends the outer photo margins to absolute black */
-    /*background: radial-gradient(circle, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 95%);*/
-    /*background: radial-gradient(elipse at center, rgba(0,0,0,0) ...*/
-    background: 
-        radial-gradient(ellipse at center,
-            rgba(0,0,0,0) 45%,
-            rgba(0,0,0,1) 95%
-        ),
-        linear-gradient(to bottom,
-            #000000 0%,
-            rgba(0,0,0,0) 4%,
-            rgba(0,0,0,0) 96%,
-            #000000 100%
-        ),
-        
-        linear-gradient(to right,
-            #000000 0%,
-            rgba(0,0,0,0) 20%, 
-            rgba(0,0,0,0) 80%,
-            #000000 100%
-        );
-    pointer-events: none;
-}
 
 
 /* ============================================
