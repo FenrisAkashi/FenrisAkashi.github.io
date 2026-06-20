@@ -631,6 +631,85 @@ html, body {
 /* END OF ART PAGE */
 
 
+/* ================================
+             Contact Page 
+    =============================== */
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: Almendra, serif;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.required {
+    color: #ff4d4d;
+}
+
+/* Style inputs, select dropdowns, and textareas */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #111;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    color: white;
+    font-family: Almendra, serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Focus styling for clear interactivity indicators */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.char-count {
+    font-size: 0.85rem;
+    color: #888;
+    text-align: right;
+    margin-top: 0.25rem;
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--gold);
+    color: black;
+    font-family: 'Almendra', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
 /* Mobile Styles*/
 @media (max-width: 480px) {
     .center-image {

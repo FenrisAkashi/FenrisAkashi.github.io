@@ -32,22 +32,70 @@
       </nav>
 
       <div class="content">
-          <!--<img class="paw-loader" src="imgs/paws.gif" alt="loading">-->
-          <!--<p class="tagline">Work In Progress</p>-->
           <h1 class="header">Contact Me</h1>
           <div class="page-container">
               <div class="page-side left">
                   <img class=paw-loader src="imgs/paws.gif" alt="change to tech tree">
               </div>
               <div class="contact-center">
-                  <p>
-                      Contact form will go here
-                  </p>
+                  <form action="https://formsubmit.co/FenrisAkashiCreations@gmail.com" method="POST" class="contact-form">
+
+                      <input type="hidden" name="_subject" value="New Portfolio Contact Submission!">
+                      <input type="hidden" name="_template" value="table">
+                      <input type="hidden" name="_next" value="https://yourusername.github.io/contact.html">
+
+                      <div class="form-group">
+                          <label for="name">Name <span class="required">*</span></label>
+                          <input type="text" id="name" name="name" required placeholder="Your Name">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="email">Email Address <span class="required">*</span></label>
+                          <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                                 title="Please enter a complete email address including a valid domain extension." 
+                                 placeholder="your.email@example.com">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="reason">Reason for Contacting</label>
+                          <select id="reason" name="reason">
+                              <option value="Art Commission">Art Commission / Custom Piece</option>
+                              <option value="Web Development Project">Web Development Project</option>
+                              <option value="General Inquiry">General Inquiry</option>
+                          </select>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="message">Message <span class="required">*</span></label>
+                          <textarea id="message" name="message" required minlength="15" maxlength="1000" rows="8" placeholder="Your message here... (Max 1000 characters)"></textarea>
+                          <div id="charCount" class="char-count">0 / 1000 characters</div>
+                      </div>
+
+                      <button type="submit" class="submit-btn">Send Message</button>
+                  </form>
               </div>
               <div class="page-side right">
                   <img class=paw-loader src="imgs/paws.gif" alt="change to tech tree">
               </div>
           </div>
       </div>
+
+      <script>
+          const textarea = document.getElementById('message');
+          const charCount = document.getElementById('charCount');
+          const maxChars = 1000;
+          const minChars = 15;
+
+          textarea.addEventListener('input', () => {
+              const currentLength = textarea.value.length;
+              // Dynamically updates the text to show how many chars they have typed
+              if (currentLength < minChars) {
+                  charCount.textContent = `${currentLength} / ${maxChars} characters (Minimum ${minChars} required)`;
+              } else {
+                  charCount.textContent = `${currentLength} / ${maxChars} characters`;
+              }
+          });
+      </script>
+
   </body>
 </html>
