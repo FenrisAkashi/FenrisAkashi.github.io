@@ -255,7 +255,76 @@ html, body {
 }
 
 
-/* list fixes */
+/* ============================================
+                Home page 
+    ===========================================*/
+
+.hero-section {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+}
+
+.site-title {
+    font-family: 'MyFont', sans-serif;
+    color: var(--gold);
+    font-size: clamp(1.8rem, 4vw, 2.6rem); /* Scales beautifully on small and large screens */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    /* Layout positioning mirroring tree frame constraint */
+    margin-top: 0;
+    margin-left: var(--circle-size); /* Keeps it securely to the right of the navbar logo */
+    margin-right: var(--circle-size); /* Symmetrically mirrors the right side gap */
+    width: calc(100% - (var(--circle-size) * 2));
+    box-sizing: border-box;
+    margin-bottom: 0rem;
+}
+
+.hero-layout-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* One single column stack */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Force all three elements into the exact same grid track so they overlay */
+.hero-layout-wrapper > div {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* Base style for the overlaid text strings */
+.hero-phrase {
+    font-family: Almendra, serif;
+    font-size: clamp(0.9rem, 1.8vw, 1.5rem);
+    color: #888;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    z-index: 10; /* Ensures text stays layered on top of the image */
+    pointer-events: none; /* Prevents text from interfering with any image interaction */
+}
+
+/* Positioning the left phrase over the left side of the tree wrapper area */
+.phrase-left {
+    text-align: center;
+    margin-right: auto; /* Locks to the left side */
+    padding-left: 5vw; /* Adjust this to change how far in from the left monitor edge it sits */
+}
+
+/* Positioning the right phrase over the right side of the tree wrapper area */
+.phrase-right {
+    text-align: center;
+    margin-left: auto; /* Locks to the right side */
+    padding-right: 5vw; /* Adjust this to change how far in from the right monitor edge it sits */
+}
+
+/* END HOME PAGE */
+
+/* LIST FIXES */
 /* drop down menu system */
 
 /* keeps the dropdown menu box locked directly below the portfolio link */
@@ -630,6 +699,155 @@ html, body {
 
 /* END OF ART PAGE */
 
+
+/* ================================
+             Contact Page 
+    =============================== */
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: Almendra, serif;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.required {
+    color: #ff4d4d;
+}
+
+/* Style inputs, select dropdowns, and textareas */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #111;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    color: white;
+    font-family: Almendra, serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Focus styling for clear interactivity indicators */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.char-count {
+    font-size: 0.85rem;
+    color: #888;
+    text-align: right;
+    margin-top: 0.25rem;
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--gold);
+    color: black;
+    font-family: 'Almendra', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* ================================
+             Certs Page 
+    =============================== */
+
+.certs-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cert-card {
+    background-color: #111;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Keeps content and buttons perfectly aligned vertically */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle interactive float effect on hover */
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
+}
+
+.cert-media img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #222;
+    border-radius: 2px;
+    margin-bottom: 1.2rem;
+}
+
+.cert-info h3 {
+    color: white;
+    font-family: 'Almendra', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.cert-info p {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Styled text links converted to premium looking action buttons */
+.cert-link-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-family: 'Almendra', serif;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.cert-link-btn:hover {
+    background-color: var(--gold);
+    color: black;
+}
 
 /* Mobile Styles*/
 @media (max-width: 480px) {

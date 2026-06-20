@@ -255,76 +255,7 @@ html, body {
 }
 
 
-/* ============================================
-                Home page 
-    ===========================================*/
-
-.hero-section {
-    width: 100%;
-    margin-top: 0;
-    text-align: center;
-}
-
-.site-title {
-    font-family: 'MyFont', sans-serif;
-    color: var(--gold);
-    font-size: clamp(1.8rem, 4vw, 2.6rem); /* Scales beautifully on small and large screens */
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    /* Layout positioning mirroring tree frame constraint */
-    margin-top: 0;
-    margin-left: var(--circle-size); /* Keeps it securely to the right of the navbar logo */
-    margin-right: var(--circle-size); /* Symmetrically mirrors the right side gap */
-    width: calc(100% - (var(--circle-size) * 2));
-    box-sizing: border-box;
-    margin-bottom: 0rem;
-}
-
-.hero-layout-wrapper {
-    display: grid;
-    grid-template-columns: 1fr; /* One single column stack */
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-}
-
-/* Force all three elements into the exact same grid track so they overlay */
-.hero-layout-wrapper > div {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-/* Base style for the overlaid text strings */
-.hero-phrase {
-    font-family: Almendra, serif;
-    font-size: clamp(0.9rem, 1.8vw, 1.5rem);
-    color: #888;
-    letter-spacing: 1px;
-    white-space: nowrap;
-    z-index: 10; /* Ensures text stays layered on top of the image */
-    pointer-events: none; /* Prevents text from interfering with any image interaction */
-}
-
-/* Positioning the left phrase over the left side of the tree wrapper area */
-.phrase-left {
-    text-align: center;
-    margin-right: auto; /* Locks to the left side */
-    padding-left: 5vw; /* Adjust this to change how far in from the left monitor edge it sits */
-}
-
-/* Positioning the right phrase over the right side of the tree wrapper area */
-.phrase-right {
-    text-align: center;
-    margin-left: auto; /* Locks to the right side */
-    padding-right: 5vw; /* Adjust this to change how far in from the right monitor edge it sits */
-}
-
-/* END HOME PAGE */
-
-/* LIST FIXES */
+/* list fixes */
 /* drop down menu system */
 
 /* keeps the dropdown menu box locked directly below the portfolio link */
