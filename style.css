@@ -709,6 +709,76 @@ html, body {
     color: black;
 }
 
+/* ================================
+             Certs Page 
+    =============================== */
+
+.certs-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cert-card {
+    background-color: #111;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Keeps content and buttons perfectly aligned vertically */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle interactive float effect on hover */
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
+}
+
+.cert-media img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #222;
+    border-radius: 2px;
+    margin-bottom: 1.2rem;
+}
+
+.cert-info h3 {
+    color: white;
+    font-family: 'Almendra', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.cert-info p {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Styled text links converted to premium looking action buttons */
+.cert-link-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-family: 'Almendra', serif;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.cert-link-btn:hover {
+    background-color: var(--gold);
+    color: black;
+}
 
 /* Mobile Styles*/
 @media (max-width: 480px) {
