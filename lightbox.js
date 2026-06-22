@@ -220,4 +220,33 @@ document.addEventListener("DOMContentLoaded", function () {
             if (e.key === "ArrowLeft" && currentAlbumImages.length > 1) showPrevImage();
         }
     });
+
+    // 6. PORTFOLIO GRID ISOLATION FILTER WITH MULTI-CATEGORY SUPPORT
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const artItems = document.querySelectorAll(".art-item");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            const selectedFilter = this.getAttribute("data-filter");
+
+            artItems.forEach(item => {
+                const itemCategoryStr = item.getAttribute("data-category") || "";
+
+                // THE MULTI-FILTER FIX: Split space-separated string into an array of categories
+                const categories = itemCategoryStr.split(" ");
+
+                // Check if 'all' is chosen, OR if the array contains the selected filter term
+                if (selectedFilter === "all" || categories.includes(selectedFilter)) {
+                    item.classList.remove("is-hidden");
+                } else {
+                    item.classList.add("is-hidden");
+                }
+            });
+        });
+    });
 });
+
+

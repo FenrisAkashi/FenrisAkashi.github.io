@@ -33,85 +33,97 @@
 
       <div class="content">
           <h1 class="header">Art Portfolio</h1>
+
+          <div class="portfolio-filters">
+              <button class="filter-btn active" data-filter="all">All Work</button>
+              <button class="filter-btn" data-filter="canvas">Canvas</button>
+              <button class="filter-btn" data-filter="painting">Painted Pieces</button>
+              <button class="filter-btn" data-filter="clay">Clay</button>
+              <button class="filter-btn" data-filter="AI-generated">Digital</button>
+              <button class="filter-btn" data-filter="food">Food</button>
+              <button class="filter-btn" data-filter="pumpkins">Pumpkins</button>
+              <button class="filter-btn" data-filter="other">Other</button>
+          </div>
+
           <div class="page-container">
               <div class="page-side left">
                   <!--<img class=paw-loader src="imgs/paws.gif" alt="change to tech tree">-->
               </div>
               <div class="art-center">
 
-                  <div class="art-item">
+                  <div class="art-item" data-category="canvas">
                       <img src="imgs/art/Paintings/Stitch.JPEG" alt="Lilo & Stitch" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Lilo & Stitch</h3>
                           <p class="overlay-desc">Acrylic painting, large canvas</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="canvas">
                       <img src="imgs/art/Paintings/Ariel.JPEG" alt="Ariel" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Kiss the Girl</h3>
                           <p class="overlay-desc">Acrylic painting, small canvas</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="canvas">
                       <img src="imgs/art/Paintings/Mickey.jpg" alt="Sorcerer Mickey" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Sorcerer Mickey</h3>
                           <p class="overlay-desc">Acrylic painting, small canvas</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="canvas">
                       <img src="imgs/art/Paintings/Minnie&Mickey2.jpg" alt="Minnie & Mickey" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Minnie & Mickey</h3>
                           <p class="overlay-desc">Acrylic painting, small canvas</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="canvas">
                       <img src="imgs/art/Paintings/Aurora.jpg" alt="Aurora" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Aurora</h3>
                           <p class="overlay-desc">Acrylic painting, mini canvas</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="canvas">
                       <img src="imgs/art/Paintings/Tink.jpg" alt="Tinker Bell" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Tinker Bell</h3>
                           <p class="overlay-desc">Acrylic painting, mini canvas</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="Piggy bank">
+                  <div class="art-item" data-category="clay" data-album="Piggy bank">
                       <img src="imgs/art/Heart Bank/Heart Bank.JPG" alt="Heart Bank" />
 
-                      <img src="imgs/art/Heart Bank/bank1.JPG" alt="top view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Bank/bank2.JPG" alt="bottom view" class="lightbox-extra"/>
+                      <img src="imgs/art/Heart Bank/bank1.JPG" alt="top view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Bank/bank2.JPG" alt="bottom view" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Human heart shaped piggy bank</h3>
                           <p class="overlay-desc">
                               Acrylic painted clay with a cork stopper underneath
                               and resin blood to sit on top of.
                           </p>
-                          <br/>
+                          <br />
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="heart cake">
+                  <div class="art-item" data-category="food" data-album="heart cake">
                       <img src="imgs/art/Heart Cake/Heart Cake.JPG" alt="Human Heart Cake" />
 
-                      <img src="imgs/art/Heart Cake/sliced.JPG" alt="Human Heart Cake, sliced into" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/heart1.JPG" alt="Human Heart Cake front view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/heart2.JPG" alt="Human Heart Cake front view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/back side.JPG" alt="Human Heart Cake back view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/left and back.JPG" alt="Human Heart Cake left side view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/right side.JPG" alt="Human Heart Cake right side view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/back side 2.JPG" alt="Human Heart Cake back view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/left side.JPG" alt="Human Heart Cake left side view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/left side 2.JPG" alt="Human Heart Cake left side view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/side and back.JPG" alt="Human Heart Cake back view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/unfinished top.JPG" alt="Unfinished top view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/unfinished back.JPG" alt="Unfinished back view" class="lightbox-extra"/>
-                      <img src="imgs/art/Heart Cake/unfinished side and back.JPG" alt="Unfinished cake" class="lightbox-extra"/>
+                      <img src="imgs/art/Heart Cake/sliced.JPG" alt="Human Heart Cake, sliced into" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/heart1.JPG" alt="Human Heart Cake front view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/heart2.JPG" alt="Human Heart Cake front view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/back side.JPG" alt="Human Heart Cake back view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/left and back.JPG" alt="Human Heart Cake left side view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/right side.JPG" alt="Human Heart Cake right side view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/back side 2.JPG" alt="Human Heart Cake back view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/left side.JPG" alt="Human Heart Cake left side view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/left side 2.JPG" alt="Human Heart Cake left side view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/side and back.JPG" alt="Human Heart Cake back view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/unfinished top.JPG" alt="Unfinished top view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/unfinished back.JPG" alt="Unfinished back view" class="lightbox-extra" />
+                      <img src="imgs/art/Heart Cake/unfinished side and back.JPG" alt="Unfinished cake" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Human heart shaped cake</h3>
                           <p class="overlay-desc">
@@ -122,12 +134,12 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="dreamcatcher">
+                  <div class="art-item" data-category="other" data-album="dreamcatcher">
                       <img src="imgs/art/dreamcatcher/dreamcatcher.JPG" alt="Dreamcatcher" />
 
-                      <img src="imgs/art/dreamcatcher/dreamcatcher light.JPG" alt="Lit up Dreamcatcher" class="lightbox-extra"/>
-                      <img src="imgs/art/dreamcatcher/dreamcatcher closeup.JPG" alt="Dreamcatcher closeup" class="lightbox-extra"/>
-                      <img src="imgs/art/dreamcatcher/dreamcatcher2.JPG" alt="Dreamcatcher underneath" class="lightbox-extra"/>
+                      <img src="imgs/art/dreamcatcher/dreamcatcher light.JPG" alt="Lit up Dreamcatcher" class="lightbox-extra" />
+                      <img src="imgs/art/dreamcatcher/dreamcatcher closeup.JPG" alt="Dreamcatcher closeup" class="lightbox-extra" />
+                      <img src="imgs/art/dreamcatcher/dreamcatcher2.JPG" alt="Dreamcatcher underneath" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Dreamcatcher</h3>
                           <p class="overlay-desc"></p>
@@ -135,12 +147,12 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="mural">
+                  <div class="art-item" data-category="painting" data-album="mural">
                       <img src="imgs/art/cheezbrgr mural/Mural.jpg" alt="Cheeseburger in Paradise Mural" />
 
-                      <img src="imgs/art/cheezbrgr mural/mural unfinished.jpg" alt="mural unfinished" class="lightbox-extra"/>
-                      <img src="imgs/art/cheezbrgr mural/dragon surfboard.jpg" alt="dragon surfboard" class="lightbox-extra"/>
-                      <img src="imgs/art/cheezbrgr mural/flower surfboard.jpg" alt="flower surfboard" class="lightbox-extra"/>
+                      <img src="imgs/art/cheezbrgr mural/mural unfinished.jpg" alt="mural unfinished" class="lightbox-extra" />
+                      <img src="imgs/art/cheezbrgr mural/dragon surfboard.jpg" alt="dragon surfboard" class="lightbox-extra" />
+                      <img src="imgs/art/cheezbrgr mural/flower surfboard.jpg" alt="flower surfboard" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Cheeseburger in Paradise themed Mural</h3>
                           <p class="overlay-desc">Acrylic paint on the backside of a large garage.</p>
@@ -148,26 +160,26 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Mushroom Forest.jpg" alt="AI art Mushroom Forest" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Mushroom Forest</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/sunset in a bottle.jpg" alt="AI art Sunset in a Bottle" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Sunset in a bottle</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="Candles">
+                  <div class="art-item" data-category="other" data-album="Candles">
                       <img src="imgs/art/floating candles/candle.JPG" alt="candle" />
 
-                      <img src="imgs/art/floating candles/candle dark.JPG" alt="candle in the dark" class="lightbox-extra"/>
-                      <img src="imgs/art/floating candles/candles.JPG" alt="candles" class="lightbox-extra"/>
-                      <img src="imgs/art/floating candles/candles2.JPG" alt="candles" class="lightbox-extra"/>
+                      <img src="imgs/art/floating candles/candle dark.JPG" alt="candle in the dark" class="lightbox-extra" />
+                      <img src="imgs/art/floating candles/candles.JPG" alt="candles" class="lightbox-extra" />
+                      <img src="imgs/art/floating candles/candles2.JPG" alt="candles" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Floating Candles</h3>
                           <p class="overlay-desc">
@@ -180,20 +192,20 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="other">
                       <img src="imgs/art/perler/mal.jpg" alt="Baby Maleficent perler" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Baby Maleficent</h3>
                           <p class="overlay-desc">Perler project</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="Garlic jar">
+                  <div class="art-item" data-category="painting" data-album="Garlic jar">
                       <img src="imgs/art/garlic jar/garlic jar.JPEG" alt="Garlic jar" />
 
-                      <img src="imgs/art/garlic jar/jar.JPEG" alt="side 2" class="lightbox-extra"/>
-                      <img src="imgs/art/garlic jar/jar2.JPEG" alt="side 3" class="lightbox-extra"/>
-                      <img src="imgs/art/garlic jar/jar3.JPEG" alt="side 4" class="lightbox-extra"/>
-                      <img src="imgs/art/garlic jar/original jar.JPEG" alt="Unpainted jar" class="lightbox-extra"/>
+                      <img src="imgs/art/garlic jar/jar.JPEG" alt="side 2" class="lightbox-extra" />
+                      <img src="imgs/art/garlic jar/jar2.JPEG" alt="side 3" class="lightbox-extra" />
+                      <img src="imgs/art/garlic jar/jar3.JPEG" alt="side 4" class="lightbox-extra" />
+                      <img src="imgs/art/garlic jar/original jar.JPEG" alt="Unpainted jar" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Garlic jar</h3>
                           <p class="overlay-desc">Acrylic painted clay jar, grass and wolfsbane. I did not make the jar.</p>
@@ -201,48 +213,50 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="other">
                       <img src="imgs/art/other/cthulhu.jpg" alt="Cthulhu inspired stuffed animal" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Cthulhu inspired stuffed animal</h3>
-                          <p class="overlay-desc">Drew an image first and then made it into the stuffed animal using cloth, 
-                                    stuffing, plastic jewels for the eyes, and wire for the limbs to be bendable. The fabric 
-                                    is snake skin patterned.</p>
+                          <p class="overlay-desc">
+                              Drew an image first and then made it into the stuffed animal using cloth,
+                              stuffing, plastic jewels for the eyes, and wire for the limbs to be bendable. The fabric
+                              is snake skin patterned.
+                          </p>
                       </div>
                   </div>
 
                   <!--<div class="art-item" data-album="CleanRoom assets">
-                      <img src="imgs/art/CleanRoom/tape.JPG" alt="CleanRoom Assets" />
+                <img src="imgs/art/CleanRoom/tape.JPG" alt="CleanRoom Assets" />
 
-                      <img src="imgs/art/CleanRoom/tape3.JPEG" alt="tape3" class="lightbox-extra"/>
-                      <img src="imgs/art/CleanRoom/tape1.JPEG" alt="tape1" class="lightbox-extra"/>
-                      <img src="imgs/art/CleanRoom/tape2.JPEG" alt="tape2" class="lightbox-extra"/>
-                      <img src="imgs/art/CleanRoom/tape4.JPEG" alt="tape4" class="lightbox-extra"/>
-                      <img src="imgs/art/CleanRoom/bottles.JPEG" alt="bottles" class="lightbox-extra"/>
-                      <img src="imgs/art/CleanRoom/testing.JPG" alt="testing" class="lightbox-extra"/>
-                      <img src="imgs/art/CleanRoom/testing2.JPG" alt="testing2" class="lightbox-extra"/>
-                      <img src="imgs/art/CleanRoom/disc.JPEG" alt="disc" class="lightbox-extra"/>
-                      <img src="imgs/art/CleanRoom/disc2.JPEG" alt="disc2" class="lightbox-extra"/>
-                      <img src="imgs/art/CleanRoom/blueprint.JPEG" alt="blueprint" class="lightbox-extra"/>
+                <img src="imgs/art/CleanRoom/tape3.JPEG" alt="tape3" class="lightbox-extra"/>
+                <img src="imgs/art/CleanRoom/tape1.JPEG" alt="tape1" class="lightbox-extra"/>
+                <img src="imgs/art/CleanRoom/tape2.JPEG" alt="tape2" class="lightbox-extra"/>
+                <img src="imgs/art/CleanRoom/tape4.JPEG" alt="tape4" class="lightbox-extra"/>
+                <img src="imgs/art/CleanRoom/bottles.JPEG" alt="bottles" class="lightbox-extra"/>
+                <img src="imgs/art/CleanRoom/testing.JPG" alt="testing" class="lightbox-extra"/>
+                <img src="imgs/art/CleanRoom/testing2.JPG" alt="testing2" class="lightbox-extra"/>
+                <img src="imgs/art/CleanRoom/disc.JPEG" alt="disc" class="lightbox-extra"/>
+                <img src="imgs/art/CleanRoom/disc2.JPEG" alt="disc2" class="lightbox-extra"/>
+                <img src="imgs/art/CleanRoom/blueprint.JPEG" alt="blueprint" class="lightbox-extra"/>
 
-                      <div class="art-overlay">
-                          <h3 class="overlay-title">CleanRoom Assets</h3>
-                          <p class="overlay-desc">
-                              The project itself is in the coding portfolio. Here are some images of
-                              the 3D assets I created using Blender.
-                          </p>
-                          <br />
-                          <p class="overlay-desc">Click to see more</p>
-                      </div>
-                  </div>-->
-                  <div class="art-item" data-album="fashion">
+                <div class="art-overlay">
+                    <h3 class="overlay-title">CleanRoom Assets</h3>
+                    <p class="overlay-desc">
+                        The project itself is in the coding portfolio. Here are some images of
+                        the 3D assets I created using Blender.
+                    </p>
+                    <br />
+                    <p class="overlay-desc">Click to see more</p>
+                </div>
+            </div>-->
+                  <div class="art-item" data-category="other" data-album="fashion">
                       <img src="imgs/art/fashion/Red dress.JPEG" alt="Red dress" />
 
-                      <img src="imgs/art/fashion/red dress sketch.JPEG" alt="Red dress sketch" class="lightbox-extra"/>
-                      <img src="imgs/art/fashion/black dress.JPEG" alt="Black dress" class="lightbox-extra"/>
-                      <img src="imgs/art/fashion/black dress sketch.JPEG" alt="Black dress sketch" class="lightbox-extra"/>
-                      <img src="imgs/art/fashion/floral dress.JPEG" alt="Floral dress" class="lightbox-extra"/>
-                      <img src="imgs/art/fashion/keyhole dress.JPEG" alt="Keyhole dress" class="lightbox-extra"/>
+                      <img src="imgs/art/fashion/red dress sketch.JPEG" alt="Red dress sketch" class="lightbox-extra" />
+                      <img src="imgs/art/fashion/black dress.JPEG" alt="Black dress" class="lightbox-extra" />
+                      <img src="imgs/art/fashion/black dress sketch.JPEG" alt="Black dress sketch" class="lightbox-extra" />
+                      <img src="imgs/art/fashion/floral dress.JPEG" alt="Floral dress" class="lightbox-extra" />
+                      <img src="imgs/art/fashion/keyhole dress.JPEG" alt="Keyhole dress" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Fashion sketches</h3>
                           <p class="overlay-desc">
@@ -253,11 +267,11 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="dragon miniature">
+                  <div class="art-item" data-category="painting" data-album="dragon miniature">
                       <img src="imgs/art/miniatures/dragon mini.JPG" alt="Dragon miniature" />
 
-                      <img src="imgs/art/miniatures/front.JPG" alt="Dragon miniature front view" class="lightbox-extra"/>
-                      <img src="imgs/art/miniatures/back.JPG" alt="Dragon miniature back view" class="lightbox-extra"/>
+                      <img src="imgs/art/miniatures/front.JPG" alt="Dragon miniature front view" class="lightbox-extra" />
+                      <img src="imgs/art/miniatures/back.JPG" alt="Dragon miniature back view" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Dragon miniature</h3>
                           <p class="overlay-desc">
@@ -268,28 +282,28 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="NBC jars">
+                  <div class="art-item" data-category="clay" data-album="NBC jars">
                       <img src="imgs/art/NBC jars/Nightshade.JPG" alt="Nightmare Before Christmas jars" />
 
-                      <img src="imgs/art/NBC jars/Nightshade top.JPG" alt="Deadly Nightshade top view" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/Nightshade side.JPG" alt="Deadly Nightshade side view" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/Witch Hazel.JPG" alt="Witch Hazel" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/witch hazel top.JPG" alt="Witch Hazel top view" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/witch hazel closeup.JPG" alt="Witch Hazel closeup" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/worms wart.JPG" alt="Worm's Wart" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/worms wart closeup.PNG" alt="Worm's Wart closeup" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/worms wart back.JPG" alt="Worm's Wart back view" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/Frogs breath.JPG" alt="Frog's Breath" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/frogs breath top.JPG" alt="Frog's Breath top view" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/frogs breath2.JPG" alt="Frog's Breath, two jars" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/mid-painting.JPG" alt="Mid-paint job" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/frogs breath unfinished.JPG" alt="Frog's breath, unfinished" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/unfinished.JPG" alt="Unfinished jars" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/worms wart unfinished.JPG" alt="Worm's Wart, unfinished" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/unpainted jars.JPG" alt="Unpainted jars" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/mixed clays.JPG" alt="Mixed Clays" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/clay covered glass jars.JPG" alt="Clay covered glass jars" class="lightbox-extra"/>
-                      <img src="imgs/art/NBC jars/just starting.JPG" alt="Just starting" class="lightbox-extra"/>
+                      <img src="imgs/art/NBC jars/Nightshade top.JPG" alt="Deadly Nightshade top view" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/Nightshade side.JPG" alt="Deadly Nightshade side view" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/Witch Hazel.JPG" alt="Witch Hazel" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/witch hazel top.JPG" alt="Witch Hazel top view" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/witch hazel closeup.JPG" alt="Witch Hazel closeup" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/worms wart.JPG" alt="Worm's Wart" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/worms wart closeup.PNG" alt="Worm's Wart closeup" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/worms wart back.JPG" alt="Worm's Wart back view" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/Frogs breath.JPG" alt="Frog's Breath" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/frogs breath top.JPG" alt="Frog's Breath top view" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/frogs breath2.JPG" alt="Frog's Breath, two jars" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/mid-painting.JPG" alt="Mid-paint job" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/frogs breath unfinished.JPG" alt="Frog's breath, unfinished" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/unfinished.JPG" alt="Unfinished jars" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/worms wart unfinished.JPG" alt="Worm's Wart, unfinished" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/unpainted jars.JPG" alt="Unpainted jars" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/mixed clays.JPG" alt="Mixed Clays" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/clay covered glass jars.JPG" alt="Clay covered glass jars" class="lightbox-extra" />
+                      <img src="imgs/art/NBC jars/just starting.JPG" alt="Just starting" class="lightbox-extra" />
 
                       <div class="art-overlay">
                           <h3 class="overlay-title">Nightmare Before Christmas jars</h3>
@@ -301,16 +315,16 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="heart pendant">
+                  <div class="art-item" data-category="clay" data-album="heart pendant">
                       <img src="imgs/art/Pendants/heart pendant.JPG" alt="Human Heart necklace pendant" />
 
-                      <img src="imgs/art/Pendants/clay single.JPG" alt="Single clay human heart pendant" class="lightbox-extra"/>
-                      <img src="imgs/art/Pendants/painted multiple.JPEG" alt="Painted human heart pendants" class="lightbox-extra"/>
-                      <img src="imgs/art/Pendants/size.JPG" alt="Human Heart necklace pendant, size comparison" class="lightbox-extra"/>
-                      <img src="imgs/art/Pendants/painted multiple2.JPG" alt="Painted human heart pendants" class="lightbox-extra"/>
-                      <img src="imgs/art/Pendants/clay multiple.JPG" alt="Unfinished clay pendants" class="lightbox-extra"/>
-                      <img src="imgs/art/Pendants/clay multiple2.JPG" alt="Unfinished clay pendants" class="lightbox-extra"/>
-                      <img src="imgs/art/Pendants/both pendants.JPEG" alt="Heart & Brains necklace pendants, unfinished" class="lightbox-extra"/>
+                      <img src="imgs/art/Pendants/clay single.JPG" alt="Single clay human heart pendant" class="lightbox-extra" />
+                      <img src="imgs/art/Pendants/painted multiple.JPEG" alt="Painted human heart pendants" class="lightbox-extra" />
+                      <img src="imgs/art/Pendants/size.JPG" alt="Human Heart necklace pendant, size comparison" class="lightbox-extra" />
+                      <img src="imgs/art/Pendants/painted multiple2.JPG" alt="Painted human heart pendants" class="lightbox-extra" />
+                      <img src="imgs/art/Pendants/clay multiple.JPG" alt="Unfinished clay pendants" class="lightbox-extra" />
+                      <img src="imgs/art/Pendants/clay multiple2.JPG" alt="Unfinished clay pendants" class="lightbox-extra" />
+                      <img src="imgs/art/Pendants/both pendants.JPEG" alt="Heart & Brains necklace pendants, unfinished" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Human heart necklace pendants</h3>
                           <p class="overlay-desc">Made from clay and painted with acrylic.</p>
@@ -318,11 +332,11 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="Fallout">
+                  <div class="art-item" data-category="painting" data-album="Fallout">
                       <img src="imgs/art/Fallout/Fallout.JPEG" alt="Fallout" />
 
-                      <img src="imgs/art/Fallout/Fallout2.JPEG" alt="Fallout" class="lightbox-extra"/>
-                      <img src="imgs/art/Fallout/Fallout3.JPEG" alt="Fallout" class="lightbox-extra"/>
+                      <img src="imgs/art/Fallout/Fallout2.JPEG" alt="Fallout" class="lightbox-extra" />
+                      <img src="imgs/art/Fallout/Fallout3.JPEG" alt="Fallout" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Fallout Monopoly pieces</h3>
                           <p class="overlay-desc">Acrylic painted metal monopoly pieces for Fallout edition.</p>
@@ -330,67 +344,71 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="other">
                       <img src="imgs/art/other/dragon.jpg" alt="Dragon Fuzzy Poster" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Rainbow Dragon</h3>
                           <p class="overlay-desc">This is actually a fuzzy poster, but it turned out really cool imo.</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="other">
                       <img src="imgs/art/other/coffee table.JPG" alt="Coffee Table" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Refinished Coffee Table</h3>
-                          <p class="overlay-desc">Bought this for cheap with kids drawings all over it. Sanded it down, 
-                                    stained it, and put a heavy coat of resin on top so it's ultra shiny</p>
+                          <p class="overlay-desc">
+                              Bought this for cheap with kids drawings all over it. Sanded it down,
+                              stained it, and put a heavy coat of resin on top so it's ultra shiny
+                          </p>
                       </div>
                   </div>
                   <!---<div class="art-item" data-album="minesweeper">
-                      <img src="imgs/art/Coding projects I need to find/Meinsweeper.JPEG" alt="Meinsweeper game" />
+                <img src="imgs/art/Coding projects I need to find/Meinsweeper.JPEG" alt="Meinsweeper game" />
 
-                      <img src="imgs/art/Coding projects I need to find/Meinsweeper2.JPEG" alt="Meinsweeper end game" class="lightbox-extra"/>
-                      <div class="art-overlay">
-                          <h3 class="overlay-title">Meinsweeper Game</h3>
-                          <p class="overlay-desc">
-                              In a college coding class we were tasked with making our own minesweeper game.
-                              I'm not sure if I still have the project somewhere, but I at least have a couple images
-                          </p>
-                          <br />
-                          <p class="overlay-desc">Click to see more</p>
-                      </div>
-                  </div>-->
-                  <div class="art-item">
+                <img src="imgs/art/Coding projects I need to find/Meinsweeper2.JPEG" alt="Meinsweeper end game" class="lightbox-extra"/>
+                <div class="art-overlay">
+                    <h3 class="overlay-title">Meinsweeper Game</h3>
+                    <p class="overlay-desc">
+                        In a college coding class we were tasked with making our own minesweeper game.
+                        I'm not sure if I still have the project somewhere, but I at least have a couple images
+                    </p>
+                    <br />
+                    <p class="overlay-desc">Click to see more</p>
+                </div>
+            </div>-->
+                  <div class="art-item" data-category="other">
                       <img src="imgs/art/other/math.JPEG" alt="Math art" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Math Art</h3>
-                          <p class="overlay-desc">This pattern was created by coding a mathematical equation. If I can find 
-                                    the project I'll add it to the coding portfolio</p>
+                          <p class="overlay-desc">
+                              This pattern was created by coding a mathematical equation. If I can find
+                              the project I'll add it to the coding portfolio
+                          </p>
                       </div>
                   </div>
                   <!--<div class="art-item" data-album="RecipeDB">
-                      <img src="imgs/art/Coding projects I need to find/Fantastic Recipes.JPEG" alt="Fantastic Recipes and where to find them, Recipe Database" />
+                <img src="imgs/art/Coding projects I need to find/Fantastic Recipes.JPEG" alt="Fantastic Recipes and where to find them, Recipe Database" />
 
-                      <img src="imgs/art/Coding projects I need to find/Recipe DB.JPEG" alt="Recipe DB" class="lightbox-extra"/>
-                      <img src="imgs/art/Coding projects I need to find/Recipe DB2.JPEG" alt="Recipe DB2" class="lightbox-extra"/>
-                      <div class="art-overlay">
-                          <h3 class="overlay-title">Fantastic Recipes and Where to Find Them</h3>
-                          <p class="overlay-desc">
-                              This is a recipe database programming project. If I can find the project I'll
-                              add it to the coding portfolio
-                          </p>
-                          <br/>
-                          <p class="overlay-desc">Click to see more</p>
-                      </div>
-                  </div>-->
-                  <div class="art-item" data-album="pokemon pumpkin">
+                <img src="imgs/art/Coding projects I need to find/Recipe DB.JPEG" alt="Recipe DB" class="lightbox-extra"/>
+                <img src="imgs/art/Coding projects I need to find/Recipe DB2.JPEG" alt="Recipe DB2" class="lightbox-extra"/>
+                <div class="art-overlay">
+                    <h3 class="overlay-title">Fantastic Recipes and Where to Find Them</h3>
+                    <p class="overlay-desc">
+                        This is a recipe database programming project. If I can find the project I'll
+                        add it to the coding portfolio
+                    </p>
+                    <br/>
+                    <p class="overlay-desc">Click to see more</p>
+                </div>
+            </div>-->
+                  <div class="art-item" data-category="pumpkins" data-album="pokemon pumpkin">
                       <img src="imgs/art/pumpkins/Ghostly pokemon.JPEG" alt="Ghostly Pokemon pumpkin" />
 
                       <video src="vids/pokemon pumpkin.MP4" alt="Ghostly Pokemon pumpkin, video rotation" class="lightbox-extra" muted loop playsinline></video>
-                      <img src="imgs/art/pumpkins/gengar.JPEG" alt="Ghostly Pokemon pumpkin, Gengar focus" class="lightbox-extra"/>
-                      <img src="imgs/art/pumpkins/haunter.JPEG" alt="Ghostly Pokemon pumpkin, Haunter focus" class="lightbox-extra"/>
-                      <img src="imgs/art/pumpkins/ghastly.JPEG" alt="Ghostly Pokemon pumpkin" class="lightbox-extra"/>
-                      <img src="imgs/art/pumpkins/sketch.JPEG" alt="Ghostly Pokemon pumpkin, sketch left side" class="lightbox-extra"/>
-                      <img src="imgs/art/pumpkins/sketch2.JPEG" alt="Ghostly Pokemon pumpkin, sketch right side" class="lightbox-extra"/>
+                      <img src="imgs/art/pumpkins/gengar.JPEG" alt="Ghostly Pokemon pumpkin, Gengar focus" class="lightbox-extra" />
+                      <img src="imgs/art/pumpkins/haunter.JPEG" alt="Ghostly Pokemon pumpkin, Haunter focus" class="lightbox-extra" />
+                      <img src="imgs/art/pumpkins/ghastly.JPEG" alt="Ghostly Pokemon pumpkin" class="lightbox-extra" />
+                      <img src="imgs/art/pumpkins/sketch.JPEG" alt="Ghostly Pokemon pumpkin, sketch left side" class="lightbox-extra" />
+                      <img src="imgs/art/pumpkins/sketch2.JPEG" alt="Ghostly Pokemon pumpkin, sketch right side" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Ghostly Pokemon</h3>
                           <p class="overlay-desc">Jack O'Lantern with ghost Pokemon, Ghastly, Haunter, and Gengar.</p>
@@ -398,111 +416,111 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Jellyfish.jpg" alt="AI Jellyfish" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Rainbow Jellyfish</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Jelly Dragon.jpg" alt="AI Jelly Dragon" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Jelly Dragon</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Cherryblossoms snowglobe.jpg" alt="AI Cherryblossoms snowglobe" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Cherryblossoms Snowglobe</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Kitsune.jpg" alt="AI Kitsune" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Kitsune</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Koi.jpg" alt="AI Koi" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Koi</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Pegasus.jpg" alt="AI Pegasus" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Pegasus</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Little Red.jpg" alt="AI Little Red Riding Hood and her protector" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Little Red and her protector</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/wolf.jpg" alt="AI wolf" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Wolf</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Monastary.jpg" alt="AI Monastary" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Monastary</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Mosaic dragon2.jpg" alt="AI Mosaic Dragon" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Mosaic Dragon</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/crystal heart.jpg" alt="AI Crystal heart" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Crystal Heart</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/Cherryblossom sunset.jpg" alt="AI Cherryblossom sunset" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Cherryblossom Sunset</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/pop up Halloween.jpg" alt="AI Haunted House book" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Pop up Halloween</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="AI-generated">
                       <img src="imgs/art/NightCafe/crystal apple.jpg" alt="AI Crystal apple" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Crystal Apple</h3>
                           <p class="overlay-desc">AI generated art on NightCafe</p>
                       </div>
                   </div>
-                  <div class="art-item" data-album="Brain pendants">
+                  <div class="art-item" data-category="clay" data-album="Brain pendants">
                       <img src="imgs/art/Pendants/Brains.JPEG" alt="Brain necklace pendants" />
 
-                      <img src="imgs/art/Pendants/clay brain.JPG" alt="Brain necklace pendant, unfinished" class="lightbox-extra"/>
-                      <img src="imgs/art/Pendants/clay brain top.JPG" alt="Brain necklace pendant, unfinished" class="lightbox-extra"/>
-                      <img src="imgs/art/Pendants/clay brain side.JPG" alt="Brain necklace pendant, unfinished" class="lightbox-extra"/>
-                      <img src="imgs/art/Pendants/both pendants.JPEG" alt="Brain and Heart necklace pendants, unfinished" class="lightbox-extra"/>
+                      <img src="imgs/art/Pendants/clay brain.JPG" alt="Brain necklace pendant, unfinished" class="lightbox-extra" />
+                      <img src="imgs/art/Pendants/clay brain top.JPG" alt="Brain necklace pendant, unfinished" class="lightbox-extra" />
+                      <img src="imgs/art/Pendants/clay brain side.JPG" alt="Brain necklace pendant, unfinished" class="lightbox-extra" />
+                      <img src="imgs/art/Pendants/both pendants.JPEG" alt="Brain and Heart necklace pendants, unfinished" class="lightbox-extra" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Brain necklace pendants</h3>
                           <p class="overlay-desc">Clay pendants painted with acrylic.</p>
@@ -510,14 +528,14 @@
                           <p class="overlay-desc">Click to see more</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="pumpkins">
                       <img src="imgs/art/pumpkins/first pumpkin.jpg" alt="1st ever Jack O lantern" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Jack O'Lantern</h3>
                           <p class="overlay-desc">1st Jack O'Lantern I ever made.</p>
                       </div>
                   </div>
-                  <div class="art-item">
+                  <div class="art-item" data-category="pumpkins">
                       <img src="imgs/art/pumpkins/Charmander.JPEG" alt="Charmander pumpkin" />
                       <div class="art-overlay">
                           <h3 class="overlay-title">Charmander Jack O'Lantern</h3>
