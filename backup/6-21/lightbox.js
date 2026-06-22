@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             currentImageIndex = 0;
             updateLightboxDisplay();
 
-            if (modal) modal.style.display = "flex";
+            if (modal) modal.style.display = "block";
 
             if (prevBtn && nextBtn) {
                 if (currentAlbumImages.length > 1) {
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             currentImageIndex = 0;
             updateLightboxDisplay();
 
-            if (modal) modal.style.display = "flex";
+            if (modal) modal.style.display = "block";
 
             if (prevBtn && nextBtn) {
                 if (currentAlbumImages.length > 1) {

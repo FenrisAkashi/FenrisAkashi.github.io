@@ -388,27 +388,19 @@ html, body {
 
 .hero-layout-wrapper {
     display: grid;
-    grid-template-columns: 14fr 72fr 14fr;
+    grid-template-columns: 1fr; /* One single column stack */
     align-items: center;
-    /*justify-content: center;
+    justify-content: center;
     position: relative;
     width: 100%;
-    margin: 0 auto;*/
-
-    /*margin-left: var(--circle-size);
-    margin-right: var(--circle-size);
-    width: calc(100% - (var(--circle-size) * 2));*/
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0 1.5rem;
+    margin: 0 auto;
 }
 
 /* Force all three elements into the exact same grid track so they overlay */
-/*.hero-layout-wrapper > div {
+.hero-layout-wrapper > div {
     grid-column: 1;
     grid-row: 1;
-}*/
+}
 
 /* Base style for the overlaid text strings */
 .hero-phrase {
@@ -417,33 +409,28 @@ html, body {
     color: #888;
     letter-spacing: 1px;
     white-space: nowrap;
-    /*z-index: 10; /* Ensures text stays layered on top of the image 
+    z-index: 10; /* Ensures text stays layered on top of the image */
     pointer-events: none; /* Prevents text from interfering with any image interaction */
 }
 
 /* Positioning the left phrase over the left side of the tree wrapper area */
 .phrase-left {
-    grid-column: 1;
     text-align: center;
-    /*margin-right: auto; /* Locks to the left side 
+    margin-right: auto; /* Locks to the left side */
     padding-left: 5vw; /* Adjust this to change how far in from the left monitor edge it sits */
-    justify-self: center;
 }
 
 /* Positioning the right phrase over the right side of the tree wrapper area */
 .phrase-right {
-    grid-column: 3;
     text-align: center;
-    /*margin-left: auto; /* Locks to the right side 
+    margin-left: auto; /* Locks to the right side */
     padding-right: 5vw; /* Adjust this to change how far in from the right monitor edge it sits */
-    justify-self: center;
 }
 
 /* Main page Tree */
 
 /* Block wrapper to center inner element */
 .yin-yang-frame {
-    grid-column: 2;
     display: block;
     text-align: center;
     background-color: black;
@@ -451,30 +438,29 @@ html, body {
     margin-left: var(--circle-size);
     margin-right: var(--circle-size);
     width: calc(100% - (var(--circle-size) * 2));
-    width: 100%;
-    position: relative; /* CRITICAL: Establishes anchor context for inverted half */
-    justify-self: center;
+
+    position: relative;     /* CRITICAL: Establishes anchor context for inverted half */
 }
 
 /* This creates a duplicate background layer that matches the image,
     crops to the left 50%, and inverts the colors */
-.yin-yang-frame::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    /* Points to your exact same tree image */
-    background-image: url('imgs/Tree.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain; /* Perfect match for object-fit: contain */
-    /* Display only the left half of this inverted layer */
-    clip-path: inset(0 50% 0 0);
-    filter: invert(1);
-    z-index: 1;
-}
+    .yin-yang-frame::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* Points to your exact same tree image */
+        background-image: url('imgs/Tree.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain; /* Perfect match for object-fit: contain */
+        /* Display only the left half of this inverted layer */
+        clip-path: inset(0 50% 0 0);
+        filter: invert(1);
+        z-index: 1;
+    }
 
 /* Isolated Image Wrapper, anchoring color fade to the image dimensions */
 .tree-wrapper {
@@ -487,16 +473,13 @@ html, body {
 /* The actual image properties controlling the size */
 .tree-img {
     display: block;
-    /*width: 72vw; /* allows img to be responsive, always 72% of screen 
+    width: 72vw; /* allows img to be responsive, always 72% of screen */
     height: 48vw; /* keeps aspect ratio 3:2 */
     object-fit: contain; /* prevents img from stretching or distorting */
 
     /* CRITICAL: Makes the left side of the foreground image transparent
         so the inverted background layer underneath comes through */
     clip-path: inset(0 0 0 50%);
-
-    width: 100%;    /* fills the 72% column */
-    height: auto;   /* keeps the aspect ratio */
 }
 
 /* Make the outer edges of the main page img black */
@@ -632,8 +615,6 @@ html, body {
     gap: 1rem;
     justify-content: center;
     margin-bottom: 1.5rem;
-
-    flex-wrap: wrap;
 }
 
 .project-btn {
@@ -750,6 +731,9 @@ html, body {
 
 /*======LIGHTBOX MODAL SYSTEM=========*/
 /* Hides the secondary images from cluttered view on the main gallery stream */
+/*.art-item img.lightbox-extra {
+    display: none !important;
+}*/
 .art-center .art-item img.lightbox-extra {
     display: none;
 }
@@ -761,45 +745,21 @@ html, body {
     z-index: 10000; /* stays securely on top of headers and tracks */
     left: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.95); /* Deep matte black background */
     box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
 }
-
-/* Force centering behaviors globally when the script turns the modal on */
-/*.lightbox-modal[style*="display: flex"],
-.lightbox-modal[style*="display: block"] {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-}*/
 
 /* Centered content bounding box */
 .lightbox-content {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 900px;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    max-width: calc(100% - 16rem);
-}
-
-/* Forces both images and videos to scale cleanly without distortion */
-.lightbox-content img,
-.lightbox-content video {
-    max-width: 100%;
-    max-height: 75vh;
-    object-fit: contain;
-    border: 2px solid var(--gold);
-    border-radius: 4px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 /* The Active Enlarged Image */
@@ -813,26 +773,24 @@ html, body {
 }
 
 /* Caption Text */
-.lightbox-caption, .lightboxCaption {
+.lightbox-caption {
     margin-top: 15px;
     color: var(--gold);
     font-family: Almendra, serif;
     font-size: 1.5rem;
     letter-spacing: 1px;
-    text-align: center;
 }
 
 /* Close Window Button ('X') */
 .lightbox-close {
-    /*position: absolute;*/
-    position: fixed;
+    position: absolute;
     top: 30px;
     right: 40px;
     color: #bbb;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    /*transition: color 0.2s ease;*/
+    transition: color 0.2s ease;
 }
 .lightbox-close:hover {
     color: var(--gold);
@@ -841,7 +799,6 @@ html, body {
 /* Navigation Arrow Controls Buttons */
 .lightbox-arrow {
     position: absolute;
-    /*position: fixed;*/
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.5);
@@ -854,9 +811,6 @@ html, body {
     border-radius: 4px;
     user-select: none;
     transition: all 0.2s ease;
-
-    z-index: 10005;
-    user-select: none;
 }
 .lightbox-arrow:hover {
     background: var(--gold);

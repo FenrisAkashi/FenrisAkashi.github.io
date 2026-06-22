@@ -745,21 +745,50 @@ html, body {
     z-index: 10000; /* stays securely on top of headers and tracks */
     left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.95); /* Deep matte black background */
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Force centering behaviors globally when the script turns the modal on */
+.lightbox-modal[style*="display: block"] {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Centered content bounding box */
 .lightbox-content {
-    position: absolute;
-    top: 50%;
+    display: flex;
+    flex-direction: column;
+    /*position: absolute;*/
+    position: relative;
+    /*top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-    max-width: 900px;
+    transform: translate(-50%, -50%);*/
+    /*width: 85%;*/
+    max-width: 80%;
+    /*max-width: 900px;*/
+    max-height: 80vh;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Forces both images and videos to scale cleanly without distortion */
+.lightbox-content img,
+.lightbox-content video {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 /* The Active Enlarged Image */
@@ -773,24 +802,26 @@ html, body {
 }
 
 /* Caption Text */
-.lightbox-caption {
+.lightbox-caption, .lightboxCaption {
     margin-top: 15px;
     color: var(--gold);
     font-family: Almendra, serif;
     font-size: 1.5rem;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 /* Close Window Button ('X') */
 .lightbox-close {
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
     top: 30px;
     right: 40px;
     color: #bbb;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.2s ease;
+    /*transition: color 0.2s ease;*/
 }
 .lightbox-close:hover {
     color: var(--gold);
@@ -798,7 +829,8 @@ html, body {
 
 /* Navigation Arrow Controls Buttons */
 .lightbox-arrow {
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.5);
@@ -811,6 +843,9 @@ html, body {
     border-radius: 4px;
     user-select: none;
     transition: all 0.2s ease;
+
+    z-index: 10005;
+    user-select: none;
 }
 .lightbox-arrow:hover {
     background: var(--gold);
