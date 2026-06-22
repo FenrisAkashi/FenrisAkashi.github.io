@@ -21,7 +21,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  /*background: blue;*/
   background: black;
   height: 100%;
   min-width: 320px;         /* smallest safe mobile width */
@@ -165,7 +164,7 @@ html, body {
   clip-path: inset(50% 0 0 0);
 }
 
-.paw-loader {
+/*.paw-loader {
   filter: 
     brightness(1.8)
     sepia(1)
@@ -173,7 +172,7 @@ html, body {
     hue-rotate(5deg);
 
   opacity: 0.9;
-}
+}*/
 
 .header {
     font-family: 'MyFont';
@@ -181,21 +180,48 @@ html, body {
     margin-top: 0;
     margin-bottom: 2rem;
     text-align: center;
+    box-sizing: border-box;
+    /* DYNAMIC LOCK: Frames titles exactly over the center 60vw space */
+    width: auto;
+    max-width: 60vw;
+    margin-left: max(20vw, 16vh);
+    margin-right: max(20vw, 16vh);
+}
+
+.content:has(.contact-center, .about-container, .page-container, .certs-center) .header {
+    margin-top: -4vh;
 }
 
 .about,
 .coding-center,
-.contact-center,
+.contact-center {
+    /* text */
+    font-family: 'Almendra', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 20px; /* Internal padding so text doesn't hit its own borders */
+    box-sizing: border-box;
+
+    flex: 0 0 60vw;
+    width: 60vw;
+    max-width: 60vw;
+}
 .certs-center {
     /* text */
     font-family: 'Almendra', serif;
     font-size: 22px;
     line-height: 1.6;
-    /* column */
-    flex: 0 0 60%; /* strictly controls width, 60% of the screen */
     text-align: center;
-    padding: 0 20px; /* Internal padding so text doesn't hit its own borders */
+    /*padding: 0 20px; /* Internal padding so text doesn't hit its own borders */
     box-sizing: border-box;
+
+    display: grid;
+    /* RE-LIGNMENT: Allows gird cards to scale down seamlessly to fit within 60vw */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 2.5rem;
+    padding: 2rem;
+    /*width: 100%;*/
 }
 
 
@@ -594,17 +620,19 @@ html, body {
 .project-btn {
     display: inline-block;
     padding: 0.6rem 1.2rem;
-    background-color: var(--gold);
-    color: black;
+    background-color: black;
+    color: var(--gold);
+    border: 1px solid var(--gold);
     font-family: Almendra, serif;
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
-    transition: background 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .project-btn:hover {
-    background-color: white;    /* clean contrast swap on hover */
+    background-color: var(--gold);    /* clean contrast swap on hover */
+    color: black;
     text-decoration: none;
 }
 
@@ -795,10 +823,9 @@ html, body {
 /* ================================
              Contact Page 
     =============================== */
-
 .contact-form {
     width: 100%;
-    max-width: 600px;
+    /*max-width: 600px;*/
     margin: 0 auto;
     text-align: left;
     font-family: Almendra, serif;
@@ -869,6 +896,7 @@ html, body {
     background-color: white;
     color: black;
 }
+/* END code page */
 
 /* ================================
              Certs Page 
@@ -876,7 +904,7 @@ html, body {
 
 .certs-center {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 2.5rem;
     padding: 2rem;
     width: 100%;
@@ -940,8 +968,27 @@ html, body {
     background-color: var(--gold);
     color: black;
 }
+/* END certs page */
 
-/* Mobile Styles*/
+/* TARGETED COLOR INVERSIONS */
+/* Both sides inverted: code portfolio, and certs page */
+.coding-center ~ .page-side::before,
+.page-container:has(.coding-center) .page-side::before,
+.certs-center ~ .page-side::before,
+.page-container:has(.certs-center) .page-side::before {
+    filter: invert(1);
+}
+
+/* Left side inverted only: about page, and contact page */
+.about-container .about-side.left::before,
+.contact-center ~ .page-side.left::before,
+.page-container:has(.contact-center) .page-side.left::before {
+    filter: invert(1);
+}
+
+/* ================================
+             Mobile Styles 
+    =============================== */
 @media (max-width: 480px) {
     .center-image {
         height: 30vh;
@@ -954,21 +1001,12 @@ html, body {
 
     .navbar {
         gap: 0.5rem;
-        /*height: auto;   /* Let the navbar expand vertically if links need to wrap 
-    flex-direction: column;     /* Stacks the logo and links block neatly if needed 
-    align-items: flex-start;*/
     }
 
     .nav-inner {
-        /*gap: 0.8rem;*/
         width: calc(100% - var(--circle-size) - 0.2rem);
-        /*gap: clamp(0.25rem, 3vw, 2rem);*/
-        /*width: 100%;*/
         margin-left: calc(var(--circle-size) + 0.2rem);
-        /*padding: 0 1rem;*/
-        /*justify-content: space-around;*/
         justify-content: space-evenly;
-        /*justify-content: flex-end;*/
         gap: 0.25rem;
         min-width: auto;
     }
