@@ -628,6 +628,8 @@ html, body {
     font-weight: bold;
     border-radius: 4px;
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .project-btn:hover {
