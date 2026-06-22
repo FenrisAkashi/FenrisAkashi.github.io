@@ -694,7 +694,8 @@ html, body {
     break-inside: avoid;
 }
 
-.art-item img {
+.art-item img,
+.art-item video {
     width: 100%;
     height: auto;
     display: block;
@@ -750,7 +751,7 @@ html, body {
 
 /*======LIGHTBOX MODAL SYSTEM=========*/
 /* Hides the secondary images from cluttered view on the main gallery stream */
-.art-center .art-item img.lightbox-extra {
+.art-center .art-item .lightbox-extra {
     display: none;
 }
 

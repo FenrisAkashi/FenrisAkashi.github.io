@@ -13,16 +13,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // 1. LISTEN FOR CLICKS ON ANY ART ITEM BOX (Art Gallery - Unchanged)
     document.querySelectorAll(".art-item").forEach(item => {
         item.addEventListener("click", function () {
-            const allImagesInItem = Array.from(this.querySelectorAll("img"));
+            // THE FIX: Find all child assets (both images and videos) inside the container in order
+            const galleryAssets = Array.from(this.querySelectorAll("img, video"));
 
-            if (allImagesInItem.length === 0) return;
+            if (galleryAssets.length === 0) return;
 
-            // Explicitly mark these as 'image' types
-            currentAlbumImages = allImagesInItem.map(img => ({
-                type: 'image',
-                src: img.getAttribute("src"),
-                alt: img.getAttribute("alt") || "Artwork View"
-            }));
+            // Map each element with its correct asset type
+            currentAlbumImages = galleryAssets.map(asset => {
+                const isVideo = asset.tagName.toLowerCase() === "video";
+                return {
+                    type: isVideo ? 'video' : 'image',
+                    src: asset.getAttribute("src"),
+                    // Checks for ordinary alt tags, otherwise falls back to your data-alt attribute for video captions
+                    alt: isVideo ? (asset.getAttribute("data-alt") || "Video View") : (asset.getAttribute("alt") || "Artwork View")
+                };
+            });
 
             currentImageIndex = 0;
             updateLightboxDisplay();
