@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("artLightbox");
     const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxVideo = document.getElementById("lightboxVideo"); // Safely reads as null on art page
     const lightboxCaption = document.getElementById("lightboxCaption");
     const closeBtn = document.querySelector(".lightbox-close");
     const prevBtn = document.querySelector(".prev-arrow");
@@ -9,14 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentAlbumImages = [];
     let currentImageIndex = 0;
 
-    // 1. LISTEN FOR CLICKS ON ANY ART ITEM BOX (Your working gallery loop)
+    // 1. LISTEN FOR CLICKS ON ANY ART ITEM BOX (Art Gallery - Unchanged)
     document.querySelectorAll(".art-item").forEach(item => {
         item.addEventListener("click", function () {
             const allImagesInItem = Array.from(this.querySelectorAll("img"));
 
             if (allImagesInItem.length === 0) return;
 
+            // Explicitly mark these as 'image' types
             currentAlbumImages = allImagesInItem.map(img => ({
+                type: 'image',
                 src: img.getAttribute("src"),
                 alt: img.getAttribute("alt") || "Artwork View"
             }));
@@ -24,94 +27,150 @@ document.addEventListener("DOMContentLoaded", function () {
             currentImageIndex = 0;
             updateLightboxDisplay();
 
-            modal.style.display = "block";
+            if (modal) modal.style.display = "block";
 
-            if (currentAlbumImages.length > 1) {
-                prevBtn.style.display = "block";
-                nextBtn.style.display = "block";
-            } else {
-                prevBtn.style.display = "none";
-                nextBtn.style.display = "none";
+            if (prevBtn && nextBtn) {
+                if (currentAlbumImages.length > 1) {
+                    prevBtn.style.display = "block";
+                    nextBtn.style.display = "block";
+                } else {
+                    prevBtn.style.display = "none";
+                    nextBtn.style.display = "none";
+                }
             }
         });
     });
 
-    // 2. NEW CODING PAGE TRIGGER: LISTEN FOR CLEANROOM MEDIA BUTTON CLICK
+    // 2. CODING PAGE TRIGGER: LISTEN FOR CLEANROOM MEDIA BUTTON CLICK
     const cleanroomBtn = document.getElementById("open-cleanroom-lightbox");
     if (cleanroomBtn) {
         cleanroomBtn.addEventListener("click", function (e) {
-            e.stopPropagation(); // Stops the click from bubbling
+            e.stopPropagation();
 
-            // ADD ALL YOUR SCREENSHOT FILE PATHS AND CAPTIONS RIGHT HERE:
+            // MIX AND MATCH VIDEOS AND IMAGES HERE BY CHANGING THE 'type' KEY
             currentAlbumImages = [
                 {
+                    type: 'video',
+                    src: 'vids/tape.MP4',
+                    alt: 'Tape video'
+                },
+                {
+                    type: 'video',
+                    src: 'vids/wafer.MP4',
+                    alt: 'Wafer video'
+                },
+                {
+                    type: 'video',
+                    src: 'vids/door.MP4',
+                    alt: 'Door video'
+                },
+                {
+                    type: 'image',
                     src: 'imgs/code/CleanRoom/tape.JPG',
-                    alt: 'tape asset'
+                    alt: 'Tape asset img'
                 },
                 {
+                    type: 'image',
                     src: 'imgs/code/CleanRoom/tape1.JPEG',
-                    alt: 'tape1'
+                    alt: 'Tape1 asset img'
                 },
                 {
+                    type: 'image',
                     src: 'imgs/code/CleanRoom/tape2.JPEG',
-                    alt: 'tape2'
+                    alt: 'Tape2 asset img'
                 },
                 {
+                    type: 'image',
                     src: 'imgs/code/CleanRoom/tape3.JPEG',
-                    alt: 'tape3'
+                    alt: 'Tape3 asset img'
                 },
                 {
+                    type: 'image',
                     src: 'imgs/code/CleanRoom/tape4.JPEG',
-                    alt: 'tape4'
+                    alt: 'Tape4 asset img'
                 },
                 {
+                    type: 'image',
                     src: 'imgs/code/CleanRoom/bottles.JPEG',
-                    alt: 'bottles'
+                    alt: 'Bottles asset img'
                 },
                 {
+                    type: 'image',
                     src: 'imgs/code/CleanRoom/testing.JPG',
-                    alt: 'testing'
+                    alt: 'Testing img'
                 },
                 {
+                    type: 'image',
                     src: 'imgs/code/CleanRoom/testing2.JPG',
-                    alt: 'testing2'
+                    alt: 'Testing2 img'
                 },
                 {
+                    type: 'image',
                     src: 'imgs/code/CleanRoom/disc.JPEG',
-                    alt: 'disc'
+                    alt: 'Disc asset img'
                 },
                 {
-                    src: 'imgs/code/CleanRoom/disc2.JPEG',
-                    alt: 'disc2'
+                    type: 'image',
+                    src: 'imgs/code/CleanRoom/Disc2.JPEG',
+                    alt: 'Disc2 asset img'
                 },
                 {
+                    type: 'image',
                     src: 'imgs/code/CleanRoom/blueprint.JPEG',
-                    alt: 'blueprint'
+                    alt: 'Blueprint img'
                 },
             ];
 
             currentImageIndex = 0;
             updateLightboxDisplay();
 
-            modal.style.display = "block";
+            if (modal) modal.style.display = "block";
 
-            // Show arrow buttons only if you added more than one image
-            if (currentAlbumImages.length > 1) {
-                prevBtn.style.display = "block";
-                nextBtn.style.display = "block";
-            } else {
-                prevBtn.style.display = "none";
-                nextBtn.style.display = "none";
+            if (prevBtn && nextBtn) {
+                if (currentAlbumImages.length > 1) {
+                    prevBtn.style.display = "block";
+                    nextBtn.style.display = "block";
+                } else {
+                    prevBtn.style.display = "none";
+                    nextBtn.style.display = "none";
+                }
             }
         });
     }
 
-    // 3. RENDER THE CURRENT SLIDE DETECTED
+    // 3. RENDER FUNCTION (Safely switches tracks depending on type)
     function updateLightboxDisplay() {
-        const activePhoto = currentAlbumImages[currentImageIndex];
-        if (activePhoto && lightboxImg) {
-            lightboxImg.src = activePhoto.src;
-            lightboxCaption.textContent = activePhoto.alt;
+        const activeMedia = currentAlbumImages[currentImageIndex];
+        if (!activeMedia) return;
+
+        // Safety pause: stops audio instantly if switching slides
+        if (lightboxVideo) {
+            lightboxVideo.pause();
+        }
+
+        if (activeMedia.type === 'video' && lightboxVideo) {
+            // Hide image layout container, show video layout container
+            if (lightboxImg) lightboxImg.style.display = "none";
+            lightboxVideo.style.display = "block";
+
+            const videoSource = lightboxVideo.querySelector("source");
+            if (videoSource) {
+                videoSource.src = activeMedia.src;
+
+                // THE CRITICAL FIX: Forces the browser to load the new video stream binary data
+                lightboxVideo.load();
+            }
+        } else {
+            // Default back to image layout rules
+            if (lightboxVideo) lightboxVideo.style.display = "none";
+            if (lightboxImg) {
+                lightboxImg.style.display = "block";
+                lightboxImg.src = activeMedia.src;
+            }
+        }
+
+        if (lightboxCaption) {
+            lightboxCaption.textContent = activeMedia.alt;
         }
     }
 
@@ -126,19 +185,32 @@ document.addEventListener("DOMContentLoaded", function () {
         updateLightboxDisplay();
     }
 
-    nextBtn.addEventListener("click", (e) => { e.stopPropagation(); showNextImage(); });
-    prevBtn.addEventListener("click", (e) => { e.stopPropagation(); showPrevImage(); });
+    if (nextBtn) {
+        nextBtn.addEventListener("click", (e) => { e.stopPropagation(); showNextImage(); });
+    }
+    if (prevBtn) {
+        prevBtn.addEventListener("click", (e) => { e.stopPropagation(); showPrevImage(); });
+    }
 
     // 5. WINDOW CLOSING LOGIC
-    closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) modal.style.display = "none";
-    });
+    function closeLightbox() {
+        if (modal) modal.style.display = "none";
+        if (lightboxVideo) {
+            lightboxVideo.pause(); // Kills audio streaming instantly on close
+        }
+    }
 
-    // Keyboard controls
+    if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+    if (modal) {
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeLightbox();
+        });
+    }
+
+    // Keyboard navigation controls
     document.addEventListener("keydown", function (e) {
-        if (modal.style.display === "block") {
-            if (e.key === "Escape") modal.style.display = "none";
+        if (modal && modal.style.display === "block") {
+            if (e.key === "Escape") closeLightbox();
             if (e.key === "ArrowRight" && currentAlbumImages.length > 1) showNextImage();
             if (e.key === "ArrowLeft" && currentAlbumImages.length > 1) showPrevImage();
         }
