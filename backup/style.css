@@ -252,6 +252,8 @@ html, body {
     align-self: stretch;
     box-sizing: border-box;
     position: relative;
+    /*top: 16vh;*/
+    top: calc(var(--circle-size));
 
     /* Global rules for side tree slices 
     background-image: url('imgs/Tree 2.png'); /* Loads the tree file 
@@ -267,10 +269,11 @@ html, body {
     content: '';
     position: fixed;    /* Binds them strictly to the viewport frame */
     /*top: 50%;*/
-    top: 16vh;       /* starts where navbar ends */
+    /*top: 16vh;       /* starts where navbar ends */
     /*width: 20vw;     /* Keeps them perfectly matched to your 20% column widths 
     height: 30vw;    /* Perfectly maintains the tree's 3:2 background aspect ratio 
     transform: translateY(calc(-50% + (var(--circle-size) / 4))); /* Flawless vertical centering alignment */
+    top: calc(var(--circle-size));
     height: 92vh;
     width: 20vw;
     pointer-events: none;
