@@ -1190,7 +1190,7 @@ html, body {
         padding: 0 20px;
         box-sizing: border-box;
         /* Pushes the title down past the logo edge with uniform breathing room */
-        margin-top: calc(var(--circle-size) + 1rem);
+        margin-top: var(--circle-size);
         /*margin-top: 1.8rem;*/
         margin-bottom: 1.5rem;
     }
@@ -1296,6 +1296,6 @@ html, body {
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
