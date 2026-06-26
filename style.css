@@ -1183,17 +1183,22 @@ html, body {
         margin-bottom: 1.5rem;
     }
 
-    /*.header {
+    .site-title {
         width: 100%;
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
-        padding: 0 20px; /* Aligns perfectly with the text padding below 
+        padding: 0 20px;
         box-sizing: border-box;
-        /* Push title safely down so it drops under the bottom edge of the logo circle 
-        margin-top: var(--circle-size);
+        /* Pushes the title down past the logo edge with uniform breathing room */
+        margin-top: 1.5rem;
         margin-bottom: 1.5rem;
-    }*/
+    }
+
+    /* Adds a safe gap above the image wrapper grid now that it's un-nested */
+    .hero-layout-wrapper {
+        margin-top: 1rem;
+    }
 
     /* ------------------------------------------------------------
        SUB-PAGE VERTICAL OVERRIDES
@@ -1244,6 +1249,6 @@ html, body {
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
