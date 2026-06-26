@@ -183,8 +183,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
+        // THE CONTENT INJECTION: Assemble the Title and Description dynamically
         if (lightboxCaption) {
-            lightboxCaption.textContent = activeMedia.alt;
+            let captionHTML = `<h3 class="lightbox-title-text" style="margin: 0 0 8px 0; font-size: 1.4rem; color: var(--gold); font-family: Almendra, serif;">${activeMedia.alt}</h3>`;
+
+            // If a description exists (meaning it's the 1st image AND on a non-hover touch device), append it below the title
+            if (activeMedia.description) {
+                captionHTML += `<p class="lightbox-desc-text" style="margin: 0; font-size: 1rem; color: #ccc; font-family: Almendra, serif;">${activeMedia.description}</p>`;
+            }
+
+            lightboxCaption.innerHTML = captionHTML;
         }
     }
 
