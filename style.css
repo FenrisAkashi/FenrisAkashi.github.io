@@ -453,7 +453,6 @@ html, body {
     margin-top: 0;
     margin-left: var(--circle-size);
     margin-right: var(--circle-size);
-    width: calc(100% - (var(--circle-size) * 2));
     width: 100%;
     position: relative; /* CRITICAL: Establishes anchor context for inverted half */
     justify-self: center;
@@ -1191,29 +1190,33 @@ html, body {
         padding: 0 20px;
         box-sizing: border-box;
         /* Pushes the title down past the logo edge with uniform breathing room */
-        margin-top: calc(var(--circle-size) + 1.5rem);
+        /*margin-top: calc(var(--circle-size) + 1.5rem);*/
+        margin-top: 1.8rem;
         margin-bottom: 1.5rem;
     }
 
     /* Adds a safe gap above the image wrapper grid now that it's un-nested */
     .hero-layout-wrapper {
+        display: grid;
         /* Change track sizes so columns can actually fit content within 100vw */
-        grid-template-columns: 20fr 60fr 20fr;
+        /*grid-template-columns: 20fr 60fr 20fr;*/
+        grid-template-columns: 1fr 1fr; /* splitting screen 50/50 */
         width: 100%;
         max-width: 100vw;
-        /* Forces the 1.5rem padding INSIDE the 100% boundary */
         box-sizing: border-box;
-        padding: 0 1rem;
+        padding: 0;
         margin: 0;
+        gap: 1.5rem 0;
     }
 
     /* Force the center frame to gracefully stay confined to its column track */
     .yin-yang-frame {
-        grid-column: 2;
+        grid-column: span 2;    /* spans across both columns */
+        grid-row: 1;
         margin-left: 0;
         margin-right: 0;
         width: 100%; 
-        max-width: 100%;
+        max-width: 100vw;
     }
 
     /* Scale the tree image layout down automatically to clear track space */
@@ -1224,10 +1227,25 @@ html, body {
 
     /* Allow the text strings to cleanly break onto new lines */
     .hero-phrase {
+        grid-row: 2;    /* moves phrases onto line below image */
         white-space: normal; /* Erases the desktop nowrap rule */
         font-size: 0.9rem;   /* Gives the typography a tight, clean mobile footprint */
         line-height: 1.3;
         width: 100%;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .phrase-left {
+        grid-column: 1; /* Centers strictly under the left (inverted) half of the tree */
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .phrase-right {
+        grid-column: 2; /* Centers strictly under the right (normal) half of the tree */
+        padding: 0 15px;
+        box-sizing: border-box;
     }
 
     /* SUB-PAGE VERTICAL OVERRIDES
@@ -1278,6 +1296,6 @@ html, body {
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
