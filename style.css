@@ -1344,6 +1344,11 @@ html, body {
         width: 50px;
         height: 45px;
         font-size: 1.3rem;
+
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #artLightbox .prev-arrow {
@@ -1356,8 +1361,9 @@ html, body {
 
     /* Open up the spacing so the text spans cleanly and naturally */
     #artLightbox .lightbox-content #lightboxCaption {
-        padding: 0 10px;
-        margin-top: 1.5rem;
+        /*padding: 0 10px;*/
+        padding: 0 75px;
+        margin-top: 1rem;
     }
 
 }
@@ -1372,6 +1378,6 @@ html, body {
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
