@@ -1173,7 +1173,7 @@ html, body {
         padding: 0 20px; /* Aligns perfectly with the text padding below */
         box-sizing: border-box;
         /* Push title safely down so it drops under the bottom edge of the logo circle */
-        margin-top: calc(var(--circle-size) / 2 + 1rem);
+        margin-top: var(--circle-size);
         margin-bottom: 1.5rem;
     }
 
@@ -1226,6 +1226,6 @@ html, body {
 
 
 
-/*body {
+body {
     background: red !important;
-}*/
+}
