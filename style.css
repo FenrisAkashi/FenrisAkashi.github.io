@@ -1296,6 +1296,30 @@ html, body {
         box-sizing: border-box;
     }
 
+    /* Have individual project sections to use the entire screen width */
+    .project-card {
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    /* Stretch the image container and the image itself to full width */
+    .project-media,
+    .project-media img {
+        width: 100%;
+        max-width: 100vw;
+        height: auto;
+    }
+
+    /* Stretch the description text block to use all available space */
+    .project-description {
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
 }
     
 
@@ -1308,6 +1332,6 @@ html, body {
 
 
 
-/*body {
+body {
     background: red !important;
-}*/
+}
