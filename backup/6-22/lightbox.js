@@ -13,28 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // 1. LISTEN FOR CLICKS ON ANY ART ITEM BOX (Art Gallery - Unchanged)
     document.querySelectorAll(".art-item").forEach(item => {
         item.addEventListener("click", function () {
-            // Find all child assets (both images and videos) inside the container in order
+            // THE FIX: Find all child assets (both images and videos) inside the container in order
             const galleryAssets = Array.from(this.querySelectorAll("img, video"));
 
             if (galleryAssets.length === 0) return;
 
-            // Find the description paragraph element inside the overlay
-            const overlayDescEl = this.querySelector(".overlay-desc");
-            const albumDescription = overlayDescEl ? overlayDescEl.innerHTML : "";
-
-            // Check if the current device supports true mouse hover interactions
-            const supportsHover = window.matchMedia('(hover: hover)').matches;
-
             // Map each element with its correct asset type
-            currentAlbumImages = galleryAssets.map((asset, index) => {
+            currentAlbumImages = galleryAssets.map(asset => {
                 const isVideo = asset.tagName.toLowerCase() === "video";
                 return {
                     type: isVideo ? 'video' : 'image',
                     src: asset.getAttribute("src"),
-                    alt: isVideo ? (asset.getAttribute("data-alt") || "Video View") : (asset.getAttribute("alt") || "Artwork View"),
-
-                    // Only attach description if it's the 1st asset AND the device lacks hover mechanics
-                    description: (index === 0 && !supportsHover) ? albumDescription : ""
+                    // Checks for ordinary alt tags, otherwise falls back to your data-alt attribute for video captions
+                    alt: isVideo ? (asset.getAttribute("data-alt") || "Video View") : (asset.getAttribute("alt") || "Artwork View")
                 };
             });
 

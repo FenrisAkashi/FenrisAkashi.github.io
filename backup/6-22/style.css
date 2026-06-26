@@ -728,12 +728,11 @@ html, body {
     pointer-events: none;   /* stops the layer from messing with mouse clicks */
 }
 
-/* move this down to media section instead */
 /* The Trigger: When the user hovers over the parent item, animate the overlay */
-/*.art-item:hover .art-overlay {
-    opacity: 1;     /* Fade into full view 
-    transform: translateY(0);       /* Snap back to perfect vertical alignment 
-}*/
+.art-item:hover .art-overlay {
+    opacity: 1;     /* Fade into full view */
+    transform: translateY(0);       /* Snap back to perfect vertical alignment */
+}
 
 /* Typography styles matching global theme colors */
 .overlay-title {
@@ -1097,16 +1096,6 @@ html, body {
     filter: invert(1);
 }
 
-/* ================================================================
-   HOVER CAPABLE DEVICES ONLY (Desktops / Laptops with a Mouse)
-   ================================================================ */
-/* The Trigger: When the user hovers over the parent item, animate the overlay */
-@media (hover: hover) {
-    .art-item:hover .art-overlay {
-        opacity: 1; /* Fade into full view */
-        transform: translateY(0); /* Snap back to perfect vertical alignment */
-    }
-}
 /* ================================
              Mobile Styles 
     =============================== */
