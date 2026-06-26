@@ -1165,6 +1165,18 @@ html, body {
         margin: 0 auto;
     }
 
+    .header {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 20px; /* Aligns perfectly with the text padding below */
+        box-sizing: border-box;
+        /* Push title safely down so it drops under the bottom edge of the logo circle */
+        margin-top: calc(var(--circle-size) / 2 + 1rem);
+        margin-bottom: 1.5rem;
+    }
+
     /* ------------------------------------------------------------
        SUB-PAGE VERTICAL OVERRIDES
        Collapses the background tree columns and maximizes screen space
@@ -1214,6 +1226,6 @@ html, body {
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
