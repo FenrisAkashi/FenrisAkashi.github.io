@@ -1183,6 +1183,15 @@ html, body {
         flex-direction: column; /* Stacks columns vertically */
     }
 
+    /* SLEDGEHAMMER TEST */
+    .page-container,
+    .page-container *,
+    .page-side,
+    div[class*="side"] {
+        background-image: none !important;
+        background: none !important;
+    }
+
     .tree-img {
         width: 90vw;
         height: auto;
@@ -1227,6 +1236,6 @@ html, body {
 
 
 
-/*body {
+body {
     background: red !important;
-}*/
+}
