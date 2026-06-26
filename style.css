@@ -1187,7 +1187,7 @@ html, body {
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
-        /*padding: 0 20px;*/
+        padding: 0 5px;
         padding: 0;
         box-sizing: border-box;
         /* Pushes the title down past the logo edge */
@@ -1296,6 +1296,6 @@ html, body {
 
 
 
-/*body {
+body {
     background: red !important;
-}*/
+}
