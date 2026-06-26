@@ -13,19 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // 1. LISTEN FOR CLICKS ON ANY ART ITEM BOX (Art Gallery - Unchanged)
     document.querySelectorAll(".art-item").forEach(item => {
         item.addEventListener("click", function () {
-            // THE FIX: Find all child assets (both images and videos) inside the container in order
+            // Find all child assets (both images and videos) inside the container in order
             const galleryAssets = Array.from(this.querySelectorAll("img, video"));
 
             if (galleryAssets.length === 0) return;
 
+            // Find the description paragraph element inside the overlay
+            const overlayDescEl = this.querySelector(".overlay-desc");
+            const albumDescription = overlayDescEl ? overlayDescEl.innerHTML : "";
+
+            // Check if the current device supports true mouse hover interactions
+            const supportsHover = window.matchMedia('(hover: hover)').matches;
+
             // Map each element with its correct asset type
-            currentAlbumImages = galleryAssets.map(asset => {
+            currentAlbumImages = galleryAssets.map((asset, index) => {
                 const isVideo = asset.tagName.toLowerCase() === "video";
                 return {
                     type: isVideo ? 'video' : 'image',
                     src: asset.getAttribute("src"),
-                    // Checks for ordinary alt tags, otherwise falls back to your data-alt attribute for video captions
-                    alt: isVideo ? (asset.getAttribute("data-alt") || "Video View") : (asset.getAttribute("alt") || "Artwork View")
+                    alt: isVideo ? (asset.getAttribute("data-alt") || "Video View") : (asset.getAttribute("alt") || "Artwork View"),
+
+                    // Only attach description if it's the 1st asset AND the device lacks hover mechanics
+                    description: (index === 0 && !supportsHover) ? albumDescription : ""
                 };
             });
 
@@ -174,8 +183,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
+        // THE CONTENT INJECTION: Assemble the Title and Description dynamically
         if (lightboxCaption) {
-            lightboxCaption.textContent = activeMedia.alt;
+            let captionHTML = `<h3 class="lightbox-title-text" style="margin: 0 0 8px 0; font-size: 1.4rem; color: var(--gold); font-family: Almendra, serif;">${activeMedia.alt}</h3>`;
+
+            // If a description exists (meaning it's the 1st image AND on a non-hover touch device), append it below the title
+            if (activeMedia.description) {
+                captionHTML += `<p class="lightbox-desc-text" style="margin: 0; font-size: 1rem; color: #ccc; font-family: Almendra, serif;">${activeMedia.description}</p>`;
+            }
+
+            lightboxCaption.innerHTML = captionHTML;
         }
     }
 
