@@ -1187,12 +1187,12 @@ html, body {
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
-        padding: 0 20px;
+        /*padding: 0 20px;*/
+        padding: 0;
         box-sizing: border-box;
-        /* Pushes the title down past the logo edge with uniform breathing room */
+        /* Pushes the title down past the logo edge */
         margin-top: calc(var(--circle-size) / 2);
-        /*margin-top: 1.8rem;*/
-        margin-bottom: 1.5rem;
+        margin-bottom: 0;
     }
 
     /* Adds a safe gap above the image wrapper grid now that it's un-nested */
@@ -1296,6 +1296,6 @@ html, body {
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
