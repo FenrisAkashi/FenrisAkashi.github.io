@@ -1107,9 +1107,9 @@ html, body {
         transform: translateY(0); /* Snap back to perfect vertical alignment */
     }
 }
-/* ================================
-             Mobile Styles 
-    =============================== */
+/* ================================================================
+   SHARED MOBILE STYLES (Applies to BOTH Vertical & Horizontal Mobile)
+   ================================================================ */
 @media (max-width: 480px) {
     .center-image {
         height: 30vh;
@@ -1132,19 +1132,8 @@ html, body {
         min-width: auto;
     }
 
-        .nav-inner > li:last-child {
-            margin-right: 0;
-        }
-
-    .about-container {
-        flex-direction: column; /* Stacks columns vertically */
-    }
-
-    .about,
-    .about-side {
-        flex: 0 0 100%; /* On mobile, everything gets 100% width */
-        width: 100%;
-        padding: 10px 20px;
+    .nav-inner > li:last-child {
+        margin-right: 0;
     }
 
     .nav-link {
@@ -1158,14 +1147,66 @@ html, body {
         margin-top: calc(var(--circle-size) / 2); /* safely drops img below logo on tiny screens */
     }
 
+    
+}
+
+/* ================================================================
+   VERTICAL ONLY MOBILE (Taller screens, e.g. normal phone grip)
+   ================================================================ */
+
+@media (max-width: 480px) and (orientation: portrait) {
+    .about-container {
+        flex-direction: column; /* Stacks columns vertically */
+    }
+
+    .about,
+    .about-side {
+        flex: 0 0 100%; /* On mobile, everything gets 100% width */
+        width: 100%;
+        padding: 10px 20px;
+    }
+
     .tree-img {
         width: 90vw;
         height: auto;
         max-height: 50vh;
         margin: 0 auto;
     }
+
+    /* ------------------------------------------------------------
+       SUB-PAGE VERTICAL OVERRIDES
+       Collapses the background tree columns and maximizes screen space
+       ------------------------------------------------------------ */
+    /* Shrink the left and right side columns to 0 so trees hide completely */
+    .page-side.left,
+    .page-side.right {
+        flex: 0 0 0%;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        overflow: hidden; /* Guarantees nothing bleeds out */
+    }
+
+    /* Stretch the main grid container to fill the full width of the phone */
+    .art-center {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        column-count: 1; /* Turn the squished 3-column grid into a clean 1-column layout */
+    }
+}
+    
+
+/* ================================================================
+   HORIZONTAL ONLY MOBILE (Wider screens, e.g. turning phone sideways)
+   ================================================================ */
+@media (max-width: 480px) and (orientation: landscape) {
+    
 }
 
-/*body {
+
+
+body {
     background: red !important;
-}*/
+}
