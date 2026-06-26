@@ -1320,6 +1320,61 @@ html, body {
         text-align: center;
     }
 
+    /* Reorient the main modal container to stack elements vertically instead of horizontally */
+    #artLightbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Have the content container occupy maximum width since the side buttons are moved */
+    #artLightbox .lightbox-content {
+        width: 100%;
+        max-width: 100vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Make sure the image maximizes its footprint within the cleared space */
+    #artLightbox #lightboxImg,
+    #artLightbox #lightboxVideo {
+        width: 100%;
+        max-width: 100vw;
+        height: auto;
+        max-height: 65vh; /* Prevents long vertical images from forcing buttons off-screen */
+        object-fit: contain;
+    }
+
+    /* Strip the absolute positioning from the arrows so they can drop beneath the image */
+    #artLightbox .lightbox-arrow {
+        position: static;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        padding: 10px 25px;
+        margin: 15px 10px 5px 10px; /* Adds healthy breathing room below the image */
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        border-radius: 4px;
+        font-size: 1.5rem;
+        transform: none; /* Clears out any vertical translation centering */
+    }
+
+    /* Keep the text content beautifully centered below the newly positioned buttons */
+    #artLightbox .lightbox-caption {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
 }
     
 
@@ -1332,6 +1387,6 @@ html, body {
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
