@@ -1005,7 +1005,7 @@ html, body {
 #thank-you {
     display: none;
     margin-top: 20px;
-    color: #4CAF50;
+    color: #6A0DAD;
     font-family: Almendra, serif;
     font-size: 1.2em;
     text-align: center;
@@ -1390,5 +1390,5 @@ html, body {
 
 
 /*body {
-    background: red !important;
+    background: #6A0DAD !important;
 }*/
