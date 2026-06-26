@@ -1002,7 +1002,7 @@ html, body {
     color: black;
 }
 
-.thank-you {
+#thank-you {
     display: none;
     margin-top: 20px;
     color: #4CAF50;
