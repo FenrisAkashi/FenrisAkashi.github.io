@@ -1147,7 +1147,31 @@ html, body {
         margin-top: calc(var(--circle-size) / 2); /* safely drops img below logo on tiny screens */
     }
 
-    
+    /* ------------------------------------------------------------
+       SUB-PAGE VERTICAL OVERRIDES
+       Collapses the background tree columns and maximizes screen space
+       ------------------------------------------------------------ */
+    /* Shrink the left and right side columns to 0 so trees hide completely */
+    .about-side,
+    .page-side {
+        flex: 0 0 0%;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        overflow: hidden; /* Guarantees nothing bleeds out */
+        background-image: none;
+    }
+
+    /* Stretch the main grid container to fill the full width of the phone */
+    .about,
+    .art-center,
+    .contact-center,
+    .certs-center,
+    .coding-center {
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 10px 20px;
+    }
 }
 
 /* ================================================================
@@ -1203,6 +1227,6 @@ html, body {
 
 
 
-/*body {
+body {
     background: red !important;
-}*/
+}
