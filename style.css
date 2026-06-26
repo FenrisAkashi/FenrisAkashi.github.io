@@ -1191,19 +1191,48 @@ html, body {
         padding: 0 20px;
         box-sizing: border-box;
         /* Pushes the title down past the logo edge with uniform breathing room */
-        margin-top: 1.5rem;
+        margin-top: calc(var(--circle-size) + 1.5rem);
         margin-bottom: 1.5rem;
     }
 
     /* Adds a safe gap above the image wrapper grid now that it's un-nested */
     .hero-layout-wrapper {
-        margin-top: 1rem;
+        /* Change track sizes so columns can actually fit content within 100vw */
+        grid-template-columns: 20fr 60fr 20fr;
+        width: 100%;
+        max-width: 100vw;
+        /* Forces the 1.5rem padding INSIDE the 100% boundary */
+        box-sizing: border-box;
+        padding: 0 1rem;
+        margin: 0;
     }
 
-    /* ------------------------------------------------------------
-       SUB-PAGE VERTICAL OVERRIDES
-       Collapses the background tree columns and maximizes screen space
-       ------------------------------------------------------------ */
+    /* Force the center frame to gracefully stay confined to its column track */
+    .yin-yang-frame {
+        grid-column: 2;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%; 
+        max-width: 100%;
+    }
+
+    /* Scale the tree image layout down automatically to clear track space */
+    .yin-yang-frame .tree-img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Allow the text strings to cleanly break onto new lines */
+    .hero-phrase {
+        white-space: normal; /* Erases the desktop nowrap rule */
+        font-size: 0.9rem;   /* Gives the typography a tight, clean mobile footprint */
+        line-height: 1.3;
+        width: 100%;
+    }
+
+    /* SUB-PAGE VERTICAL OVERRIDES
+       Collapses the background tree columns and maximizes screen space */
+
     /* CRITICAL FIX: completely remove tree images from sides of pages */
     .about-side::before,
     .page-side::before,
@@ -1249,6 +1278,6 @@ html, body {
 
 
 
-/*body {
+body {
     background: red !important;
-}*/
+}
