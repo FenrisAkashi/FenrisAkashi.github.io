@@ -1154,12 +1154,12 @@ html, body {
     /* Shrink the left and right side columns to 0 so trees hide completely */
     .about-side,
     .page-side {
-        flex: 0 0 0%;
-        width: 0;
-        padding: 0;
-        margin: 0;
-        overflow: hidden; /* Guarantees nothing bleeds out */
-        background-image: none;
+        flex: 0 0 0% !important;
+        width: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important; /* Guarantees nothing bleeds out */
+        background-image: none !important;
     }
 
     /* Stretch the main grid container to fill the full width of the phone */
@@ -1168,9 +1168,9 @@ html, body {
     .contact-center,
     .certs-center,
     .coding-center {
-        flex: 0 0 100%;
-        width: 100%;
-        padding: 10px 20px;
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        padding: 10px 20px !important;
     }
 }
 
@@ -1227,6 +1227,6 @@ html, body {
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
