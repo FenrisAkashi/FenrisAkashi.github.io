@@ -357,10 +357,10 @@ html, body {
 }
 
 /* Safe cleanup removal for old inline image declarations */
-.about-side img,
+/*.about-side img,
 .page-side img {
     display: none;
-}
+}*/
 
 
 /* ============================================
@@ -1159,13 +1159,6 @@ html, body {
         flex-direction: column; /* Stacks columns vertically */
     }
 
-    .about,
-    .about-side {
-        flex: 0 0 100%; /* On mobile, everything gets 100% width */
-        width: 100%;
-        padding: 10px 20px;
-    }
-
     .tree-img {
         width: 90vw;
         height: auto;
@@ -1178,22 +1171,25 @@ html, body {
        Collapses the background tree columns and maximizes screen space
        ------------------------------------------------------------ */
     /* Shrink the left and right side columns to 0 so trees hide completely */
-    .page-side.left,
-    .page-side.right {
+    .about-side,
+    .page-side {
         flex: 0 0 0%;
         width: 0;
         padding: 0;
         margin: 0;
         overflow: hidden; /* Guarantees nothing bleeds out */
+        background-image: none;
     }
 
     /* Stretch the main grid container to fill the full width of the phone */
-    .art-center {
+    .about,
+    .art-center,
+    .contact-center,
+    .certs-center,
+    .coding-center {
         flex: 0 0 100%;
         width: 100%;
-        max-width: 100%;
-        padding: 0 15px;
-        column-count: 1; /* Turn the squished 3-column grid into a clean 1-column layout */
+        padding: 10px 20px;
     }
 }
     
@@ -1201,12 +1197,12 @@ html, body {
 /* ================================================================
    HORIZONTAL ONLY MOBILE (Wider screens, e.g. turning phone sideways)
    ================================================================ */
-@media (max-width: 480px) and (orientation: landscape) {
+/*@media (max-width: 480px) and (orientation: landscape) {
     
-}
+}*/
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
