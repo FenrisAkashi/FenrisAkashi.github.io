@@ -1188,7 +1188,6 @@ html, body {
         margin-left: 0;
         margin-right: 0;
         padding: 0 20px;
-        padding: 0;
         box-sizing: border-box;
         /* Pushes the title down past the logo edge */
         margin-top: calc(var(--circle-size) / 2);
@@ -1296,6 +1295,6 @@ html, body {
 
 
 
-/*body {
+body {
     background: red !important;
-}*/
+}
