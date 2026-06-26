@@ -1165,6 +1165,11 @@ html, body {
         margin: 0 auto;
     }
 
+    .content {
+        margin-top: 0; /* Clear the collapsing margin */
+        padding-top: calc(var(--circle-size) / 2); /* Safely clears the navbar decoration */
+    }
+
     .content:has(.contact-center, .about-container, .page-container, .certs-center) .header,
     .header {
         width: 100%;
@@ -1174,7 +1179,7 @@ html, body {
         padding: 0 20px;
         box-sizing: border-box;
         /* Pushes down the remaining distance plus clean breathing room */
-        margin-top: calc(var(--circle-size) / 2 + 1.5rem);
+        margin-top: 1.5rem;
         margin-bottom: 1.5rem;
     }
 
@@ -1239,6 +1244,6 @@ html, body {
 
 
 
-/*body {
+body {
     background: red !important;
-}*/
+}
