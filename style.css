@@ -1147,6 +1147,24 @@ html, body {
         margin-top: calc(var(--circle-size) / 2); /* safely drops img below logo on tiny screens */
     }
 
+}
+
+/* ================================================================
+   VERTICAL ONLY MOBILE (Taller screens, e.g. normal phone grip)
+   ================================================================ */
+
+@media (max-width: 480px) and (orientation: portrait) {
+    .about-container {
+        flex-direction: column; /* Stacks columns vertically */
+    }
+
+    .tree-img {
+        width: 90vw;
+        height: auto;
+        max-height: 50vh;
+        margin: 0 auto;
+    }
+
     /* ------------------------------------------------------------
        SUB-PAGE VERTICAL OVERRIDES
        Collapses the background tree columns and maximizes screen space
@@ -1174,59 +1192,15 @@ html, body {
     .coding-center {
         flex: 0 0 100%;
         width: 100%;
+        max-width: 100%;    /* overrides 60vw ceiling from desktop */
         padding: 10px 20px;
     }
-}
 
-/* ================================================================
-   VERTICAL ONLY MOBILE (Taller screens, e.g. normal phone grip)
-   ================================================================ */
-
-@media (max-width: 480px) and (orientation: portrait) {
-    .about-container {
-        flex-direction: column; /* Stacks columns vertically */
-    }
-
-    /* SLEDGEHAMMER TEST */
-    /*.page-container,
-    .page-container *,
-    .page-side,
-    div[class*="side"] {
-        background-image: none !important;
-        background: none !important;
-    }*/
-
-    .tree-img {
-        width: 90vw;
-        height: auto;
-        max-height: 50vh;
-        margin: 0 auto;
-    }
-
-    /* ------------------------------------------------------------
-       SUB-PAGE VERTICAL OVERRIDES
-       Collapses the background tree columns and maximizes screen space
-       ------------------------------------------------------------ */
-    /* Shrink the left and right side columns to 0 so trees hide completely */
-    .about-side,
-    .page-side {
-        flex: 0 0 0%;
-        width: 0;
-        padding: 0;
-        margin: 0;
-        overflow: hidden; /* Guarantees nothing bleeds out */
-        background-image: none;
-    }
-
-    /* Stretch the main grid container to fill the full width of the phone */
-    .about,
+    /* Set grid layouts to stack cleanly in a single column layout */
     .art-center,
-    .contact-center,
     .certs-center,
     .coding-center {
-        flex: 0 0 100%;
-        width: 100%;
-        padding: 10px 20px;
+        column-count: 1;
     }
 }
     
@@ -1240,6 +1214,6 @@ html, body {
 
 
 
-/*body {
+body {
     background: red !important;
-}*/
+}
