@@ -1320,13 +1320,23 @@ html, body {
         text-align: center;
     }
 
-    /* Have media elements expand fully sideways while restricting height bounds */
-    /*#artLightbox .lightbox-content #lightboxImg,
-    #artLightbox .lightbox-content #lightboxVideo {
-        max-height: 48vh;
-    }*/
+    #artLightbox .lightbox-content {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
 
-    /* Reposition arrow targets near the lower baseline tier of the mobile screen */
+    /* Allow the media elements to expand fully sideways and vertically */
+    #artLightbox .lightbox-content img,
+    #artLightbox .lightbox-content video,
+    #artLightbox #lightboxImg {
+        max-height: 60vh;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Keep arrow targets anchored near the lower tier corners */
     #artLightbox .lightbox-arrow {
         bottom: 5%;
         top: auto;
@@ -1336,7 +1346,6 @@ html, body {
         font-size: 1.3rem;
     }
 
-    /* Shift arrow elements cleanly to your preferred edge margins */
     #artLightbox .prev-arrow {
         left: 20px;
     }
@@ -1345,10 +1354,10 @@ html, body {
         right: 20px;
     }
 
-    /* Format text margins and set a wide side safety buffer to clear button targets */
-    #artLightbox .lightbox-content #lightboxCaption.lightbox-caption {
-        padding: 0 25px;
-        margin-top: 1rem;
+    /* Open up the spacing so the text spans cleanly and naturally */
+    #artLightbox .lightbox-content #lightboxCaption {
+        padding: 0 10px;
+        margin-top: 1.5rem;
     }
 
 }
@@ -1363,6 +1372,6 @@ html, body {
 
 
 
-/*body {
+body {
     background: red !important;
-}*/
+}
