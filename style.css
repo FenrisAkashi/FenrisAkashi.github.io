@@ -1151,26 +1151,30 @@ html, body {
        SUB-PAGE VERTICAL OVERRIDES
        Collapses the background tree columns and maximizes screen space
        ------------------------------------------------------------ */
-    /* Shrink the left and right side columns to 0 so trees hide completely */
-    .about-side,
-    .page-side {
-        flex: 0 0 0% !important;
-        width: 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        overflow: hidden !important; /* Guarantees nothing bleeds out */
-        background-image: none !important;
+    /* CRITICAL FIX: completely remove tree images from sides of pages */
+    .about-side::before,
+    .page-side::before,
+    .about-side::after,
+    .page-side::after {
+        display: none;
     }
 
-    /* Stretch the main grid container to fill the full width of the phone */
+    /* Collapse the remaining structural parent panels cleanly */
+    .about-side,
+    .page-side {
+        flex: 0 0 0%;
+        width: 0;
+    }
+
+    /* Stretch every content section to occupy the beautiful new screen real estate */
     .about,
     .art-center,
     .contact-center,
     .certs-center,
     .coding-center {
-        flex: 0 0 100% !important;
-        width: 100% !important;
-        padding: 10px 20px !important;
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 10px 20px;
     }
 }
 
@@ -1184,13 +1188,13 @@ html, body {
     }
 
     /* SLEDGEHAMMER TEST */
-    .page-container,
+    /*.page-container,
     .page-container *,
     .page-side,
     div[class*="side"] {
         background-image: none !important;
         background: none !important;
-    }
+    }*/
 
     .tree-img {
         width: 90vw;
@@ -1236,6 +1240,6 @@ html, body {
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
