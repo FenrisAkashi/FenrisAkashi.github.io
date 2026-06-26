@@ -1165,17 +1165,30 @@ html, body {
         margin: 0 auto;
     }
 
+    .content:has(.contact-center, .about-container, .page-container, .certs-center) .header,
     .header {
         width: 100%;
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
-        padding: 0 20px; /* Aligns perfectly with the text padding below */
+        padding: 0 20px;
         box-sizing: border-box;
-        /* Push title safely down so it drops under the bottom edge of the logo circle */
-        margin-top: var(--circle-size);
+        /* Pushes down the remaining distance plus clean breathing room */
+        margin-top: calc(var(--circle-size) / 2 + 1.5rem);
         margin-bottom: 1.5rem;
     }
+
+    /*.header {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 20px; /* Aligns perfectly with the text padding below 
+        box-sizing: border-box;
+        /* Push title safely down so it drops under the bottom edge of the logo circle 
+        margin-top: var(--circle-size);
+        margin-bottom: 1.5rem;
+    }*/
 
     /* ------------------------------------------------------------
        SUB-PAGE VERTICAL OVERRIDES
@@ -1226,6 +1239,6 @@ html, body {
 
 
 
-body {
+/*body {
     background: red !important;
-}
+}*/
